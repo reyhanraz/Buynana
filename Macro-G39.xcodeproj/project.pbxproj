@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B0F39782540175F00A5E80F /* customCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0F39772540175F00A5E80F /* customCells.swift */; };
 		4B6F0833252B00630054C1FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6F0832252B00630054C1FA /* AppDelegate.swift */; };
 		4B6F0835252B00630054C1FA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6F0834252B00630054C1FA /* SceneDelegate.swift */; };
 		4B6F0837252B00630054C1FA /* CameraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6F0836252B00630054C1FA /* CameraVC.swift */; };
@@ -43,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4B0F39772540175F00A5E80F /* customCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customCells.swift; sourceTree = "<group>"; };
 		4B6F082F252B00630054C1FA /* Macro-G39.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Macro-G39.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B6F0832252B00630054C1FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4B6F0834252B00630054C1FA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -252,6 +254,7 @@
 			isa = PBXGroup;
 			children = (
 				4B6F086D252B027C0054C1FA /* DetailPageVC.swift */,
+				4B0F39772540175F00A5E80F /* customCells.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -408,6 +411,7 @@
 			files = (
 				4B6F0837252B00630054C1FA /* CameraVC.swift in Sources */,
 				94603698253FDFC100BF9072 /* HomeVC.swift in Sources */,
+				4B0F39782540175F00A5E80F /* customCells.swift in Sources */,
 				4B6F086E252B027C0054C1FA /* DetailPageVC.swift in Sources */,
 				4B6F087D252B02B50054C1FA /* RecipeVC.swift in Sources */,
 				4B6F0869252B02690054C1FA /* OnBoardingVC.swift in Sources */,
