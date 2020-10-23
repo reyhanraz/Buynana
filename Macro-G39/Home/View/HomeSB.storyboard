@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PUw-yW-RSh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="H6Z-vM-PjZ">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -14,13 +14,71 @@
                     <view key="view" contentMode="scaleToFill" id="9hw-Tk-mj0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HBT-6Q-Kwc">
+                                <rect key="frame" x="136" y="608" width="142" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="toRecipePlaceholder"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N5o-eK-83F">
+                                <rect key="frame" x="136" y="608" width="142" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="toRecipePlaceholder"/>
+                                <connections>
+                                    <action selector="goToRecipePage:" destination="PUw-yW-RSh" eventType="touchUpInside" id="lqy-5G-uEd"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="Oha-yE-zoy"/>
                     </view>
+                    <navigationItem key="navigationItem" id="hp9-TM-kle"/>
+                    <connections>
+                        <segue destination="0UZ-Ei-Czu" kind="show" identifier="segueToRecipe" id="oB0-bD-kjY"/>
+                        <segue destination="WyH-aV-RE8" kind="show" identifier="segueToCamera" id="4Vt-AN-QGE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cqU-LP-Ndb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="200" y="130"/>
+            <point key="canvasLocation" x="1110.144927536232" y="129.91071428571428"/>
+        </scene>
+        <!--RecipeSB-->
+        <scene sceneID="gLO-jH-gF7">
+            <objects>
+                <viewControllerPlaceholder storyboardName="RecipeSB" id="0UZ-Ei-Czu" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="VVW-8P-z4I"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5wP-a6-vmS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2014" y="114"/>
+        </scene>
+        <!--CameraSB-->
+        <scene sceneID="sJx-S5-EVx">
+            <objects>
+                <viewControllerPlaceholder storyboardName="CameraSB" id="WyH-aV-RE8" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Uev-yR-lfg"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cdq-4y-kcj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2017" y="217"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="pxi-aR-xyT">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="H6Z-vM-PjZ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="wsC-ek-UTf">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="PUw-yW-RSh" kind="relationship" relationship="rootViewController" id="qXo-YY-47M"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f7W-YY-8pw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="200.00000000000003" y="129.91071428571428"/>
         </scene>
     </scenes>
 </document>
