@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vlD-hE-y7x">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
@@ -15,6 +16,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="LO2-5p-HGV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="customCellImage" rowHeight="280" id="gZw-KV-NQL" customClass="CustomCellImage" customModule="Macro_G39" customModuleProvider="target">
@@ -162,6 +164,7 @@
                                         <constraint firstItem="nXo-pU-wPp" firstAttribute="leading" secondItem="J1M-v3-uXR" secondAttribute="leading" id="sT0-Ui-YN7"/>
                                     </constraints>
                                 </tableViewCellContentView>
+
                                 <connections>
                                     <outlet property="image1" destination="6hB-QI-sLj" id="CoM-da-Xq4"/>
                                     <outlet property="image2" destination="CZ2-M4-P1Q" id="TVL-mz-fqd"/>
@@ -171,6 +174,7 @@
                                     <outlet property="label3" destination="BkO-A8-5Dv" id="F5r-nx-b6X"/>
                                     <outlet property="progressBar" destination="ruV-1K-2Vv" id="1Sl-UF-gZF"/>
                                 </connections>
+
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CustomCellHeaderandDeteil" rowHeight="104" id="N0C-Ol-ZT0" customClass="CustomCellHeaderandDetail" customModule="Macro_G39" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="440" width="375" height="104"/>
@@ -255,6 +259,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0FC-2I-wTu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-17.39130434782609" y="-50.223214285714285"/>
+
         </scene>
         <!--RecipeSB-->
         <scene sceneID="cut-4Q-ILF">
