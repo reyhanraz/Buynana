@@ -7,12 +7,20 @@
 
 import UIKit
 
-class RecipeVC: UIViewController {
+class RecipeVC: UIViewController{
 
     @IBOutlet weak var recipeCollectionView: UICollectionView!
+    
+    let searchController = UISearchController(searchResultsController: nil)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         recipeCollectionView.register(UINib.init(nibName: "RecipeCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "recipeCell")
+        
+        navigationItem.searchController = searchController
+        navigationItem.hidesSearchBarWhenScrolling = false
+        
+        searchController.searchBar.delegate = self
         recipeCollectionView.delegate = self
         recipeCollectionView.dataSource = self
     }
@@ -30,4 +38,10 @@ extension RecipeVC: UICollectionViewDelegate, UICollectionViewDataSource {
     }
     
     
+}
+
+extension RecipeVC: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        print(searchText)
+    }
 }
