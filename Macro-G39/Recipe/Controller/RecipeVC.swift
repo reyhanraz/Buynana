@@ -14,5 +14,8 @@ class RecipeVC: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func btnTap(_ sender: Any) {
+        performSegue(withIdentifier: "toDetailRecipe", sender: nil)
+    }
+    
 }
