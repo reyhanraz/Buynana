@@ -23,6 +23,8 @@
 		94603698253FDFC100BF9072 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94603697253FDFC100BF9072 /* HomeVC.swift */; };
 		9460369A253FDFE500BF9072 /* HomeSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94603699253FDFE500BF9072 /* HomeSB.storyboard */; };
 		9460369C253FE30A00BF9072 /* OnboardingSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9460369B253FE30A00BF9072 /* OnboardingSB.storyboard */; };
+		946036B125464ED900BF9072 /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946036AF25464ED900BF9072 /* HomeCollectionViewCell.swift */; };
+		946036B225464ED900BF9072 /* HomeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 946036B025464ED900BF9072 /* HomeCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,8 @@
 		94603697253FDFC100BF9072 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		94603699253FDFE500BF9072 /* HomeSB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeSB.storyboard; sourceTree = "<group>"; };
 		9460369B253FE30A00BF9072 /* OnboardingSB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OnboardingSB.storyboard; sourceTree = "<group>"; };
+		946036AF25464ED900BF9072 /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
+		946036B025464ED900BF9072 /* HomeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,6 +216,8 @@
 			isa = PBXGroup;
 			children = (
 				94603699253FDFE500BF9072 /* HomeSB.storyboard */,
+				946036AF25464ED900BF9072 /* HomeCollectionViewCell.swift */,
+				946036B025464ED900BF9072 /* HomeCollectionViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -378,6 +384,7 @@
 				4B6F088C252B035F0054C1FA /* RecipeSB.storyboard in Resources */,
 				4B6F083F252B00640054C1FA /* LaunchScreen.storyboard in Resources */,
 				4B6F08B0252B06FD0054C1FA /* CameraSB.storyboard in Resources */,
+				946036B225464ED900BF9072 /* HomeCollectionViewCell.xib in Resources */,
 				4B6F083C252B00640054C1FA /* Assets.xcassets in Resources */,
 				9460369C253FE30A00BF9072 /* OnboardingSB.storyboard in Resources */,
 				4B6F0882252B02D30054C1FA /* DetailPageSB.storyboard in Resources */,
@@ -413,6 +420,7 @@
 				4B6F0869252B02690054C1FA /* OnBoardingVC.swift in Sources */,
 				4B6F0833252B00630054C1FA /* AppDelegate.swift in Sources */,
 				4B6F0835252B00630054C1FA /* SceneDelegate.swift in Sources */,
+				946036B125464ED900BF9072 /* HomeCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
