@@ -17,6 +17,11 @@ class HomeVC: UIViewController {
         homeCollectionView.dataSource = self
         homeCollectionView.delegate = self
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.isHidden = true
+    }
+    
     @IBAction func goToRecipePage(_ sender: Any) {
         performSegue(withIdentifier: "segueToRecipe", sender: nil)
     }
@@ -26,10 +31,10 @@ class HomeVC: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let dest = segue.destination as? RecipeVC {
-            
+            self.navigationController?.navigationBar.isHidden = false
         }
         if let dest = segue.destination as? CameraVC {
-            
+            self.navigationController?.navigationBar.isHidden = false
         }
     }
 
@@ -42,7 +47,7 @@ extension HomeVC: UICollectionViewDataSource, UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = homeCollectionView.dequeueReusableCell(withReuseIdentifier: "homeCell", for: indexPath) as! HomeCollectionViewCell
-        cell.recipeNameLabel.text = "JALAN"
+        
         return cell
     }
     
