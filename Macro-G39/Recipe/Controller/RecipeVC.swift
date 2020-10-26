@@ -24,8 +24,6 @@ class RecipeVC: UIViewController{
         recipeCollectionView.delegate = self
         recipeCollectionView.dataSource = self
     }
-
-
 }
 extension RecipeVC: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
