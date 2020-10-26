@@ -36,8 +36,8 @@ class CustomCellProgressBar: UITableViewCell{
         viewCont2.backgroundColor = UIColor.customColor.customWhite
         viewCont3.backgroundColor = UIColor.customColor.customWhite
 
-        let colorStart = CGColor(red: 0.573, green: 0.741, blue: 0.007, alpha: 1)
-        let colorEnd = CGColor(red: 0.667, green: 0.49, blue: 0.015, alpha: 1)
+        let colorStart = UIColor(red: 0.573, green: 0.741, blue: 0.007, alpha: 1).cgColor
+        let colorEnd = UIColor(red: 0.667, green: 0.49, blue: 0.015, alpha: 1).cgColor
         let gradientImage = UIImage.gradientImage(with: progressBar.frame,
                                                 colors: [colorStart, colorEnd],
                                                 locations: nil)
