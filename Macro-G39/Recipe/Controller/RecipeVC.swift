@@ -25,7 +25,10 @@ class RecipeVC: UIViewController{
         recipeCollectionView.dataSource = self
     }
 
-
+    @IBAction func btnTap(_ sender: Any) {
+        performSegue(withIdentifier: "toDetailRecipe", sender: nil)
+    }
+    
 }
 extension RecipeVC: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
