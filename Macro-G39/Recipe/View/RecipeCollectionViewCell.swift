@@ -14,6 +14,8 @@ class RecipeCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var recipeNameLabel: UILabel!
     @IBOutlet weak var bananaRipenessLabel: UILabel!
     @IBOutlet weak var bananaTypeLabel: UILabel!
+    @IBOutlet weak var blackOverlay: UIView!
+
     
     override func awakeFromNib() {
         super.awakeFromNib()
