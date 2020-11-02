@@ -8,22 +8,28 @@
 import UIKit
 
 class DetailPageVC: UITableViewController {
+    
+    weak var delegate: ModalHandler?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.customColor.customWhite
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
-        self.navigationController?.navigationBar.shadowImage = UIImage()
+
+        let image = UIImage(systemName: "house")
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: image, style: .plain, target: self, action: #selector(HomeTapped))
+        self.navigationController?.navigationBar.tintColor = UIColor.customColor.customOrange
+        self.navigationController?.navigationBar.barTintColor = UIColor.customColor.customWhite
+
         self.navigationController?.navigationBar.isTranslucent = true
-        self.navigationController?.view.backgroundColor = UIColor.clear
+        self.title = "Detail Pisang"
         
-//        if let rect = self.navigationController?.navigationBar.frame {
-//                let y = rect.size.height
-//            self.tableView.contentInset = UIEdgeInsets( top: -y, left: 0, bottom: 0, right: 0)
-//            }
+
         self.tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
     }
     
+    @objc func HomeTapped(){
+        self.navigationController?.popToRootViewController(animated: true)
+    }
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 6
     }
@@ -43,15 +49,18 @@ class DetailPageVC: UITableViewController {
             cell.image2.image = UIImage(named: "DSC08830")
             cell.image3.image = UIImage(named: "DSC08830")
             
-            cell.progressBar.setProgress(0.6, animated: true)
+            cell.progressBar.setProgress((100-20)/100, animated: true)
             
             cell.label1.text = "Mentah"
             cell.label2.text = "Matang"
             cell.label3.text = "Busuk"
+            
+            cell.backgroundColor = UIColor.customColor.customWhite
             return cell
         }else if indexPath.section == 5{
             let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCellButton") as! customCellButton
-        
+            cell.delegate = self
+
             cell.contentView.backgroundColor = UIColor.customColor.customWhite
             return cell
         } else{
@@ -65,6 +74,7 @@ class DetailPageVC: UITableViewController {
             default:
                 cell.textLabel?.text = "Pisang Ambon"
             }
+            cell.textLabel?.font = UIFont.systemFont(ofSize: 16)
             return cell
 
         }
@@ -86,23 +96,54 @@ class DetailPageVC: UITableViewController {
         }
     }
     
+
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        if section == 0{
+            return 0
+        }else{
+            return  18
+        }
+    }
+    
+
     override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableView.automaticDimension
+            return UITableView.automaticDimension
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 16
     }
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        
             let myLabel = UILabel()
-            
-            myLabel.frame = CGRect(x: view.layoutMargins.left, y: 8, width: 300, height: 20)
-                myLabel.font = UIFont.boldSystemFont(ofSize: 18)
-                myLabel.text = self.tableView(tableView, titleForHeaderInSection: section)
-
-                let headerView = UIView()
-                headerView.backgroundColor = UIColor.clear
-                headerView.addSubview(myLabel)
-
-
-                return headerView
+            myLabel.frame = CGRect(x: view.layoutMargins.left, y: 0, width: 300, height: 18)
+            myLabel.font = UIFont.boldSystemFont(ofSize: 16)
+            myLabel.text = self.tableView(tableView, titleForHeaderInSection: section)
+            let headerView = UIView()
+            headerView.backgroundColor = UIColor.clear
+            headerView.addSubview(myLabel)
+            return headerView
+    }
+    override func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        let footer = UIView()
+        footer.backgroundColor = UIColor.clear
+        return footer
     }
 
+}
+extension DetailPageVC: customCellButtonDelegate{
+    
+    func didTapButton() {
+        self.navigationController?.popViewControllerWithHandler {
+            self.delegate?.modalDismissed()
+            print("aaaa")
+        }
+    }
+}
+extension UINavigationController {
+    func popViewControllerWithHandler(handler: @escaping ()->()) {
+        CATransaction.begin()
+        CATransaction.setCompletionBlock(handler)
+        self.popViewController(animated: true)
+        CATransaction.commit()
+    }
 }

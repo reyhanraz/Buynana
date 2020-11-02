@@ -11,11 +11,12 @@ class HomeVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.tintColor = UIColor.customColor.customOrange
+        self.navigationController?.navigationBar.barTintColor = UIColor.customColor.customWhite
+        self.navigationController?.navigationBar.isTranslucent = true
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
 
         // Do any additional setup after loading the view.
-    }
-    @IBAction func goToRecipePage(_ sender: Any) {
-        performSegue(withIdentifier: "segueToRecipe", sender: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

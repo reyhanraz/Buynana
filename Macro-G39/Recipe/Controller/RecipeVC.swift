@@ -35,7 +35,17 @@ extension RecipeVC: UICollectionViewDelegate, UICollectionViewDataSource {
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "toDetailRecipe", sender: self)
+    }
     
+    
+}
+
+extension RecipeVC: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        print(searchText)
+    }
 }
 
 extension RecipeVC: UISearchBarDelegate {

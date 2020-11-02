@@ -36,12 +36,12 @@ class CustomCellProgressBar: UITableViewCell{
         viewCont2.backgroundColor = UIColor.customColor.customWhite
         viewCont3.backgroundColor = UIColor.customColor.customWhite
 
-        let colorStart = UIColor(red: 0.573, green: 0.741, blue: 0.007, alpha: 1).cgColor
-        let colorEnd = UIColor(red: 0.667, green: 0.49, blue: 0.015, alpha: 1).cgColor
         let gradientImage = UIImage.gradientImage(with: progressBar.frame,
-                                                colors: [colorStart, colorEnd],
-                                                locations: nil)
-        progressBar.progressImage = gradientImage
+                                                  locations: [0.0, 1.0])?.withHorizontallyFlippedOrientation()
+        progressBar.transform = CGAffineTransform(scaleX: -1.0, y: -1.0)
+        progressBar.progressTintColor = UIColor.customColor.customYellow
+        progressBar.trackImage = gradientImage
+
         progressBar.roundCorners(corners: [.allCorners], radius: 7)
         image1.roundCorners(corners: [.allCorners], radius: 10)
         image2.roundCorners(corners: [.allCorners], radius: 10)
@@ -51,20 +51,31 @@ class CustomCellProgressBar: UITableViewCell{
 
 class customCellButton: UITableViewCell{
     
+    weak var delegate: customCellButtonDelegate?
     @IBOutlet weak var buttonNext: UIButton!
     
     override func layoutSubviews() {
         super.layoutSubviews()
         buttonNext.backgroundColor = UIColor.customColor.customYellow
-        buttonNext.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.25).cgColor
+
+        buttonNext.layer.shadowColor = UIColor(netHex: 0xCCAD5B).cgColor
+
         buttonNext.layer.shadowOffset = CGSize(width: 0.0, height: 4.0)
         buttonNext.layer.shadowOpacity = 1.0
         buttonNext.layer.shadowRadius = 0.0
         buttonNext.layer.masksToBounds = false
         buttonNext.layer.cornerRadius = 25
-        
+
+    }
+    
+    @IBAction func toRecipetapped(){
+        delegate?.didTapButton()
     }
 
+}
+
+protocol customCellButtonDelegate: AnyObject {
+    func didTapButton()
 }
 extension UIView {
    func roundCorners(corners: UIRectCorner, radius: CGFloat) {
@@ -77,12 +88,12 @@ extension UIView {
 
 fileprivate extension UIImage {
     static func gradientImage(with bounds: CGRect,
-                            colors: [CGColor],
                             locations: [NSNumber]?) -> UIImage? {
 
         let gradientLayer = CAGradientLayer()
         gradientLayer.frame = bounds
-        gradientLayer.colors = colors
+        gradientLayer.colors = [UIColor.customColor.progressGreen.cgColor, UIColor.customColor.progressYellow.cgColor, UIColor.customColor.progressBrown.cgColor]
+
         // This makes it horizontal
         gradientLayer.startPoint = CGPoint(x: 0.0,
                                         y: 0.5)
@@ -114,5 +125,9 @@ extension UIColor {
         static let customBlue = UIColor(netHex: 0xF6D275)
         static let customOrange = UIColor(netHex: 0xCD784D)
         static let customWhite = UIColor(netHex: 0xFBF6E8)
+        static let progressGreen = UIColor(netHex: 0x92BD02)
+        static let progressYellow = UIColor(netHex: 0xFFCB00)
+        static let progressBrown = UIColor(netHex: 0x3D2C00)
+
     }
 }
