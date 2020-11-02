@@ -16,7 +16,14 @@ class HomeVC: UIViewController {
         
         homeCollectionView.dataSource = self
         homeCollectionView.delegate = self
+        self.navigationController?.navigationBar.tintColor = UIColor.customColor.customOrange
+        self.navigationController?.navigationBar.barTintColor = UIColor.customColor.customWhite
+        self.navigationController?.navigationBar.isTranslucent = true
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+
+        // Do any additional setup after loading the view.
     }
+      
     
     override func viewDidAppear(_ animated: Bool) {
         self.navigationController?.navigationBar.isHidden = true
