@@ -10,7 +10,6 @@
 		4B0F39782540175F00A5E80F /* customCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0F39772540175F00A5E80F /* customCells.swift */; };
 		4B6F0833252B00630054C1FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6F0832252B00630054C1FA /* AppDelegate.swift */; };
 		4B6F0835252B00630054C1FA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6F0834252B00630054C1FA /* SceneDelegate.swift */; };
-		4B6F0837252B00630054C1FA /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6F0836252B00630054C1FA /* MainController.swift */; };
 		4B6F083C252B00640054C1FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B6F083B252B00640054C1FA /* Assets.xcassets */; };
 		4B6F083F252B00640054C1FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B6F083D252B00640054C1FA /* LaunchScreen.storyboard */; };
 		4B6F084A252B00640054C1FA /* Macro_G39Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6F0849252B00640054C1FA /* Macro_G39Tests.swift */; };
@@ -21,13 +20,14 @@
 		4B6F0882252B02D30054C1FA /* DetailPageSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B6F0881252B02D30054C1FA /* DetailPageSB.storyboard */; };
 		4B6F088C252B035F0054C1FA /* RecipeSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B6F088B252B035F0054C1FA /* RecipeSB.storyboard */; };
 		94603698253FDFC100BF9072 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94603697253FDFC100BF9072 /* HomeVC.swift */; };
-		9460369A253FDFE500BF9072 /* HomeSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94603699253FDFE500BF9072 /* HomeSB.storyboard */; };
 		9460369C253FE30A00BF9072 /* OnboardingSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9460369B253FE30A00BF9072 /* OnboardingSB.storyboard */; };
 		946036AA2542732800BF9072 /* RecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946036A92542732800BF9072 /* RecipeView.swift */; };
 		946036AD2542755500BF9072 /* RecipeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946036AB2542755500BF9072 /* RecipeCollectionViewCell.swift */; };
 		946036AE2542755500BF9072 /* RecipeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 946036AC2542755500BF9072 /* RecipeCollectionViewCell.xib */; };
-		AE1B8B312550528000D1DC40 /* CameraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1B8B302550528000D1DC40 /* CameraController.swift */; };
 		AE1B8B36255052E200D1DC40 /* Camera.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE1B8B35255052E200D1DC40 /* Camera.storyboard */; };
+		AE1B8B5225505DE200D1DC40 /* CameraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1B8B5025505DE100D1DC40 /* CameraController.swift */; };
+		AE1B8B5325505DE200D1DC40 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1B8B5125505DE200D1DC40 /* MainController.swift */; };
+		AE1B8B5825505DFB00D1DC40 /* HomeSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE1B8B5725505DFB00D1DC40 /* HomeSB.storyboard */; };
 		AEEBAA32254FC03200AA621C /* JenisPisang1.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = AEEBAA31254FC03200AA621C /* JenisPisang1.mlmodel */; };
 /* End PBXBuildFile section */
 
@@ -53,7 +53,6 @@
 		4B6F082F252B00630054C1FA /* Macro-G39.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Macro-G39.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B6F0832252B00630054C1FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4B6F0834252B00630054C1FA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4B6F0836252B00630054C1FA /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
 		4B6F083B252B00640054C1FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4B6F083E252B00640054C1FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4B6F0840252B00640054C1FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -69,13 +68,14 @@
 		4B6F0881252B02D30054C1FA /* DetailPageSB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailPageSB.storyboard; sourceTree = "<group>"; };
 		4B6F088B252B035F0054C1FA /* RecipeSB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RecipeSB.storyboard; sourceTree = "<group>"; };
 		94603697253FDFC100BF9072 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
-		94603699253FDFE500BF9072 /* HomeSB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeSB.storyboard; sourceTree = "<group>"; };
 		9460369B253FE30A00BF9072 /* OnboardingSB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OnboardingSB.storyboard; sourceTree = "<group>"; };
 		946036A92542732800BF9072 /* RecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeView.swift; sourceTree = "<group>"; };
 		946036AB2542755500BF9072 /* RecipeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCollectionViewCell.swift; sourceTree = "<group>"; };
 		946036AC2542755500BF9072 /* RecipeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecipeCollectionViewCell.xib; sourceTree = "<group>"; };
-		AE1B8B302550528000D1DC40 /* CameraController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraController.swift; sourceTree = "<group>"; };
 		AE1B8B35255052E200D1DC40 /* Camera.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Camera.storyboard; sourceTree = "<group>"; };
+		AE1B8B5025505DE100D1DC40 /* CameraController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraController.swift; sourceTree = "<group>"; };
+		AE1B8B5125505DE200D1DC40 /* MainController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
+		AE1B8B5725505DFB00D1DC40 /* HomeSB.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HomeSB.storyboard; sourceTree = "<group>"; };
 		AEEBAA31254FC03200AA621C /* JenisPisang1.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = JenisPisang1.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -224,7 +224,7 @@
 		9460369F253FE4C000BF9072 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				94603699253FDFE500BF9072 /* HomeSB.storyboard */,
+				AE1B8B5725505DFB00D1DC40 /* HomeSB.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -248,8 +248,8 @@
 		946036A2253FE4E200BF9072 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				4B6F0836252B00630054C1FA /* MainController.swift */,
-				AE1B8B302550528000D1DC40 /* CameraController.swift */,
+				AE1B8B5025505DE100D1DC40 /* CameraController.swift */,
+				AE1B8B5125505DE200D1DC40 /* MainController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -399,8 +399,8 @@
 				AE1B8B36255052E200D1DC40 /* Camera.storyboard in Resources */,
 				9460369C253FE30A00BF9072 /* OnboardingSB.storyboard in Resources */,
 				4B6F0882252B02D30054C1FA /* DetailPageSB.storyboard in Resources */,
+				AE1B8B5825505DFB00D1DC40 /* HomeSB.storyboard in Resources */,
 				946036AE2542755500BF9072 /* RecipeCollectionViewCell.xib in Resources */,
-				9460369A253FDFE500BF9072 /* HomeSB.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,15 +427,15 @@
 			files = (
 				946036AD2542755500BF9072 /* RecipeCollectionViewCell.swift in Sources */,
 				946036AA2542732800BF9072 /* RecipeView.swift in Sources */,
-				4B6F0837252B00630054C1FA /* MainController.swift in Sources */,
 				94603698253FDFC100BF9072 /* HomeVC.swift in Sources */,
 				4B0F39782540175F00A5E80F /* customCells.swift in Sources */,
 				4B6F086E252B027C0054C1FA /* DetailPageVC.swift in Sources */,
-				AE1B8B312550528000D1DC40 /* CameraController.swift in Sources */,
 				AEEBAA32254FC03200AA621C /* JenisPisang1.mlmodel in Sources */,
+				AE1B8B5325505DE200D1DC40 /* MainController.swift in Sources */,
 				4B6F087D252B02B50054C1FA /* RecipeVC.swift in Sources */,
 				4B6F0869252B02690054C1FA /* OnBoardingVC.swift in Sources */,
 				4B6F0833252B00630054C1FA /* AppDelegate.swift in Sources */,
+				AE1B8B5225505DE200D1DC40 /* CameraController.swift in Sources */,
 				4B6F0835252B00630054C1FA /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
