@@ -66,7 +66,7 @@ extension MainController {
             
         else {
             cameraController.flashMode = .on
-            toggleFlashButton.setImage(#imageLiteral(resourceName: "blitz-icon"), for: .normal)
+            toggleFlashButton.setImage(#imageLiteral(resourceName: "flash"), for: .normal)
         }
     }
     
