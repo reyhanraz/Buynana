@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4B0F39782540175F00A5E80F /* customCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0F39772540175F00A5E80F /* customCells.swift */; };
+		4B2376F6254ED3D500674F99 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2376F5254ED3D500674F99 /* Data.swift */; };
 		4B6F0833252B00630054C1FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6F0832252B00630054C1FA /* AppDelegate.swift */; };
 		4B6F0835252B00630054C1FA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6F0834252B00630054C1FA /* SceneDelegate.swift */; };
 		4B6F0837252B00630054C1FA /* CameraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6F0836252B00630054C1FA /* CameraVC.swift */; };
@@ -51,6 +52,7 @@
 
 /* Begin PBXFileReference section */
 		4B0F39772540175F00A5E80F /* customCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customCells.swift; sourceTree = "<group>"; };
+		4B2376F5254ED3D500674F99 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		4B6F082F252B00630054C1FA /* Macro-G39.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Macro-G39.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B6F0832252B00630054C1FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4B6F0834252B00630054C1FA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -296,6 +298,7 @@
 			children = (
 				946036B52546B24100BF9072 /* Controller */,
 				946036B42546B23A00BF9072 /* View */,
+				4B2376F5254ED3D500674F99 /* Data.swift */,
 			);
 			path = DetailRecipe;
 			sourceTree = "<group>";
@@ -461,6 +464,7 @@
 				4BE0CF242541CAC600142FFA /* customCellDetailRecipe.swift in Sources */,
 				4B6F086E252B027C0054C1FA /* DetailPageVC.swift in Sources */,
 				4B6F087D252B02B50054C1FA /* RecipeVC.swift in Sources */,
+				4B2376F6254ED3D500674F99 /* Data.swift in Sources */,
 				4B6F0869252B02690054C1FA /* OnBoardingVC.swift in Sources */,
 				4B6F0833252B00630054C1FA /* AppDelegate.swift in Sources */,
 				4B6F0835252B00630054C1FA /* SceneDelegate.swift in Sources */,

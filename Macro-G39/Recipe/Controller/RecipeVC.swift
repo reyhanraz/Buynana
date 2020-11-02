@@ -35,6 +35,10 @@ extension RecipeVC: UICollectionViewDelegate, UICollectionViewDataSource {
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "toDetailRecipe", sender: self)
+    }
+    
     
 }
 

@@ -18,12 +18,7 @@ class HomeVC: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-    @IBAction func goToRecipePage(_ sender: Any) {
-        performSegue(withIdentifier: "segueToRecipe", sender: nil)
-    }
-    @IBAction func goTocameraPage(_ sender: Any) {
-        performSegue(withIdentifier: "segueToCamera", sender: nil)
-    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let dest = segue.destination as? RecipeVC {
             
