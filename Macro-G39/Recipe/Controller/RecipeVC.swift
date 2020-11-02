@@ -47,9 +47,3 @@ extension RecipeVC: UISearchBarDelegate {
         print(searchText)
     }
 }
-
-extension RecipeVC: UISearchBarDelegate {
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        print(searchText)
-    }
-}
