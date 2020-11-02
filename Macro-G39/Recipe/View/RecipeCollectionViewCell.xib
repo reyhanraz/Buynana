@@ -46,7 +46,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xh3-mc-1Z4" userLabel="blackOverlay">
-                                <rect key="frame" x="1" y="44" width="159.5" height="136.5"/>
+                                <rect key="frame" x="0.0" y="45" width="160" height="137"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </view>
                         </subviews>
