@@ -31,6 +31,7 @@
 		946036AD2542755500BF9072 /* RecipeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946036AB2542755500BF9072 /* RecipeCollectionViewCell.swift */; };
 		946036AE2542755500BF9072 /* RecipeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 946036AC2542755500BF9072 /* RecipeCollectionViewCell.xib */; };
 		946036B72546B27F00BF9072 /* DetailRecipeSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 946036B62546B27F00BF9072 /* DetailRecipeSB.storyboard */; };
+
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,7 @@
 		946036AB2542755500BF9072 /* RecipeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCollectionViewCell.swift; sourceTree = "<group>"; };
 		946036AC2542755500BF9072 /* RecipeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecipeCollectionViewCell.xib; sourceTree = "<group>"; };
 		946036B62546B27F00BF9072 /* DetailRecipeSB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailRecipeSB.storyboard; sourceTree = "<group>"; };
+
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +133,7 @@
 		4B6F0831252B00630054C1FA /* Macro-G39 */ = {
 			isa = PBXGroup;
 			children = (
+				946036B8254ECE7500BF9072 /* Model */,
 				4B6F0832252B00630054C1FA /* AppDelegate.swift */,
 				4B6F0834252B00630054C1FA /* SceneDelegate.swift */,
 				94603694253F1F2500BF9072 /* Onboarding */,
@@ -299,6 +302,7 @@
 				946036B52546B24100BF9072 /* Controller */,
 				946036B42546B23A00BF9072 /* View */,
 				4B2376F5254ED3D500674F99 /* Data.swift */,
+
 			);
 			path = DetailRecipe;
 			sourceTree = "<group>";
@@ -320,6 +324,7 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -467,6 +472,7 @@
 				4B2376F6254ED3D500674F99 /* Data.swift in Sources */,
 				4B6F0869252B02690054C1FA /* OnBoardingVC.swift in Sources */,
 				4B6F0833252B00630054C1FA /* AppDelegate.swift in Sources */,
+				946036BA254ECE8100BF9072 /* Recipe.swift in Sources */,
 				4B6F0835252B00630054C1FA /* SceneDelegate.swift in Sources */,
 				4BE0CF1F2541CA3E00142FFA /* DetailRecipeVC.swift in Sources */,
 			);

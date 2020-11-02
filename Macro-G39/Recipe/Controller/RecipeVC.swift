@@ -27,7 +27,7 @@ class RecipeVC: UIViewController{
 }
 extension RecipeVC: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return 6
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -40,6 +40,12 @@ extension RecipeVC: UICollectionViewDelegate, UICollectionViewDataSource {
     }
     
     
+}
+
+extension RecipeVC: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        print(searchText)
+    }
 }
 
 extension RecipeVC: UISearchBarDelegate {

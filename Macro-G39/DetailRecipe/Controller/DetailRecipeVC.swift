@@ -8,6 +8,7 @@
 import UIKit
 
 class DetailRecipeVC: UITableViewController {
+
     var Resep: Resep?
     override func viewDidLoad() {
         Resep = listResep[10]
@@ -24,6 +25,7 @@ class DetailRecipeVC: UITableViewController {
     @objc func HomeTapped(){
         self.navigationController?.popToRootViewController(animated: true)
     }
+
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 4
@@ -31,9 +33,11 @@ class DetailRecipeVC: UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 3{
+
             return Resep?.instruksiRecipe.count ?? 0
         }else if section == 2{
             return Resep?.bahanRecipe.count ?? 0
+
         }else{
             return 1
         }
@@ -43,6 +47,7 @@ class DetailRecipeVC: UITableViewController {
         switch section {
         case 1:
             return "a"
+
         case 2:
             return "Bahan - Bahan"
         case 3:
@@ -60,11 +65,13 @@ class DetailRecipeVC: UITableViewController {
             return cell
         }else if indexPath.section == 3{
             let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCellInstruction") as! CustomCellInstruction
+
             let arr = Resep?.instruksiRecipe
             cell.backgroundColor = UIColor.customColor.customWhite
             cell.labelNumber.text = "\(indexPath.row + 1)."
             cell.labelInstruction.text = "\(arr![indexPath.row])"
             
+
             return cell
         }else{
             let cell = UITableViewCell()
@@ -72,8 +79,10 @@ class DetailRecipeVC: UITableViewController {
             case 1:
                 cell.textLabel?.text = "Makanan ringan berbahan dasar pisang dibungkus dengan adonan dan digoreng dengan minyak panas"
             default:
+
                 let arr = Resep?.bahanRecipe
                 cell.textLabel?.text = " • \(arr![indexPath.row]) \n"
+
             }
             cell.backgroundColor = UIColor.customColor.customWhite
             return cell
@@ -84,6 +93,7 @@ class DetailRecipeVC: UITableViewController {
         return UITableView.automaticDimension
     }
     
+
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         if section == 0 || section == 1{
             return 0
@@ -121,6 +131,7 @@ class DetailRecipeVC: UITableViewController {
         headerView.addSubview(v)
         
         return headerView
+
     }
     
 

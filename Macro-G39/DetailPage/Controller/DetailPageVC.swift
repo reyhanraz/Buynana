@@ -14,13 +14,16 @@ class DetailPageVC: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.customColor.customWhite
+
         let image = UIImage(systemName: "house")
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: image, style: .plain, target: self, action: #selector(HomeTapped))
         self.navigationController?.navigationBar.tintColor = UIColor.customColor.customOrange
         self.navigationController?.navigationBar.barTintColor = UIColor.customColor.customWhite
+
         self.navigationController?.navigationBar.isTranslucent = true
         self.title = "Detail Pisang"
         
+
         self.tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
     }
     
@@ -57,6 +60,7 @@ class DetailPageVC: UITableViewController {
         }else if indexPath.section == 5{
             let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCellButton") as! customCellButton
             cell.delegate = self
+
             cell.contentView.backgroundColor = UIColor.customColor.customWhite
             return cell
         } else{
@@ -92,6 +96,7 @@ class DetailPageVC: UITableViewController {
         }
     }
     
+
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         if section == 0{
             return 0
@@ -100,6 +105,7 @@ class DetailPageVC: UITableViewController {
         }
     }
     
+
     override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
             return UITableView.automaticDimension
     }

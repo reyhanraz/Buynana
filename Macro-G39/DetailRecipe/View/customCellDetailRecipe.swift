@@ -24,7 +24,9 @@ class CustomCellInstruction: UITableViewCell{
 
     override func layoutSubviews() {
         super.layoutSubviews()
+
         containerView.backgroundColor = UIColor.customColor.customYellow
         containerView.layer.cornerRadius = 12
     }
+
 }

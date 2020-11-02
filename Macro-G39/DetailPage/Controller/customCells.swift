@@ -35,11 +35,13 @@ class CustomCellProgressBar: UITableViewCell{
         viewCont1.backgroundColor = UIColor.customColor.customWhite
         viewCont2.backgroundColor = UIColor.customColor.customWhite
         viewCont3.backgroundColor = UIColor.customColor.customWhite
+
         let gradientImage = UIImage.gradientImage(with: progressBar.frame,
                                                   locations: [0.0, 1.0])?.withHorizontallyFlippedOrientation()
         progressBar.transform = CGAffineTransform(scaleX: -1.0, y: -1.0)
         progressBar.progressTintColor = UIColor.customColor.customYellow
         progressBar.trackImage = gradientImage
+
         progressBar.roundCorners(corners: [.allCorners], radius: 7)
         image1.roundCorners(corners: [.allCorners], radius: 10)
         image2.roundCorners(corners: [.allCorners], radius: 10)
@@ -55,12 +57,15 @@ class customCellButton: UITableViewCell{
     override func layoutSubviews() {
         super.layoutSubviews()
         buttonNext.backgroundColor = UIColor.customColor.customYellow
+
         buttonNext.layer.shadowColor = UIColor(netHex: 0xCCAD5B).cgColor
+
         buttonNext.layer.shadowOffset = CGSize(width: 0.0, height: 4.0)
         buttonNext.layer.shadowOpacity = 1.0
         buttonNext.layer.shadowRadius = 0.0
         buttonNext.layer.masksToBounds = false
         buttonNext.layer.cornerRadius = 25
+
     }
     
     @IBAction func toRecipetapped(){
@@ -88,6 +93,7 @@ fileprivate extension UIImage {
         let gradientLayer = CAGradientLayer()
         gradientLayer.frame = bounds
         gradientLayer.colors = [UIColor.customColor.progressGreen.cgColor, UIColor.customColor.progressYellow.cgColor, UIColor.customColor.progressBrown.cgColor]
+
         // This makes it horizontal
         gradientLayer.startPoint = CGPoint(x: 0.0,
                                         y: 0.5)
@@ -122,5 +128,6 @@ extension UIColor {
         static let progressGreen = UIColor(netHex: 0x92BD02)
         static let progressYellow = UIColor(netHex: 0xFFCB00)
         static let progressBrown = UIColor(netHex: 0x3D2C00)
+
     }
 }
