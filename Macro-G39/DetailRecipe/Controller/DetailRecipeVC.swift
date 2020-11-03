@@ -61,6 +61,7 @@ class DetailRecipeVC: UITableViewController {
         
         if indexPath.section == 0{
             let cell = tableView.dequeueReusableCell(withIdentifier: "customCellImageRecipe") as! CustomCellImageRecipe
+            cell.imageView?.image = UIImage(named: Resep!.gambarRecipe)
             
             return cell
         }else if indexPath.section == 3{

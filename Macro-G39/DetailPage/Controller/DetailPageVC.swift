@@ -10,6 +10,7 @@ import UIKit
 class DetailPageVC: UITableViewController {
     
     weak var delegate: ModalHandler!
+    var image: UIImage?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,8 +24,10 @@ class DetailPageVC: UITableViewController {
         self.navigationController?.navigationBar.isTranslucent = true
         self.title = "Detail Pisang"
         
-
         self.tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.isHidden = false
     }
     
     @objc func HomeTapped(){
@@ -42,14 +45,11 @@ class DetailPageVC: UITableViewController {
         if indexPath.section == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "customCellImage") as! CustomCellImage
             cell.contentView.backgroundColor = UIColor.customColor.customWhite
+            cell.imageTop.image = self.image
             return cell
         }else if indexPath.section == 2{
             let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCellProgressBar") as! CustomCellProgressBar
-            cell.image1.image = UIImage(named: "DSC08830")
-            cell.image2.image = UIImage(named: "DSC08830")
-            cell.image3.image = UIImage(named: "DSC08830")
-            
-            cell.progressBar.setProgress((100-20)/100, animated: true)
+            cell.progressBar.setProgress((100-80)/100, animated: true)
             
             cell.label1.text = "Mentah"
             cell.label2.text = "Matang"

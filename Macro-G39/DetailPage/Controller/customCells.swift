@@ -9,11 +9,7 @@ import UIKit
 
 class CustomCellImage: UITableViewCell{
     @IBOutlet weak var imageTop: UIImageView!
-    
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        imageTop.roundCorners(corners: [.bottomLeft, .bottomRight], radius: 50)
-    }
+
 }
 
 class CustomCellProgressBar: UITableViewCell{

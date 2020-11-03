@@ -46,10 +46,12 @@ extension MainController {
                 try? self.cameraController.displayPreview(on: self.capturePreviewView)
             }
         }
-        self.navigationController?.navigationBar.isHidden = true
         configureCameraController()
         detectTypeImage()
         
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.isHidden = true
     }
 }
 
@@ -142,6 +144,7 @@ extension MainController {
         }
         picker.dismiss(animated: true, completion: nil)
         detectTypeImage()
+        performSegue(withIdentifier: "captureToDetailPage", sender: nil)
     }
     
     
@@ -161,9 +164,10 @@ extension MainController {
         performSegue(withIdentifier: "captureToDetailPage", sender: nil)
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-            if let destination = segue.destination as? DetailPageVC{
-                destination.delegate = self
-            }
+        if let destination = segue.destination as? DetailPageVC{
+            destination.delegate = self
+            destination.image = self.sendImage
+        }
     }
 }
 extension MainController: ModalHandler{
