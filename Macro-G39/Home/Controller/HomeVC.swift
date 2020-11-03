@@ -22,6 +22,7 @@ class HomeVC: UIViewController {
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
 
         // Do any additional setup after loading the view.
+        print(listResep.count)
     }
       
     
