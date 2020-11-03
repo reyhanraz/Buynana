@@ -46,7 +46,7 @@ extension MainController {
                 try? self.cameraController.displayPreview(on: self.capturePreviewView)
             }
         }
-        
+        self.navigationController?.navigationBar.isHidden = true
         configureCameraController()
         detectTypeImage()
         
@@ -160,5 +160,19 @@ extension MainController {
         detectTypeImage()
         performSegue(withIdentifier: "captureToDetailPage", sender: nil)
     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            if let destination = segue.destination as? DetailPageVC{
+                destination.delegate = self
+            }
+    }
 }
-
+extension MainController: ModalHandler{
+    func modalDismissed() {
+        let storyB = UIStoryboard(name: "RecipeSB", bundle: nil)
+        let vc = storyB.instantiateViewController(withIdentifier: "RecipeVC") as! RecipeVC
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+}
+protocol ModalHandler: AnyObject {
+    func modalDismissed()
+}

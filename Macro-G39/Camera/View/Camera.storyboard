@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -32,8 +32,7 @@
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <state key="normal" image="gallery-icon"/>
                                         <connections>
-                                            <action selector="pickImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ffr-21-6ed"/>
-                                            <segue destination="qoK-V1-qDW" kind="presentation" identifier="photoToDetaiPage" id="R3N-Cn-xMf"/>
+                                            <action selector="takeImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WMs-I1-95M"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nmX-pG-pvs">
@@ -57,7 +56,6 @@
                                         <state key="normal" image="camera-button"/>
                                         <connections>
                                             <action selector="captureImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wgc-uc-AzG"/>
-                                            <segue destination="qoK-V1-qDW" kind="presentation" identifier="captureToDetailPage" id="dVq-94-JrD"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -95,10 +93,10 @@
                         <outlet property="backButton" destination="nmX-pG-pvs" id="Koe-BN-52j"/>
                         <outlet property="captureButton" destination="Akr-g7-ggC" id="ZHd-4Q-aGF"/>
                         <outlet property="capturePreviewView" destination="Lnd-7g-U5f" id="1h1-9E-VM0"/>
-                        <outlet property="photoLibraryButton" destination="pfX-fU-RS1" id="wuL-Lw-Q6f"/>
                         <outlet property="thisLabel" destination="aCB-gS-v5E" id="GkH-kw-wbX"/>
                         <outlet property="toggleCameraButton" destination="dNR-Vo-zfA" id="Tc7-9N-4bs"/>
                         <outlet property="toggleFlashButton" destination="TK7-Oc-3y1" id="pfk-k4-hgk"/>
+                        <segue destination="qoK-V1-qDW" kind="show" identifier="captureToDetailPage" id="SC9-1H-o2Z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -108,7 +106,9 @@
         <!--DetailPageSB-->
         <scene sceneID="9n0-9J-QdB">
             <objects>
-                <viewControllerPlaceholder storyboardName="DetailPageSB" id="qoK-V1-qDW" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="DetailPageSB" id="qoK-V1-qDW" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Mab-eb-V8Y"/>
+                </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a5Z-Q2-WFf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="670" y="139"/>
@@ -122,9 +122,6 @@
             <point key="canvasLocation" x="136" y="574"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="dVq-94-JrD"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="blitz-icon" width="41" height="48"/>
         <image name="camera-button" width="75" height="75"/>
