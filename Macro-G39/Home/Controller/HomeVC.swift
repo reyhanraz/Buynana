@@ -40,7 +40,7 @@ class HomeVC: UIViewController {
         if let dest = segue.destination as? RecipeVC {
             self.navigationController?.navigationBar.isHidden = false
         }
-        if let dest = segue.destination as? CameraVC {
+        if let dest = segue.destination as? MainController {
             self.navigationController?.navigationBar.isHidden = false
         }
     }

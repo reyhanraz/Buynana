@@ -9,7 +9,7 @@ import UIKit
 
 class DetailPageVC: UITableViewController {
     
-    weak var delegate: ModalHandler?
+    weak var delegate: ModalHandler!
 
     override func viewDidLoad() {
         super.viewDidLoad()
