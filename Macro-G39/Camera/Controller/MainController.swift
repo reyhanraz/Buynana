@@ -13,7 +13,7 @@ import CoreML
 
 class MainController: UIViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
     
-    public var sendImage = #imageLiteral(resourceName: "DSC08830")
+    public var sendImage = #imageLiteral(resourceName: "camera-button")
     public var typeAccuration = "100%"
     public var typeBanana = "Pisang"
     @IBOutlet weak var thisLabel: UILabel!
@@ -55,8 +55,6 @@ extension MainController {
 
 extension MainController {
     func detectTypeImage() {
-        
-        
         guard let model = try? VNCoreMLModel(for: JenisPisang1().model) else {
             fatalError("Failed to load model")
         }
@@ -160,6 +158,7 @@ extension MainController {
             }
         }
         detectTypeImage()
+        performSegue(withIdentifier: "captureToDetailPage", sender: nil)
     }
 }
 

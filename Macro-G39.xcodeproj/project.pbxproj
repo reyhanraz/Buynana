@@ -35,6 +35,7 @@
 		AE1B8BAC2550BCB000D1DC40 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1B8BA82550BCB000D1DC40 /* MainController.swift */; };
 		AE1B8BAD2550BCB000D1DC40 /* Camera.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE1B8BAA2550BCB000D1DC40 /* Camera.storyboard */; };
 		AE1B8BB52550BFCE00D1DC40 /* JenisPisang1.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = AE1B8BB42550BFCE00D1DC40 /* JenisPisang1.mlmodel */; };
+		AE1B8BBD2550E89700D1DC40 /* UmurPisang1.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = AE1B8BBC2550E89700D1DC40 /* UmurPisang1.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +90,7 @@
 		AE1B8BA82550BCB000D1DC40 /* MainController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
 		AE1B8BAA2550BCB000D1DC40 /* Camera.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Camera.storyboard; sourceTree = "<group>"; };
 		AE1B8BB42550BFCE00D1DC40 /* JenisPisang1.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = JenisPisang1.mlmodel; sourceTree = "<group>"; };
+		AE1B8BBC2550E89700D1DC40 /* UmurPisang1.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = UmurPisang1.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +141,7 @@
 		4B6F0831252B00630054C1FA /* Macro-G39 */ = {
 			isa = PBXGroup;
 			children = (
+				AE1B8BBC2550E89700D1DC40 /* UmurPisang1.mlmodel */,
 				AE1B8BB42550BFCE00D1DC40 /* JenisPisang1.mlmodel */,
 				4B6F0832252B00630054C1FA /* AppDelegate.swift */,
 				4B6F0834252B00630054C1FA /* SceneDelegate.swift */,
@@ -475,6 +478,7 @@
 				94603698253FDFC100BF9072 /* HomeVC.swift in Sources */,
 				AE1B8BAC2550BCB000D1DC40 /* MainController.swift in Sources */,
 				4B0F39782540175F00A5E80F /* customCells.swift in Sources */,
+				AE1B8BBD2550E89700D1DC40 /* UmurPisang1.mlmodel in Sources */,
 				4BE0CF242541CAC600142FFA /* customCellDetailRecipe.swift in Sources */,
 				4B6F086E252B027C0054C1FA /* DetailPageVC.swift in Sources */,
 				AE1B8BB52550BFCE00D1DC40 /* JenisPisang1.mlmodel in Sources */,

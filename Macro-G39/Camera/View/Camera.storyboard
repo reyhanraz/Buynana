@@ -33,7 +33,7 @@
                                         <state key="normal" image="gallery-icon"/>
                                         <connections>
                                             <action selector="pickImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ffr-21-6ed"/>
-                                            <segue destination="qoK-V1-qDW" kind="presentation" id="R3N-Cn-xMf"/>
+                                            <segue destination="qoK-V1-qDW" kind="presentation" identifier="photoToDetaiPage" id="R3N-Cn-xMf"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nmX-pG-pvs">
@@ -41,7 +41,7 @@
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <state key="normal" image="chevron-icon"/>
                                         <connections>
-                                            <segue destination="rjz-nv-V3D" kind="custom" id="Kbw-SG-SCb"/>
+                                            <segue destination="rjz-nv-V3D" kind="custom" identifier="cevronToHome" id="Kbw-SG-SCb"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TK7-Oc-3y1">
@@ -57,7 +57,7 @@
                                         <state key="normal" image="camera-button"/>
                                         <connections>
                                             <action selector="captureImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wgc-uc-AzG"/>
-                                            <segue destination="qoK-V1-qDW" kind="presentation" id="dVq-94-JrD"/>
+                                            <segue destination="qoK-V1-qDW" kind="presentation" identifier="captureToDetailPage" id="dVq-94-JrD"/>
                                         </connections>
                                     </button>
                                 </subviews>
