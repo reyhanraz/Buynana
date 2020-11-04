@@ -11,7 +11,7 @@
         <!--Detail PageVC-->
         <scene sceneID="xdi-hf-lB9">
             <objects>
-                <tableViewController id="vlD-hE-y7x" customClass="DetailPageVC" customModule="Macro_G39" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="DetailPageSB" id="vlD-hE-y7x" customClass="DetailPageVC" customModule="Macro_G39" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="LO2-5p-HGV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -220,9 +220,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="bananaCoklat" width="38" height="40"/>
-        <image name="bananaHijau" width="37" height="40"/>
-        <image name="bananaKuning" width="38" height="40"/>
+        <image name="bananaCoklat" width="76" height="80"/>
+        <image name="bananaHijau" width="74" height="80"/>
+        <image name="bananaKuning" width="76" height="80"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
