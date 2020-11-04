@@ -71,28 +71,34 @@ class DetailRecipeVC: UITableViewController {
             cell.backgroundColor = UIColor.customColor.customWhite
             cell.labelNumber.text = "\(indexPath.row + 1)."
             cell.labelInstruction.text = "\(arr![indexPath.row])"
+            return cell
+        }else if indexPath.section == 1{
+            let cell = UITableViewCell()
             
+                cell.textLabel?.text = Resep?.description
 
+            cell.textLabel?.numberOfLines = 0
+            cell.textLabel?.textAlignment = .justified
+            cell.textLabel?.font = UIFontMetrics.default.scaledFont(for: UIFont.customFont.body!)
+            cell.textLabel?.adjustsFontForContentSizeCategory = true
+            cell.backgroundColor = UIColor.customColor.customWhite
             return cell
         }else{
-            let cell = UITableViewCell()
-            switch indexPath.section{
-            case 1:
-                cell.textLabel?.text = "Makanan ringan berbahan dasar pisang dibungkus dengan adonan dan digoreng dengan minyak panas"
-            default:
-
-                let arr = Resep?.bahanRecipe
-                cell.textLabel?.text = " • \(arr![indexPath.row]) \n"
-
-            }
+            let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCellIngredients") as! CustomCellIngredients
+            let arr = Resep?.bahanRecipe
+            cell.lableIngredients.text = "\(arr![indexPath.row])"
             cell.backgroundColor = UIColor.customColor.customWhite
             return cell
         }
     }
     
-    override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if indexPath.section == 2{
+            return 30
+        }
         return UITableView.automaticDimension
     }
+  
     
 
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
