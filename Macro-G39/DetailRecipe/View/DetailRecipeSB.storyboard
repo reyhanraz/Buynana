@@ -20,6 +20,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="jH0-gY-SAn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.9876531959" green="0.96585875750000005" blue="0.90195178990000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="customCellImageRecipe" rowHeight="210" id="rLV-rw-gaL" customClass="CustomCellImageRecipe" customModule="Macro_G39" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="210"/>
@@ -42,6 +43,7 @@
                                         <constraint firstItem="vTT-0J-oAq" firstAttribute="top" secondItem="77n-4f-zeg" secondAttribute="top" id="zQi-ME-SFg"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.9876531959" green="0.96585875750000005" blue="0.90195178990000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <outlet property="imageTop" destination="vTT-0J-oAq" id="DeD-Jf-x9E"/>
                                 </connections>
@@ -55,6 +57,7 @@
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6cp-4P-G0Y">
                                             <rect key="frame" x="20" y="4" width="374" height="32.5"/>
+
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xFe-hB-Pd8">
                                                     <rect key="frame" x="14" y="6.5" width="20" height="19.5"/>
@@ -67,6 +70,7 @@
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vtA-bT-9Bu">
                                                     <rect key="frame" x="42" y="6" width="324" height="21.5"/>
+
                                                     <constraints>
                                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="x8b-L1-Yd2"/>
                                                     </constraints>
@@ -86,6 +90,7 @@
                                             </constraints>
                                         </view>
                                     </subviews>
+                                    <color key="tintColor" red="0.9876531959" green="0.96585875750000005" blue="0.90195178990000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <constraints>
                                         <constraint firstAttribute="bottom" secondItem="6cp-4P-G0Y" secondAttribute="bottom" constant="4" id="7HA-sW-8ES"/>
                                         <constraint firstItem="6cp-4P-G0Y" firstAttribute="top" secondItem="Wlp-Wx-9Os" secondAttribute="top" constant="4" id="AvA-Rb-OI3"/>
@@ -93,6 +98,7 @@
                                         <constraint firstItem="6cp-4P-G0Y" firstAttribute="leading" secondItem="Wlp-Wx-9Os" secondAttribute="leading" constant="20" id="wIP-Ff-Lua"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.9876531959" green="0.96585875750000005" blue="0.90195178990000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <outlet property="containerView" destination="6cp-4P-G0Y" id="Oki-lX-ZY8"/>
                                     <outlet property="labelInstruction" destination="vtA-bT-9Bu" id="Egt-Ou-CpQ"/>
@@ -156,6 +162,7 @@
     </scenes>
     <resources>
         <image name="DSC08830" width="5618" height="3745"/>
+
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
