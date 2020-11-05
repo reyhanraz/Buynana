@@ -35,10 +35,6 @@ class DetailPageVC: UITableViewController {
         self.title = "Detail Pisang"
         
         self.tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
-        
-        detectTypeImage()
-        detectAgeImage()
-        detectRipeImage()
     }
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.navigationBar.isHidden = false
@@ -62,6 +58,7 @@ class DetailPageVC: UITableViewController {
             return cell
         }else if indexPath.section == 2{
             let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCellProgressBar") as! CustomCellProgressBar
+            detectRipeImage()
             cell.progressBar.setProgress((100-80)/100, animated: true)
             
             cell.label1.text = "Mentah"
@@ -87,18 +84,16 @@ class DetailPageVC: UITableViewController {
             let cell = UITableViewCell()
             switch indexPath.section {
             case 3:
+                detectAgeImage()
                 cell.backgroundColor = view.backgroundColor
-                DispatchQueue.main.async { [self] in
                     cell.textLabel?.text = "\(ageBanana)"
-                }
             case 4:
                 cell.backgroundColor = view.backgroundColor
                 cell.textLabel?.text = "Simpan dalam Kulkas Selama 4 Hari"
             default:
+                detectTypeImage()
                 cell.backgroundColor = view.backgroundColor
-                DispatchQueue.main.async { [self] in
                     cell.textLabel?.text = "\(typeBanana)"
-                }
             }
             cell.textLabel?.font = UIFont.systemFont(ofSize: 16)
             return cell
@@ -180,13 +175,11 @@ extension DetailPageVC{
         
         // Run klasifikasi jenis pisang
         let handler = VNImageRequestHandler(ciImage: ciImage)
-        DispatchQueue.global().async {
             do {
                 try handler.perform([request])
             } catch {
                 print(error)
             }
-        }
     }
     
     func detectAgeImage() {
@@ -211,15 +204,13 @@ extension DetailPageVC{
         guard let ciImage = CIImage(image: image!)
             else { fatalError("Cant create CIImage from UIImage") }
         
-        // Run klasifikasi jenis pisang
+        // Run klasifikasi umur pisang
         let handler = VNImageRequestHandler(ciImage: ciImage)
-        DispatchQueue.global().async {
             do {
                 try handler.perform([request])
             } catch {
                 print(error)
             }
-        }
     }
     
     func detectRipeImage() {
@@ -244,15 +235,13 @@ extension DetailPageVC{
         guard let ciImage = CIImage(image: image!)
             else { fatalError("Cant create CIImage from UIImage") }
         
-        // Run klasifikasi jenis pisang
+        // Run klasifikasi kematangan pisang
         let handler = VNImageRequestHandler(ciImage: ciImage)
-        DispatchQueue.global().async {
             do {
                 try handler.perform([request])
             } catch {
                 print(error)
             }
-        }
     }
 }
 extension DetailPageVC: customCellButtonDelegate{
