@@ -21,17 +21,24 @@ class RecipeCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
         
         self.RecipeView.layer.cornerRadius = 20
-        self.RecipeView.layer.borderColor = UIColor.gray.cgColor
-        self.RecipeView.layer.borderWidth = 1
-        // Initialization code
+
+        //code shadow
+        RecipeView.layer.shadowOpacity = 0.4
+        RecipeView.layer.shadowOffset = CGSize (width: 0, height: 4)
+        RecipeView.layer.shadowColor = #colorLiteral(red: 0.6575118303, green: 0.6163470745, blue: 0.4697498679, alpha: 1)
+        RecipeView.layer.shadowRadius = 0.5
         
-        
-        
+        //gradient code
         gl.colors = [UIColor.clear.cgColor, UIColor.black.cgColor]
         gl.locations = [0.0,1.0]
         gl.frame = blackOverlay.frame
         blackOverlay.layer.addSublayer(gl)
         blackOverlay.layer.cornerRadius = 20
         blackOverlay.clipsToBounds = true
+        
+        //image code
+        recipeImage.contentMode = .scaleAspectFill
+        recipeImage.layer.cornerRadius = 20
+        recipeImage.clipsToBounds = true
     }
 }
