@@ -95,7 +95,8 @@ class DetailPageVC: UITableViewController {
                 cell.backgroundColor = view.backgroundColor
                     cell.textLabel?.text = "\(typeBanana)"
             }
-            cell.textLabel?.font = UIFont.systemFont(ofSize: 16)
+            cell.textLabel?.font = UIFontMetrics.default.scaledFont(for: UIFont.customFont.body!)
+            cell.textLabel?.adjustsFontForContentSizeCategory = true
             return cell
 
         }
@@ -131,12 +132,16 @@ class DetailPageVC: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        if section == 2{
+            return 24
+        }
         return 16
     }
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
             let myLabel = UILabel()
             myLabel.frame = CGRect(x: view.layoutMargins.left, y: 0, width: 300, height: 18)
-            myLabel.font = UIFont.boldSystemFont(ofSize: 16)
+            myLabel.font = UIFontMetrics.default.scaledFont(for: UIFont.customFont.heading!)
+            myLabel.adjustsFontForContentSizeCategory = true
             myLabel.text = self.tableView(tableView, titleForHeaderInSection: section)
             let headerView = UIView()
             headerView.backgroundColor = UIColor.clear
@@ -249,7 +254,6 @@ extension DetailPageVC: customCellButtonDelegate{
     func didTapButton() {
         self.navigationController?.popViewControllerWithHandler {
             self.delegate?.modalDismissed()
-            print("aaaa")
         }
     }
 }
@@ -259,5 +263,11 @@ extension UINavigationController {
         CATransaction.setCompletionBlock(handler)
         self.popViewController(animated: true)
         CATransaction.commit()
+    }
+}
+extension UIFont{
+    struct customFont {
+        static let heading = UIFont(name: "SFCompactDisplay-Bold", size: 16)
+        static let body = UIFont(name: "SFCompactDisplay-Regular", size: 16)
     }
 }

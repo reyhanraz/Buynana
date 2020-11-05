@@ -9,11 +9,10 @@ import UIKit
 
 class CustomCellImageRecipe: UITableViewCell{
     @IBOutlet weak var imageTop: UIImageView!
-    
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        imageTop.roundCorners(corners: [.bottomLeft, .bottomRight], radius: 50)
-    }
+}
+
+class CustomCellIngredients: UITableViewCell{
+    @IBOutlet weak var lableIngredients: UILabel!
 }
 
 class CustomCellInstruction: UITableViewCell{
