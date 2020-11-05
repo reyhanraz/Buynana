@@ -19,10 +19,15 @@ class RecipeVC: UIViewController{
         
         navigationItem.searchController = searchController
         navigationItem.hidesSearchBarWhenScrolling = false
+        self.navigationController?.navigationBar.isHidden = false
         
         searchController.searchBar.delegate = self
         recipeCollectionView.delegate = self
         recipeCollectionView.dataSource = self
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.isHidden = false
     }
 }
 extension RecipeVC: UICollectionViewDelegate, UICollectionViewDataSource {

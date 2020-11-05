@@ -31,6 +31,7 @@
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fb1-MW-avy">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="210"/>
+                                            <color key="backgroundColor" red="0.8901960784313725" green="0.8666666666666667" blue="0.80392156862745101" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="210" id="qsn-3f-OKy"/>
                                             </constraints>
@@ -84,7 +85,7 @@
                                                             </constraints>
                                                         </imageView>
                                                     </subviews>
-                                                    <color key="backgroundColor" red="0.9876531959" green="0.96585875750000005" blue="0.90195178990000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <color key="backgroundColor" red="0.99149972200000003" green="0.96599751710000004" blue="0.8941074014" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="60" id="2sU-NM-HgI"/>
                                                         <constraint firstAttribute="trailing" secondItem="CSp-Bd-J6y" secondAttribute="trailing" constant="20" id="CSO-B0-Xhv"/>
@@ -102,7 +103,7 @@
                                                             <rect key="frame" x="20" y="0.0" width="374" height="15"/>
                                                         </progressView>
                                                     </subviews>
-                                                    <color key="backgroundColor" red="0.9876531959" green="0.96585875750000005" blue="0.90195178990000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <color key="backgroundColor" red="0.99149972200000003" green="0.96599751710000004" blue="0.8941074014" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <constraints>
                                                         <constraint firstAttribute="trailing" secondItem="ruV-1K-2Vv" secondAttribute="trailing" constant="20" id="8Ll-Ch-gfO"/>
                                                         <constraint firstItem="ruV-1K-2Vv" firstAttribute="centerX" secondItem="bJX-qv-K2i" secondAttribute="centerX" id="EdC-sf-aft"/>
@@ -140,7 +141,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
-                                                    <color key="backgroundColor" red="0.9876531959" green="0.96585875750000005" blue="0.90195178990000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <color key="backgroundColor" red="0.99149972200000003" green="0.96599751710000004" blue="0.8941074014" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <constraints>
                                                         <constraint firstAttribute="bottom" secondItem="X9t-Yd-wyN" secondAttribute="bottom" constant="13" id="D8e-Zl-egH"/>
                                                         <constraint firstItem="X9t-Yd-wyN" firstAttribute="leading" secondItem="xpS-C9-FMA" secondAttribute="leading" constant="20" id="Fry-U8-VeO"/>
@@ -153,7 +154,7 @@
                                                     </constraints>
                                                 </view>
                                             </subviews>
-                                            <color key="backgroundColor" red="0.9876531959" green="0.96585875750000005" blue="0.90195178990000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <color key="backgroundColor" red="0.99149972200000003" green="0.96599751710000004" blue="0.8941074014" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <constraints>
                                                 <constraint firstItem="bJX-qv-K2i" firstAttribute="top" secondItem="All-oQ-hKl" secondAttribute="bottom" constant="10" id="4zl-Ri-zvK"/>
                                                 <constraint firstItem="All-oQ-hKl" firstAttribute="leading" secondItem="nXo-pU-wPp" secondAttribute="leading" id="iim-jT-7uw"/>
@@ -162,7 +163,7 @@
                                             </constraints>
                                         </stackView>
                                     </subviews>
-                                    <color key="backgroundColor" red="0.9876531959" green="0.96585875750000005" blue="0.90195178990000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="backgroundColor" red="0.99149972200000003" green="0.96599751710000004" blue="0.8941074014" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <constraints>
                                         <constraint firstAttribute="bottom" secondItem="nXo-pU-wPp" secondAttribute="bottom" id="KZe-UF-r1N"/>
                                         <constraint firstItem="nXo-pU-wPp" firstAttribute="top" secondItem="J1M-v3-uXR" secondAttribute="top" constant="24" id="MBV-9l-xyG"/>
@@ -214,7 +215,7 @@
                                         <constraint firstItem="hPM-hT-0qY" firstAttribute="top" secondItem="1KR-g7-OMI" secondAttribute="top" id="p7K-ug-SGh"/>
                                     </constraints>
                                 </tableViewCellContentView>
-                                <color key="backgroundColor" red="0.9876531959" green="0.96585875750000005" blue="0.90195178990000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.99149972200000003" green="0.96599751710000004" blue="0.8941074014" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <outlet property="buttonNext" destination="hPM-hT-0qY" id="pof-SI-Eb4"/>
                                 </connections>

@@ -120,7 +120,7 @@ extension UIColor {
         static let customYellow = UIColor.init(netHex: 0xF6D275)
         static let customBlue = UIColor(netHex: 0xF6D275)
         static let customOrange = UIColor(netHex: 0xCD784D)
-        static let customWhite = UIColor(netHex: 0xFBF6E8)
+        static let customWhite = UIColor(netHex: 0xE3DDCD)
         static let progressGreen = UIColor(netHex: 0x92BD02)
         static let progressYellow = UIColor(netHex: 0xFFCB00)
         static let progressBrown = UIColor(netHex: 0x3D2C00)

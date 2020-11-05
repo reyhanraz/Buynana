@@ -39,6 +39,9 @@
                                         <rect key="frame" x="8" y="52" width="44" height="44"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <state key="normal" image="chevron-icon"/>
+                                        <connections>
+                                            <action selector="backButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qk6-nc-JxT"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TK7-Oc-3y1">
                                         <rect key="frame" x="364" y="50" width="41" height="48"/>
@@ -86,7 +89,6 @@
                         <outlet property="toggleCameraButton" destination="dNR-Vo-zfA" id="Tc7-9N-4bs"/>
                         <outlet property="toggleFlashButton" destination="TK7-Oc-3y1" id="pfk-k4-hgk"/>
                         <segue destination="qoK-V1-qDW" kind="show" identifier="toDetailPage" id="SC9-1H-o2Z"/>
-                        <segue destination="rjz-nv-V3D" kind="show" identifier="toHomePage" id="njd-7B-THw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -102,16 +104,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a5Z-Q2-WFf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="670" y="139"/>
-        </scene>
-        <!--HomeSB-->
-        <scene sceneID="OPJ-9m-meJ">
-            <objects>
-                <viewControllerPlaceholder storyboardIdentifier="HomeSB" storyboardName="HomeSB" id="rjz-nv-V3D" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="IjL-pT-fMr"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wzT-yJ-Yhg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="136" y="574"/>
         </scene>
     </scenes>
     <resources>

@@ -72,7 +72,7 @@ class DetailPageVC: UITableViewController {
             }else if ripeBanana == "Kematangan"{
                 cell.progressBar.setProgress((100-75)/100, animated: true)
             }else{
-                cell.progressBar.setProgress(0/100, animated: true)
+                cell.progressBar.setProgress(0.5, animated: true)
             }
             
             return cell

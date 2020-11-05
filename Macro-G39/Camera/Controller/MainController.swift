@@ -32,7 +32,7 @@ class MainController: UIViewController, UIImagePickerControllerDelegate & UINavi
             destination.image = sendImage
         }
         if segue.destination is HomeVC{
-            self.navigationController?.navigationBar.isHidden = true
+            self.navigationController?.popToRootViewController(animated: true)
         }
     }
 }
@@ -57,17 +57,10 @@ extension MainController {
 
 extension MainController {
     func toDetailPage(){
-//        DispatchQueue.main.asyncAfter(deadline: .now() + 3){          self.performSegue(withIdentifier: "toDetailPage", sender: nil)
-//        }
-        self.performSegue(withIdentifier: "toDetailPage", sender: nil)
+        performSegue(withIdentifier: "toDetailPage", sender: nil)
     }
-    
-    func toHomePage(){
-        self.performSegue(withIdentifier: "toHomePage", sender: nil)
-    }
-    
-    @IBAction func backButtonTapped(_ sender: Any){
-        toHomePage()
+    @IBAction func backButtonTapped(_ sender: UIButton){    navigationController?.popViewController(animated: true)
+        dismiss(animated: true, completion: nil)
     }
     
     @IBAction func toggleFlash(_ sender: UIButton) {
