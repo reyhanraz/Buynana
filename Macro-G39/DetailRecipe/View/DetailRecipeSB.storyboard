@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Tbi-wa-6WH">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
-
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -14,10 +11,10 @@
         <scene sceneID="7Rs-rv-8P1">
             <objects>
                 <tableViewController id="Tbi-wa-6WH" customClass="DetailRecipeVC" customModule="Macro_G39" customModuleProvider="target" sceneMemberID="viewController">
-
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="jH0-gY-SAn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.9876531959" green="0.96585875750000005" blue="0.90195178990000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="customCellImageRecipe" rowHeight="210" id="rLV-rw-gaL" customClass="CustomCellImageRecipe" customModule="Macro_G39" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="210"/>
@@ -30,7 +27,6 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="210"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="210" id="l2F-Vn-rCH"/>
-
                                             </constraints>
                                         </imageView>
                                     </subviews>
@@ -41,6 +37,7 @@
                                         <constraint firstItem="vTT-0J-oAq" firstAttribute="top" secondItem="77n-4f-zeg" secondAttribute="top" id="zQi-ME-SFg"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.9876531959" green="0.96585875750000005" blue="0.90195178990000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <outlet property="imageTop" destination="vTT-0J-oAq" id="DeD-Jf-x9E"/>
                                 </connections>
@@ -54,7 +51,6 @@
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6cp-4P-G0Y">
                                             <rect key="frame" x="20" y="5" width="374" height="32.5"/>
-
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xFe-hB-Pd8">
                                                     <rect key="frame" x="14" y="6" width="28" height="19.5"/>
@@ -65,21 +61,17 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vtA-bT-9Bu">
                                                     <rect key="frame" x="50" y="6" width="316" height="21.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="x8b-L1-Yd2"/>
-
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-
-                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-
+                                            <color key="backgroundColor" red="0.9876531959" green="0.96585875750000005" blue="0.90195178990000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <constraints>
                                                 <constraint firstItem="vtA-bT-9Bu" firstAttribute="leading" secondItem="xFe-hB-Pd8" secondAttribute="trailing" constant="8" id="IvC-EK-zfQ"/>
                                                 <constraint firstItem="xFe-hB-Pd8" firstAttribute="top" secondItem="6cp-4P-G0Y" secondAttribute="top" constant="6" id="Of6-BM-SC2"/>
@@ -90,6 +82,7 @@
                                             </constraints>
                                         </view>
                                     </subviews>
+                                    <color key="tintColor" red="0.9876531959" green="0.96585875750000005" blue="0.90195178990000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <constraints>
                                         <constraint firstAttribute="bottom" secondItem="6cp-4P-G0Y" secondAttribute="bottom" constant="5" id="7HA-sW-8ES"/>
                                         <constraint firstItem="6cp-4P-G0Y" firstAttribute="top" secondItem="Wlp-Wx-9Os" secondAttribute="top" constant="5" id="AvA-Rb-OI3"/>
@@ -97,6 +90,7 @@
                                         <constraint firstItem="6cp-4P-G0Y" firstAttribute="leading" secondItem="Wlp-Wx-9Os" secondAttribute="leading" constant="20" id="wIP-Ff-Lua"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.9876531959" green="0.96585875750000005" blue="0.90195178990000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <outlet property="containerView" destination="6cp-4P-G0Y" id="Oki-lX-ZY8"/>
                                     <outlet property="labelInstruction" destination="vtA-bT-9Bu" id="Egt-Ou-CpQ"/>
@@ -119,9 +113,5 @@
     </scenes>
     <resources>
         <image name="DSC08830" width="5618" height="3745"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-
     </resources>
 </document>

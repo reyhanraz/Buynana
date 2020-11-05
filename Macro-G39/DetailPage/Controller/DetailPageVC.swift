@@ -6,25 +6,39 @@
 //
 
 import UIKit
+import Vision
+import CoreML
 
 class DetailPageVC: UITableViewController {
     
+    let mainC = MainController()
     weak var delegate: ModalHandler!
     var image: UIImage?
+    
+    var typeAccuration:String = "--%"
+    var typeBanana:String = "--"
+    var ageAccuration:String = "--%"
+    var ageBanana:String = "--"
+    var ripeAccuration:String = "--%"
+    var ripeBanana:String = "--"
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.customColor.customWhite
+//        self.view.backgroundColor = UIColor.customColor.customWhite
 
         let image = UIImage(systemName: "house")
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: image, style: .plain, target: self, action: #selector(HomeTapped))
         self.navigationController?.navigationBar.tintColor = UIColor.customColor.customOrange
-        self.navigationController?.navigationBar.barTintColor = UIColor.customColor.customWhite
+
 
         self.navigationController?.navigationBar.isTranslucent = true
         self.title = "Detail Pisang"
         
         self.tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
+        
+        detectTypeImage()
+        detectAgeImage()
+        detectRipeImage()
     }
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.navigationBar.isHidden = false
@@ -44,7 +58,6 @@ class DetailPageVC: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.section == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "customCellImage") as! CustomCellImage
-            cell.contentView.backgroundColor = UIColor.customColor.customWhite
             cell.imageTop.image = self.image
             return cell
         }else if indexPath.section == 2{
@@ -55,30 +68,42 @@ class DetailPageVC: UITableViewController {
             cell.label2.text = "Matang"
             cell.label3.text = "Busuk"
             
-            cell.backgroundColor = UIColor.customColor.customWhite
+            if ripeBanana == "Mentah"{
+                cell.progressBar.setProgress(1, animated: true)
+            }else if ripeBanana == "Matang"{
+                cell.progressBar.setProgress(50/100, animated: true)
+            }else if ripeBanana == "Kematangan"{
+                cell.progressBar.setProgress((100-75)/100, animated: true)
+            }else{
+                cell.progressBar.setProgress(0/100, animated: true)
+            }
+            
             return cell
         }else if indexPath.section == 5{
             let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCellButton") as! customCellButton
             cell.delegate = self
-
-            cell.contentView.backgroundColor = UIColor.customColor.customWhite
             return cell
         } else{
             let cell = UITableViewCell()
-            cell.backgroundColor = UIColor.customColor.customWhite
             switch indexPath.section {
             case 3:
-                cell.textLabel?.text = "Pisang Ambon"
+                cell.backgroundColor = view.backgroundColor
+                DispatchQueue.main.async { [self] in
+                    cell.textLabel?.text = "\(ageBanana)"
+                }
             case 4:
+                cell.backgroundColor = view.backgroundColor
                 cell.textLabel?.text = "Simpan dalam Kulkas Selama 4 Hari"
             default:
-                cell.textLabel?.text = "Pisang Ambon"
+                cell.backgroundColor = view.backgroundColor
+                DispatchQueue.main.async { [self] in
+                    cell.textLabel?.text = "\(typeBanana)"
+                }
             }
             cell.textLabel?.font = UIFont.systemFont(ofSize: 16)
             return cell
 
         }
-        
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -129,6 +154,106 @@ class DetailPageVC: UITableViewController {
         return footer
     }
 
+}
+extension DetailPageVC{
+    func detectTypeImage() {
+        guard let model = try? VNCoreMLModel(for: JenisPisang1().model) else {
+            fatalError("Failed to load model")
+        }
+        
+        // Create a vision request
+        let request = VNCoreMLRequest(model: model) {[weak self] request, error in
+            guard let results = request.results as? [VNClassificationObservation],
+                let topResult = results.first
+                else {
+                    fatalError("Unexpected results")
+            }
+            
+            // Update the Main UI Thread with our result
+                print("\(Int(topResult.confidence * 100))% \(topResult.identifier)")
+                self?.typeAccuration = "\(Int(topResult.confidence * 100))%"
+                self?.typeBanana = "\(topResult.identifier)"
+        }
+        
+        guard let ciImage = CIImage(image: image!)
+            else { fatalError("Cant create CIImage from UIImage") }
+        
+        // Run klasifikasi jenis pisang
+        let handler = VNImageRequestHandler(ciImage: ciImage)
+        DispatchQueue.global().async {
+            do {
+                try handler.perform([request])
+            } catch {
+                print(error)
+            }
+        }
+    }
+    
+    func detectAgeImage() {
+        guard let model = try? VNCoreMLModel(for: UmurPisang1().model) else {
+            fatalError("Failed to load model")
+        }
+        
+        // Create a vision request
+        let request = VNCoreMLRequest(model: model) {[weak self] request, error in
+            guard let results = request.results as? [VNClassificationObservation],
+                let topResult = results.first
+                else {
+                    fatalError("Unexpected results")
+            }
+            
+            // Update the Main UI Thread with our result
+                print("\(Int(topResult.confidence * 100))% \(topResult.identifier)")
+                self?.ageAccuration = "\(Int(topResult.confidence * 100))%"
+                self?.ageBanana = "\(topResult.identifier)"
+        }
+        
+        guard let ciImage = CIImage(image: image!)
+            else { fatalError("Cant create CIImage from UIImage") }
+        
+        // Run klasifikasi jenis pisang
+        let handler = VNImageRequestHandler(ciImage: ciImage)
+        DispatchQueue.global().async {
+            do {
+                try handler.perform([request])
+            } catch {
+                print(error)
+            }
+        }
+    }
+    
+    func detectRipeImage() {
+        guard let model = try? VNCoreMLModel(for: KematanganPisang1().model) else {
+            fatalError("Failed to load model")
+        }
+        
+        // Create a vision request
+        let request = VNCoreMLRequest(model: model) {[weak self] request, error in
+            guard let results = request.results as? [VNClassificationObservation],
+                let topResult = results.first
+                else {
+                    fatalError("Unexpected results")
+            }
+            
+            // Update the Main UI Thread with our result
+                print("\(Int(topResult.confidence * 100))% \(topResult.identifier)")
+                self?.ageAccuration = "\(Int(topResult.confidence * 100))%"
+                self?.ageBanana = "\(topResult.identifier)"
+        }
+        
+        guard let ciImage = CIImage(image: image!)
+            else { fatalError("Cant create CIImage from UIImage") }
+        
+        // Run klasifikasi jenis pisang
+        let handler = VNImageRequestHandler(ciImage: ciImage)
+        DispatchQueue.global().async {
+            do {
+                try handler.perform([request])
+            } catch {
+                print(error)
+            }
+        }
+    }
 }
 extension DetailPageVC: customCellButtonDelegate{
     

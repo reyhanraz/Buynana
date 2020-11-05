@@ -9,6 +9,7 @@ import UIKit
 
 class HomeVC: UIViewController {
 
+    @IBOutlet weak var cameraButton: UIButton!
     @IBOutlet weak var homeCollectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,11 +39,11 @@ class HomeVC: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let dest = segue.destination as? RecipeVC {
+        if segue.destination is RecipeVC {
             self.navigationController?.navigationBar.isHidden = false
         }
-        if let dest = segue.destination as? MainController {
-            self.navigationController?.navigationBar.isHidden = false
+        if segue.destination is MainController {
+            self.navigationController?.navigationBar.isHidden = true
         }
     }
 

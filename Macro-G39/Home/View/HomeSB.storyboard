@@ -5,7 +5,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -28,7 +27,7 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="8ZL-em-zan">
                                 <rect key="frame" x="16" y="567" width="359" height="160"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" red="0.9876531959" green="0.96585875750000005" blue="0.90195178990000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="24" minimumInteritemSpacing="24" id="TX6-ic-PaS">
                                     <size key="itemSize" width="195" height="145"/>
                                     <size key="estimatedItemSize" width="195" height="145"/>
@@ -64,22 +63,22 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xEG-rQ-Cd4">
-                                <rect key="frame" x="22" y="124" width="331" height="360"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xEG-rQ-Cd4">
+                                <rect key="frame" x="1" y="102" width="374" height="404"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" image="DeteksiPisangButton"/>
                                 <connections>
                                     <action selector="goToCameraPage:" destination="PUw-yW-RSh" eventType="touchUpInside" id="tyg-Bp-cWl"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Oha-yE-zoy"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.98380786180000002" green="0.96571832899999999" blue="0.90979623789999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                     <navigationItem key="navigationItem" id="hp9-TM-kle"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
+                        <outlet property="cameraButton" destination="xEG-rQ-Cd4" id="EXP-dI-Shy"/>
                         <outlet property="homeCollectionView" destination="8ZL-em-zan" id="i4J-gh-yGJ"/>
                         <segue destination="0UZ-Ei-Czu" kind="show" identifier="segueToRecipe" id="oB0-bD-kjY"/>
                         <segue destination="WyH-aV-RE8" kind="show" identifier="segueToCamera" id="4Vt-AN-QGE"/>
@@ -117,6 +116,8 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="wsC-ek-UTf">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.9876531959" green="0.96585875750000005" blue="0.90195178990000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="barTintColor" red="0.9876531959" green="0.96585875750000005" blue="0.90195178990000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -129,8 +130,6 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <image name="DeteksiPisangButton" width="374" height="404"/>
     </resources>
 </document>

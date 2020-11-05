@@ -36,6 +36,7 @@
 		AE1B8BAD2550BCB000D1DC40 /* Camera.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE1B8BAA2550BCB000D1DC40 /* Camera.storyboard */; };
 		AE1B8BB52550BFCE00D1DC40 /* JenisPisang1.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = AE1B8BB42550BFCE00D1DC40 /* JenisPisang1.mlmodel */; };
 		AE1B8BBD2550E89700D1DC40 /* UmurPisang1.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = AE1B8BBC2550E89700D1DC40 /* UmurPisang1.mlmodel */; };
+		AE680ED025538AD0008FAA2C /* KematanganPisang1.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = AE680ECF25538AD0008FAA2C /* KematanganPisang1.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +92,7 @@
 		AE1B8BAA2550BCB000D1DC40 /* Camera.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Camera.storyboard; sourceTree = "<group>"; };
 		AE1B8BB42550BFCE00D1DC40 /* JenisPisang1.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = JenisPisang1.mlmodel; sourceTree = "<group>"; };
 		AE1B8BBC2550E89700D1DC40 /* UmurPisang1.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = UmurPisang1.mlmodel; sourceTree = "<group>"; };
+		AE680ECF25538AD0008FAA2C /* KematanganPisang1.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = KematanganPisang1.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +143,7 @@
 		4B6F0831252B00630054C1FA /* Macro-G39 */ = {
 			isa = PBXGroup;
 			children = (
+				AE680ECF25538AD0008FAA2C /* KematanganPisang1.mlmodel */,
 				AE1B8BBC2550E89700D1DC40 /* UmurPisang1.mlmodel */,
 				AE1B8BB42550BFCE00D1DC40 /* JenisPisang1.mlmodel */,
 				4B6F0832252B00630054C1FA /* AppDelegate.swift */,
@@ -489,6 +492,7 @@
 				4B6F0835252B00630054C1FA /* SceneDelegate.swift in Sources */,
 				946036B125464ED900BF9072 /* HomeCollectionViewCell.swift in Sources */,
 				4BE0CF1F2541CA3E00142FFA /* DetailRecipeVC.swift in Sources */,
+				AE680ED025538AD0008FAA2C /* KematanganPisang1.mlmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

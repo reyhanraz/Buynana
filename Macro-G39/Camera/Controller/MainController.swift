@@ -8,13 +8,9 @@
 
 import UIKit
 import Photos
-import Vision
-import CoreML
 
 class MainController: UIViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
     var sendImage:UIImage = #imageLiteral(resourceName: "DSC08830")
-    var typeAccuration:String = "100%"
-    var typeBanana:String = "Pisang"
     
     @IBOutlet fileprivate var captureButton: UIButton!
     
@@ -34,6 +30,9 @@ class MainController: UIViewController, UIImagePickerControllerDelegate & UINavi
         if let destination = segue.destination as? DetailPageVC{
             destination.delegate = self
             destination.image = sendImage
+        }
+        if segue.destination is HomeVC{
+            self.navigationController?.navigationBar.isHidden = true
         }
     }
 }
@@ -58,44 +57,17 @@ extension MainController {
 
 extension MainController {
     func toDetailPage(){
-        detectTypeImage()
-        performSegue(withIdentifier: "toDetailPage", sender: nil)
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 3){          self.performSegue(withIdentifier: "toDetailPage", sender: nil)
+//        }
+        self.performSegue(withIdentifier: "toDetailPage", sender: nil)
     }
     
-    func detectTypeImage() {
-        guard let model = try? VNCoreMLModel(for: JenisPisang1().model) else {
-            fatalError("Failed to load model")
-        }
-        
-        // Create a vision request
-        let request = VNCoreMLRequest(model: model) {[weak self] request, error in
-            guard let results = request.results as? [VNClassificationObservation],
-                let topResult = results.first
-                else {
-                    fatalError("Unexpected results")
-            }
-            
-            // Update the Main UI Thread with our result
-            DispatchQueue.main.async { [weak self] in
-                print("\(Int(topResult.confidence * 100))% \(topResult.identifier)")
-                self?.typeAccuration = "\(Int(topResult.confidence * 100))%"
-                self?.typeBanana = "\(topResult.identifier)"
-            }
-        }
-        
-        guard let ciImage = CIImage(image: self.sendImage)
-            else { fatalError("Cant create CIImage from UIImage") }
-        
-        // Run klasifikasi jenis pisang
-        let handler = VNImageRequestHandler(ciImage: ciImage)
-        DispatchQueue.global().async {
-            do {
-                try handler.perform([request])
-            } catch {
-                print(error)
-            }
-        }
-        
+    func toHomePage(){
+        self.performSegue(withIdentifier: "toHomePage", sender: nil)
+    }
+    
+    @IBAction func backButtonTapped(_ sender: Any){
+        toHomePage()
     }
     
     @IBAction func toggleFlash(_ sender: UIButton) {
@@ -139,8 +111,7 @@ extension MainController {
             imagePicker.delegate = self
             imagePicker.sourceType = UIImagePickerController.SourceType.photoLibrary
             imagePicker.allowsEditing = true
-            self.present(imagePicker, animated: true, completion: toDetailPage)
-            
+            self.present(imagePicker, animated: true, completion: nil)
         }
     }
     
@@ -148,9 +119,8 @@ extension MainController {
         if let pickedImage = info[UIImagePickerController.InfoKey.originalImage.rawValue] as? UIImage {
             self.sendImage = pickedImage
         }
-        picker.dismiss(animated: true, completion: nil)
-        
-        
+        picker.dismiss(animated: true, completion: toDetailPage)
+    
     }
     
     @IBAction func captureImage(_ sender: UIButton) {
@@ -162,10 +132,11 @@ extension MainController {
             
             try? PHPhotoLibrary.shared().performChangesAndWait {
                 PHAssetChangeRequest.creationRequestForAsset(from: image)
+                self.sendImage = image
+                self.toDetailPage()
             }
-            self.sendImage = image
         }
-        toDetailPage()
+        
     }
 }
 extension MainController: ModalHandler{
