@@ -10,7 +10,7 @@ import UIKit
 import Photos
 
 class MainController: UIViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
-    var sendImage:UIImage = #imageLiteral(resourceName: "DSC08830")
+    public var sendImage:UIImage = #imageLiteral(resourceName: "DSC08830")
     
     @IBOutlet fileprivate var captureButton: UIButton!
     
@@ -99,20 +99,18 @@ extension MainController {
     }
     
     @IBAction func takeImage(_ sender: UIButton){
-        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerController.SourceType.photoLibrary) {
-            let imagePicker = UIImagePickerController()
-            imagePicker.delegate = self
-            imagePicker.sourceType = UIImagePickerController.SourceType.photoLibrary
-            imagePicker.allowsEditing = true
-            self.present(imagePicker, animated: true, completion: nil)
-        }
+        let imagePicker = UIImagePickerController()
+        imagePicker.delegate = self
+        imagePicker.sourceType = .photoLibrary
+        imagePicker.allowsEditing = true
+        present(imagePicker, animated: true, completion: nil)
     }
     
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        if let pickedImage = info[UIImagePickerController.InfoKey.originalImage.rawValue] as? UIImage {
-            self.sendImage = pickedImage
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let pickedImage = info[UIImagePickerController.InfoKey(rawValue: UIImagePickerController.InfoKey.editedImage.rawValue)] as? UIImage {
+            sendImage = pickedImage
         }
-        picker.dismiss(animated: true, completion: toDetailPage)
+        picker.dismiss(animated: true, completion: self.toDetailPage)
     
     }
     
