@@ -48,6 +48,9 @@ class HomeVC: UIViewController {
         if segue.destination is MainController {
             self.navigationController?.navigationBar.isHidden = true
         }
+        if let dest = segue.destination as? DetailRecipeVC{
+            dest.Resep = (sender as! Resep)
+        }
     }
 
 }
@@ -65,7 +68,8 @@ extension HomeVC: UICollectionViewDataSource, UICollectionViewDelegate {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "segueToDetail", sender: nil)
+        let resep = listResep[indexPath.row]
+        performSegue(withIdentifier: "segueToDetail", sender: resep)
     }
     
 }

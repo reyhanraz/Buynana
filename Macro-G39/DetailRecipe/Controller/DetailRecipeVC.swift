@@ -11,7 +11,6 @@ class DetailRecipeVC: UITableViewController {
 
     var Resep: Resep?
     override func viewDidLoad() {
-        Resep = listResep[10]
         self.view.backgroundColor = UIColor.customColor.customWhite
         let image = UIImage(systemName: "house")
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: image, style: .plain, target: self, action: #selector(HomeTapped))
@@ -66,7 +65,8 @@ class DetailRecipeVC: UITableViewController {
         if indexPath.section == 0{
             let cell = tableView.dequeueReusableCell(withIdentifier: "customCellImageRecipe") as! CustomCellImageRecipe
             cell.imageView?.image = UIImage(named: Resep!.gambarRecipe)
-            
+            cell.imageView?.contentMode = .scaleAspectFill
+            cell.backgroundColor = UIColor.customColor.customWhite
             return cell
         }else if indexPath.section == 3{
             let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCellInstruction") as! CustomCellInstruction
@@ -96,10 +96,7 @@ class DetailRecipeVC: UITableViewController {
         }
     }
     
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if indexPath.section == 2{
-            return 30
-        }
+    override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
     }
   

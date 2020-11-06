@@ -29,7 +29,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="210"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DSC08830" translatesAutoresizingMaskIntoConstraints="NO" id="vTT-0J-oAq">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vTT-0J-oAq">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="210"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="210" id="l2F-Vn-rCH"/>
@@ -57,7 +57,6 @@
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6cp-4P-G0Y">
                                             <rect key="frame" x="20" y="4" width="374" height="32.5"/>
-
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xFe-hB-Pd8">
                                                     <rect key="frame" x="14" y="6.5" width="20" height="19.5"/>
@@ -70,7 +69,6 @@
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vtA-bT-9Bu">
                                                     <rect key="frame" x="42" y="6" width="324" height="21.5"/>
-
                                                     <constraints>
                                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="x8b-L1-Yd2"/>
                                                     </constraints>
@@ -105,15 +103,15 @@
                                     <outlet property="labelNumber" destination="xFe-hB-Pd8" id="vAJ-Wv-Tho"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CustomCellIngredients" rowHeight="21" id="i7a-XF-MiM" customClass="CustomCellIngredients" customModule="Macro_G39" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="278.5" width="414" height="21"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CustomCellIngredients" id="i7a-XF-MiM" customClass="CustomCellIngredients" customModule="Macro_G39" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="278.5" width="414" height="21.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="i7a-XF-MiM" id="oXf-WB-T7w">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="21"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="21.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oaH-Oc-J4U">
-                                            <rect key="frame" x="62" y="0.0" width="332" height="21"/>
+                                            <rect key="frame" x="62" y="0.0" width="332" height="21.5"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="Xv4-wd-axO"/>
                                             </constraints>
@@ -122,7 +120,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="•" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ht8-HX-bzr">
-                                            <rect key="frame" x="34" y="0.0" width="20" height="21"/>
+                                            <rect key="frame" x="34" y="0.0" width="20" height="21.5"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="HsM-NY-vnh"/>
                                                 <constraint firstAttribute="width" constant="20" id="mn0-bq-9Aa"/>
@@ -161,8 +159,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="DSC08830" width="5618" height="3745"/>
-
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

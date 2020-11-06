@@ -47,7 +47,14 @@ extension RecipeVC: UICollectionViewDelegate, UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "toDetailRecipe", sender: self)
+        let resep = listResep[indexPath.row]
+        performSegue(withIdentifier: "toDetailRecipe", sender: resep)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let dest = segue.destination as? DetailRecipeVC{
+            dest.Resep = (sender as! Resep)
+        }
     }
     
     

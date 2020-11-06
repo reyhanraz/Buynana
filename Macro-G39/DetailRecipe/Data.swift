@@ -101,7 +101,7 @@ let listResep = [
         "Masukkan ke loyang, hias dengan kenari jika ingin",
         "Panggang dengan suhu 180 derajat celsius selama 1 jam atau sampai matang"
     ], source: "https://cookpad.com/id/resep/9504581-apple-banana-cake?via=search&search_term=pisang%20ambon%20terlalu%20matang"),
-    Resep(jenisPisang: .General, tingkatKematangan: .Mengkal, namaRecipe: "Keripik Pisang", description: "Makanan yang terbuat dari pisang yang diiris tipis kemudian digoreng. biasanya rasanya adalah asin dengan aroma bawang yang gurih ", gambarRecipe: "lumpia", bahanRecipe: [
+    Resep(jenisPisang: .General, tingkatKematangan: .Mengkal, namaRecipe: "Keripik Pisang", description: "Makanan yang terbuat dari pisang yang diiris tipis kemudian digoreng. biasanya rasanya adalah asin dengan aroma bawang yang gurih ", gambarRecipe: "", bahanRecipe: [
     "10 buah pisang mengkal, iris tipis", "Minyak goreng", "5 sdm air hangat", "3 sdm gula pasir", "1/4 sdt garam"
     ], instruksiRecipe: [
     "Kupas pisang raja",
@@ -122,7 +122,7 @@ let listResep = [
     ], instruksiRecipe: [
     "Campur tepung terigu, gula halus, margarin dan vanili","Tuangi air sedikit demi sedikit sambil di uleni sampai kalis","Giling adonan sampai ketebelan yang diinginkan. Lilitkan adonan pada pisang","Goreng adonan pada minyak yang belum terlalu panas sampai coklat ke emasan"
     ], source: ""),
-    Resep(jenisPisang: .Uli, tingkatKematangan: .Matang, namaRecipe: "Bolu Marmer Pisang", description: "Cemilan manis legendaris Indonesia dengan berbahan dasar tepung dan campuran pisang yang memiliki tekstur yang padat dan aroma yang harum.", gambarRecipe: "Bolu_marmer", bahanRecipe: [
+    Resep(jenisPisang: .Uli, tingkatKematangan: .Matang, namaRecipe: "Bolu Marmer Pisang", description: "Cemilan manis legendaris Indonesia dengan berbahan dasar tepung dan campuran pisang yang memiliki tekstur yang padat dan aroma yang harum.", gambarRecipe: "Bolu marmer", bahanRecipe: [
         "250 gr tepung terigu", "250 gr pisang", "3 buah telur", "150 gr gula pasir", "110 ml minyak sayur", "110 ml susu (susu bubuk + air)", "1 sdt baking powder", "1/2 sdt baking soda", "1/2 bks vanili bubuk", "pasta coklat"
     ], instruksiRecipe: [
     "Panaskan oven. Selama itu siapkan loyang yang diolesi mentega dan taburan tepung terigu", "Mixer telur dan gula dengan kecepatan tinggi sampai putih mengental", "Masukan tepung terigu yang sudah ditambahi baking powder, baking soda, vanili. Matikan mixer", "Masukan ke dalam adonan, campuran minyak sayur, susu dan pisang yang sudah dilumatkan. aduk rata dengan spatula", "Tuangkan adonan ke dalam loyang dan masukan ke oven dan panggang", "Sebelum benar-benar matang, berikan pasta coklat ke dalam adonan dan panggang hingga matang"
@@ -141,7 +141,7 @@ let listResep = [
     ], instruksiRecipe: [
     "Campur semua bahan (tepung beras, tepung maizena, nutrijel plain, gula, vanili, air, 2 daun pandan, garam) lalu panaskan diatas kompor sampai menjadi bubur","Bersihkan daun pisang, potong kecil2 pisang dan daun pandan","Panaskan kukusan, letakan adonan tepung yang sudah menjadi bubur ke daun pisang, tambahkan pisang, kemudian tutup pisang dengan adonan dan beri potongan daun pandan","Bungkus nagasari dan kukus dalam waktu 30 menit"
     ], source: ""),
-    Resep(jenisPisang: .Uli, tingkatKematangan: .Matang, namaRecipe: "Kolak Pisang", description: "Salah satu jenis minuman khas Indonesia yang dapat dijadikan hidangan penutup berbahan dasar pisang yang direbus dengan santan dan gula aren.", gambarRecipe: "kolak_bali", bahanRecipe: [
+    Resep(jenisPisang: .Uli, tingkatKematangan: .Matang, namaRecipe: "Kolak Pisang", description: "Salah satu jenis minuman khas Indonesia yang dapat dijadikan hidangan penutup berbahan dasar pisang yang direbus dengan santan dan gula aren.", gambarRecipe: "Kolak pisang", bahanRecipe: [
         "2 sisir pisang",
           "3-4 sdm gula merah yang sudah di iris",
           "3 sdm gula pasir",
@@ -194,7 +194,7 @@ let listResep = [
         "Lalu adonan yang sudah matang celupkan kedalam tepung terigu, lalu celupkan ke telur, Setelah itu celupkan ke tepung roti",
         "Goreng hingga matang"
     ], source: "https://tinyurl.com/resepPisangNugget"),
-    Resep(jenisPisang: .Uli, tingkatKematangan: .Matang, namaRecipe: "Puding Susu Pisang", description: "Salah satu hidangan penutup  bertekstur lembut, yang dapat dibuat dengan berbagai macam rasa, salah satunya yaitu dengan kombinasi rasa susu dan pisang.", gambarRecipe: "", bahanRecipe: [
+    Resep(jenisPisang: .Uli, tingkatKematangan: .Matang, namaRecipe: "Puding Susu Pisang", description: "Salah satu hidangan penutup  bertekstur lembut, yang dapat dibuat dengan berbagai macam rasa, salah satunya yaitu dengan kombinasi rasa susu dan pisang.", gambarRecipe: "Puding susu pisang", bahanRecipe: [
         "5 buah pisang",
           "1 bungkus agar plain",
           "3 sdm gula pasir",
@@ -211,17 +211,17 @@ let listResep = [
         "Masukan potongan pisang. Aduk hingga mendidih.",
         "Puding siap untuk dicetak"
     ], source: ""),
-    Resep(jenisPisang: .Uli, tingkatKematangan: .Kematengan, namaRecipe: "Sale Pisang", description: "Salah satu cemilan khas Indonesia berbahan dasar pisang, yang memiliki citarasa manis dan renyah", gambarRecipe: "", bahanRecipe: [
+    Resep(jenisPisang: .Uli, tingkatKematangan: .Kematengan, namaRecipe: "Sale Pisang", description: "Salah satu cemilan khas Indonesia berbahan dasar pisang, yang memiliki citarasa manis dan renyah", gambarRecipe: "sale_pisang", bahanRecipe: [
         "1 sisir pisang", "secukupnya tepung beras", "secukupnya tepung terigu", "secukupnya air", "sejumput garam"
     ], instruksiRecipe: [
     "Iris pisang dan jemur kurang lebih 3-7 hari hingga pisang menghitam", "Siapkan adonan tepung yaitu tepung beras, tepung terigu dan garam. Masukan air dan aduk hingga mengental","Celupkan pisang ke dalam adonan tepung","Goreng dengan api sedang. Sale pisang siap disajikan",
     ], source: ""),
-    Resep(jenisPisang: .Tanduk, tingkatKematangan: .Matang, namaRecipe: "Bola-bola Pisang", description: "Cemilan berbahan dasar pisang yang sudah dikukus, lalu dibentuk-bentuk seperti bola dan dapat dikombinasikan dengan topping didalam ataupun saat disajikan.", gambarRecipe: "", bahanRecipe: [
+    Resep(jenisPisang: .Tanduk, tingkatKematangan: .Matang, namaRecipe: "Bola-bola Pisang", description: "Cemilan berbahan dasar pisang yang sudah dikukus, lalu dibentuk-bentuk seperti bola dan dapat dikombinasikan dengan topping didalam ataupun saat disajikan.", gambarRecipe: "Bola bola pisang", bahanRecipe: [
         "600 gr pisang","3 sdm gula pasir","8 sdm tepung terigu","1/2 sdt vanili bubuk","secukupnya tepung panir","minyak goreng"
     ], instruksiRecipe: [
     "Lumatkan pisang", "Campurkan semua bahan dan aduk rata", "Bulatkan adonan dan goreng hingga kuning kecoklatan"
     ], source: "https://cookpad.com/id/resep/13605247-bola-bola-pisang-tanduk?via=search&search_term=bola bola pisang tanduk"),
-    Resep(jenisPisang: .Kepok, tingkatKematangan: .Mengkal, namaRecipe: "Puding Pisang Kepok", description: "Salah satu hidangan penutup bertekstur lembut, dibuat dengan rasa pisang kepok yang memiliki rasa dan aroma yang sangat khas", gambarRecipe: "", bahanRecipe: [
+    Resep(jenisPisang: .Kepok, tingkatKematangan: .Mengkal, namaRecipe: "Puding Pisang Kepok", description: "Salah satu hidangan penutup bertekstur lembut, dibuat dengan rasa pisang kepok yang memiliki rasa dan aroma yang sangat khas", gambarRecipe: "Puding Pisang", bahanRecipe: [
         "6 buah pisang kepok mentah",
           "2 butir telur",
           "6 sdm susu bubuk",
@@ -243,7 +243,7 @@ let listResep = [
         "Kukus adonan 30 menit hingga matang",
         "Terakhir, adonan siap disajikan setelah dipotong sesuai selera."
     ], source: "https://bp-guide.id/AXjTsA5G#article_element_129317"),
-    Resep(jenisPisang: .Kepok, tingkatKematangan: .Matang, namaRecipe: "Es Krim Pisang Kepok", description: "Salah satu hidangan penutup yang paling banyak disukai oleh semua orang dan memiliki berbagai varian rasa, salah satunya pisang yang memiliki rasa manis dan aroma yang kuat.", gambarRecipe: "", bahanRecipe: [
+    Resep(jenisPisang: .Kepok, tingkatKematangan: .Matang, namaRecipe: "Es Krim Pisang Kepok", description: "Salah satu hidangan penutup yang paling banyak disukai oleh semua orang dan memiliki berbagai varian rasa, salah satunya pisang yang memiliki rasa manis dan aroma yang kuat.", gambarRecipe: "Es krim pisang", bahanRecipe: [
         "5 buah pisang kepok ukuran besar yang sudah benar2 matang",
           "300 ml air mineral",
           "3 sdm susu bubuk",
@@ -274,7 +274,7 @@ let listResep = [
         "Masukkan pisang yang sudah dipanggang/bakar, aduk pisang sampai tercampur rata.",
         "Angkat dan sajikan."
     ], source: "https://brilicious.brilio.net/masak-yuk/25-resep-camilan-dari-pisang-enak-dan-mudah-dibuat-di-rumah-190802h.html"),
-    Resep(jenisPisang: .Kepok, tingkatKematangan: .Matang, namaRecipe: "Muffin Pisang Kepok", description: "Kue panggang yang biasanya berukuran kecil dengan bahan dasar tepung terigu tetapi memiliki campuran pisang supaya memiliki cita rasa yang lebih nikmat", gambarRecipe: "", bahanRecipe: [
+    Resep(jenisPisang: .Kepok, tingkatKematangan: .Matang, namaRecipe: "Muffin Pisang Kepok", description: "Kue panggang yang biasanya berukuran kecil dengan bahan dasar tepung terigu tetapi memiliki campuran pisang supaya memiliki cita rasa yang lebih nikmat", gambarRecipe: "banana muffin", bahanRecipe: [
         "10 pisang kepok ukuran sedang",
           "2 butir telur",
           "100 gr gula palem",
@@ -293,24 +293,24 @@ let listResep = [
         "Panggang di oven tangkring suhu 170 derajat, api bawah 15 menit, dan api atas 15 menit",
         "Muffin siap disajikan!"
     ], source: "https://cookpad.com/id/resep/13807159-muffin-pisang-kepok"),
-    Resep(jenisPisang: .Kepok, tingkatKematangan: .Kematengan, namaRecipe: "Roti Pisang Banjar", description: "Roti pisang khas banjarmasin tetapi teksturnya tidak seperti roti, namun memiliki rasa manis dan legit.", gambarRecipe: "", bahanRecipe: [
-        "5 buah pisang kepok kematangan",
-        "400 ml santan kental",
-        "200 gr tepung segitiga biru",
-        "75gr - 100 gr gula pasir (sesuaikan dengan selera)",
-        "2 butir telur",
-        "50 gr margarin yang dicairkan",
-        "1/2 sdt vanilli",
-        "1/2 sdt garam",
-        "Secukupnya margarin, untuk olesan loyang"
-    ], instruksiRecipe: [
-    "Hancurkan pisang bersama gula pasir menggunakan gelas dibuat kasar, tidak terlalu lumat",
-    "Campurkan sisa bahan2 lain hingga menjadi satu",
-    "Panaskan loyang yang sudah diolesi margarin",
-    "Tuang adonan ke dalam loyang",
-    "Gulung adonan kemudian angkat",
-    "Tata di atas piring dan sajikan"
-    ], source: "https://cookpad.com/id/resep/731084-roti-pisang-banjar"),
+//    Resep(jenisPisang: .Kepok, tingkatKematangan: .Kematengan, namaRecipe: "Roti Pisang Banjar", description: "Roti pisang khas banjarmasin tetapi teksturnya tidak seperti roti, namun memiliki rasa manis dan legit.", gambarRecipe: "", bahanRecipe: [
+//        "5 buah pisang kepok kematangan",
+//        "400 ml santan kental",
+//        "200 gr tepung segitiga biru",
+//        "75gr - 100 gr gula pasir (sesuaikan dengan selera)",
+//        "2 butir telur",
+//        "50 gr margarin yang dicairkan",
+//        "1/2 sdt vanilli",
+//        "1/2 sdt garam",
+//        "Secukupnya margarin, untuk olesan loyang"
+//    ], instruksiRecipe: [
+//    "Hancurkan pisang bersama gula pasir menggunakan gelas dibuat kasar, tidak terlalu lumat",
+//    "Campurkan sisa bahan2 lain hingga menjadi satu",
+//    "Panaskan loyang yang sudah diolesi margarin",
+//    "Tuang adonan ke dalam loyang",
+//    "Gulung adonan kemudian angkat",
+//    "Tata di atas piring dan sajikan"
+//    ], source: "https://cookpad.com/id/resep/731084-roti-pisang-banjar"),
     Resep(jenisPisang: .Kepok, tingkatKematangan: .Kematengan, namaRecipe: "Godok-godok Pisang", description: "Makanan khas Rejang yang berupa penganan dengan komposisi terdiri dari pisang yang dicampur dengan terigu dan daging buah kelapa yang telah diparut.", gambarRecipe: "", bahanRecipe: [
         "4 buah Pisang",
           "3 sdm Kelapa Parut (optional)",
@@ -324,7 +324,7 @@ let listResep = [
         "Panaskan minyak dengan api sedang. Ambil satu sendok makan adonan godok-godok dan goreng hingga kuning kecokelatan.",
         "Angkat dan tiriskan. Sajikan godok-godok pisang selagi hangat!",
     ], source: "https://m.caping.co.id/news/detailop/7854614?utm_content=1036127558&utm_campaign=f7f0e1796cec814478480b770ecd6e1e"),
-    Resep(jenisPisang: .Kepok, tingkatKematangan: .Kematengan, namaRecipe: "Kolak Pisang Bali", description: "Tidak seperti kolak pada umumnya, kolak pisang bali tidak berkuah namun sangat kental.", gambarRecipe: "", bahanRecipe: [
+    Resep(jenisPisang: .Kepok, tingkatKematangan: .Kematengan, namaRecipe: "Kolak Pisang Bali", description: "Tidak seperti kolak pada umumnya, kolak pisang bali tidak berkuah namun sangat kental.", gambarRecipe: "kolak_bali", bahanRecipe: [
         "1 sisir pisang raja yang Masih mengkal",
           "250gr Gula merah",
           "2sdm gula pasir",
@@ -363,7 +363,7 @@ let listResep = [
         "Jika sudah mengental, saring dan dinginkan",
         "Pisang goreng kembung yang sudah matang diberi topping gula merah diatasnya.",
     ], source: ""),
-    Resep(jenisPisang: .Kepok, tingkatKematangan: .Kematengan, namaRecipe: "Smoothie", description: " Minuman seperti jus namun diblender tidak menggunakan air dan penambahan susu yang menjadi ciri khas.", gambarRecipe: "", bahanRecipe: [
+    Resep(jenisPisang: .Kepok, tingkatKematangan: .Kematengan, namaRecipe: "Smoothie", description: " Minuman seperti jus namun diblender tidak menggunakan air dan penambahan susu yang menjadi ciri khas.", gambarRecipe: "banana smoothie", bahanRecipe: [
         "2 pisang raja terlalu matang",
           "100gr stoberi",
           "1 gelas susu cair",
