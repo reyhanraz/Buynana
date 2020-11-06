@@ -9,7 +9,6 @@ import UIKit
 
 class HomeVC: UIViewController {
 
-    @IBOutlet weak var cameraButton: UIButton!
     @IBOutlet weak var homeCollectionView: UICollectionView!
     @IBOutlet weak var cameraButton: UIButton!
     override func viewDidLoad() {
