@@ -7,19 +7,19 @@
 
 import Foundation
 
-enum jenisPisang {
-    case Ambon
-    case Uli
-    case Tanduk
-    case Kepok
-    case General
+enum jenisPisang: String{
+    case Ambon = "Ambon"
+    case Uli = "Uli"
+    case Tanduk = "Tanduk"
+    case Kepok = "Kepok"
+    case General = "General"
 }
 
-enum tingkatKematangan{
-    case Mengkal
-    case Matang
-    case Kematengan
-    case General
+enum tingkatKematangan: String{
+    case Mengkal = "Mengkal"
+    case Matang = "Matang"
+    case Kematengan = "Kematengan"
+    case General = "General"
 }
 
 struct Resep {
@@ -34,7 +34,7 @@ struct Resep {
 }
 
 let listResep = [
-    Resep(jenisPisang: .Ambon, tingkatKematangan: .Matang, namaRecipe: "Banana Cheese Cake Lumer", description: "Cemilan dengan resep sederhana, pisang yang berpadu dengan keju dan regal, lumer di mulut!", gambarRecipe: "", bahanRecipe: [
+    Resep(jenisPisang: .Ambon, tingkatKematangan: .Matang, namaRecipe: "Banana Cheese Cake Lumer", description: "Cemilan dengan resep sederhana, pisang yang berpadu dengan keju dan regal, lumer di mulut!", gambarRecipe: "banana_cheesecake_lumer", bahanRecipe: [
             "3buah pisang ambon yang telah dipotong-potong",
             "100 gram keju",
             "1/2 bungkus biskuit regal yang sudah dihancurkan",
@@ -45,7 +45,7 @@ let listResep = [
         instruksiRecipe: ["Didihkan susu cair, keju, gula pasir, dan garam. Aduk hingga larut. Tambahkan larutan tepung maizena, lalu aduk hingga rata. Masak hingga meletup-letup.",
             "Susun dalam wadah dengan urutan biskuit, potongan pisang, keju, lalu pisang. Kamu bisa menghiasnya sesuka hati",
             "Masukkan ke dalam kulkas dan sajikan ketika dingin"], source: ""),
-    Resep(jenisPisang: .Ambon, tingkatKematangan: .Matang, namaRecipe: "Banana Pancake",description: "Pilihan terbaik untuk menu sarapan atau saat lapar. Mudah dibuat dan dikreasikan dengan toping sesuai selera.", gambarRecipe: "", bahanRecipe: [
+    Resep(jenisPisang: .Ambon, tingkatKematangan: .Matang, namaRecipe: "Banana Pancake",description: "Pilihan terbaik untuk menu sarapan atau saat lapar. Mudah dibuat dan dikreasikan dengan toping sesuai selera.", gambarRecipe: "pancake", bahanRecipe: [
             "1 buah pisang Ambon matang, kupas",
             "1 buah telur ayam",
             "Sedikit minyak goreng, margarin, atau mentega untuk mengoles wajan",
@@ -53,22 +53,22 @@ let listResep = [
         instruksiRecipe: ["Lumatkan pisang dalam mangkok dengan garpu",
             "Masukan telur ke dalam lumatan pisang, aduk hingga rata",
             "Beri sedikit minyak/mentega ke wajan agar tidak lengket", "Tuangkan sesendok adonan pisang ke wajan panas. Tunggu beberapa saat sampai bagian bawahnya tak lengket, lalu balikkan pancake. Setelah kedua sisi pancake berwarna cokelat, angkat.", "Pancake pisang siap disajikan dengan tambahan pelengkap sesuai selera"], source: ""),
-    Resep(jenisPisang: .Ambon, tingkatKematangan: .Matang, namaRecipe: "Banana Cupcake",description: "Cupcake pisang yang bisa dikreasikan menjadi tampilan yang menarik, cocok disajikan untuk acara-acara spesial!", gambarRecipe: "", bahanRecipe: [
+    Resep(jenisPisang: .Ambon, tingkatKematangan: .Matang, namaRecipe: "Banana Cupcake",description: "Cupcake pisang yang bisa dikreasikan menjadi tampilan yang menarik, cocok disajikan untuk acara-acara spesial!", gambarRecipe: "banana_cupcake", bahanRecipe: [
         "2 buah pisang ambon yang sudah dilumatkan", "150 gram gula pasir", "1 sendok makan emulsifier", "100 gram margarin yang dicarikan", "170 gram tepung terigu", "30 gr Maizena", "4 butir telurr", "1/2 sendok teh baking powder", "1/2 sendok teh bubuk kayu manis", "1/4 sendok teh garam"
     ], instruksiRecipe: [
         "Panaskan oven, lalu kocok dengan kecepatan tinggi adonan telur, gula, emulsifier, sampai mengembang kental.", "Turunkan kecepatan mixer, masukkan pisang bergantian dengan tepung terigu, maizena, baking powder, garam, kayu manis secara bertahap", "Matikan mixer lalu tuang margarin cair aduk lipat menggunakan spatula hingga rata. Pastikan tidak ada cairan di dasar adonan.", "Tuang adonan ke cup bolu kukus yang sudah dialasi kertas.", "Panggang selama 20 menit di oven.", "Tunggu sampai dingin lalu hias dengan irisan buah pisang dan butter cream."
     ], source: ""),
-    Resep(jenisPisang: .Ambon, tingkatKematangan: .Kematengan, namaRecipe: "Banana Classic Butter Cake",description: "Cemilan yang menyulap pisang kematangan menjadi kue manis dan memberikan keharuman yang menyedapkan.", gambarRecipe: "", bahanRecipe: [
+    Resep(jenisPisang: .Ambon, tingkatKematangan: .Kematengan, namaRecipe: "Banana Classic Butter Cake",description: "Cemilan yang menyulap pisang kematangan menjadi kue manis dan memberikan keharuman yang menyedapkan.", gambarRecipe: "classic_buttercake", bahanRecipe: [
         "1-2 buah Pisang Ambon/Raja, haluskan","1 butir Telur","85 gr Tepung Segitiga","45 gr Butter, lelehkan","40 gr Minyak Goreng","50 gr Gula Palem/Gula Pasir","1 sdt Rum (optional)","1/2 sdt Kayu Manis Bubuk","1/2 sdt Baking Powder","Secubit Garam","Secubit Vanili","Secukupnya Chocochips"
     ], instruksiRecipe: [
         "Campur bahan basah: Gula Palem + Telur + Pisang + Butter + Minyak Goreng + Garam + Vanili, aduk sampai rata.","Campur + ayak bahan kering: Tepung + Baking Powder + Kayu Manis Bubuk.","Campur bahan kering + bahan basah, aduk sampai rata, masukkan Chocochip, aduk rata."
     ], source: ""),
-    Resep(jenisPisang: .Ambon, tingkatKematangan: .Kematengan, namaRecipe: "Banana Bread", description: "Bolu pisang yang moist dan fluffy, memberikan rasa manis yang legit dan aroma yang kuat.", gambarRecipe: "", bahanRecipe: [
+    Resep(jenisPisang: .Ambon, tingkatKematangan: .Kematengan, namaRecipe: "Banana Bread", description: "Bolu pisang yang moist dan fluffy, memberikan rasa manis yang legit dan aroma yang kuat.", gambarRecipe: "banana_bread", bahanRecipe: [
         "1 dan 3/4 cup tepung terigu","1/3 cup gula pasir","1 sdt kayu manis bubuk","1 sdt baking powder","1/4 sdt baking soda","1/4 sdt garam","4 buah pisang","2 butir telur","1/2 cup minyak", "1 sdt ekstrak vanila"
     ], instruksiRecipe: [
         "Campur bahan kering jadi satu, sisihkan. Di mangkuk lain, haluskan pisang dengan garpu atau potato masher,campur rata dengan bahan basah lainnya.", "Tuangkan bahan basah ke mangkuk bahan kering, aduk secukupnya hingga rata. Jangan terlalu lama mengaduk, karena banana bread nanti bisa jadi bantat.", "Tuangkan ke loyang, kukus selama 50-60 menit atau hingga matang. Bisa juga dipanggang di oven selama 50-60 menit dengan suhu sekitar 180-200 derajat Celcius."
     ], source: ""),
-    Resep(jenisPisang: .Ambon, tingkatKematangan: .Kematengan, namaRecipe: "Lumpia roti goreng isi pisang selai kacang", description: "Cemilan lumpia berkulit roti, dilengkapi dengan kelezatan selai kacang di dalamnya.", gambarRecipe: "", bahanRecipe: [
+    Resep(jenisPisang: .Ambon, tingkatKematangan: .Kematengan, namaRecipe: "Lumpia roti goreng isi pisang selai kacang", description: "Cemilan lumpia berkulit roti, dilengkapi dengan kelezatan selai kacang di dalamnya.", gambarRecipe: "lumpia", bahanRecipe: [
         "4 lembar roti tawar tanpa kulit, tipiskan",
         "2 buah pisang ambon, potong jadi 2",
         "1 sdm margarin",
@@ -81,7 +81,7 @@ let listResep = [
         "Celupkan ke telur kocok. Balur dengan tepung roti. Simpan 15 menit di kulkas agar tepung roti lebih nempel.",
         "Goreng sampai berwarna kuning dalam minyak panas. Angkat. Pindahkan",
     ], source: "https://cookpad.com/id/resep/13879232-lumpia-roti-goreng-isi-pisang-selai-kacang?via=search&search_term=roti%20goreng%20pisang%20ambon"),
-    Resep(jenisPisang: .Ambon, tingkatKematangan: .Kematengan, namaRecipe: "Apple Banana Cake", description: "Kombinasi pisang dan apel, bertekstur padat dengan rasa legit dan sedikit asam segar. Cocok disajikan dengan es krim vanilla.", gambarRecipe: "", bahanRecipe: [
+    Resep(jenisPisang: .Ambon, tingkatKematangan: .Kematengan, namaRecipe: "Apple Banana Cake", description: "Kombinasi pisang dan apel, bertekstur padat dengan rasa legit dan sedikit asam segar. Cocok disajikan dengan es krim vanilla.", gambarRecipe: "apple_banana_cake", bahanRecipe: [
         "4 buah apel malang/granny smith, kupas, parut kasar",
         "2 buah pisang ambon/cavendish yg sangat matang",
         "2 butir telur",
@@ -101,7 +101,7 @@ let listResep = [
         "Masukkan ke loyang, hias dengan kenari jika ingin",
         "Panggang dengan suhu 180 derajat celsius selama 1 jam atau sampai matang"
     ], source: "https://cookpad.com/id/resep/9504581-apple-banana-cake?via=search&search_term=pisang%20ambon%20terlalu%20matang"),
-    Resep(jenisPisang: .General, tingkatKematangan: .Mengkal, namaRecipe: "Keripik Pisang", description: "Makanan yang terbuat dari pisang yang diiris tipis kemudian digoreng. biasanya rasanya adalah asin dengan aroma bawang yang gurih ", gambarRecipe: "", bahanRecipe: [
+    Resep(jenisPisang: .General, tingkatKematangan: .Mengkal, namaRecipe: "Keripik Pisang", description: "Makanan yang terbuat dari pisang yang diiris tipis kemudian digoreng. biasanya rasanya adalah asin dengan aroma bawang yang gurih ", gambarRecipe: "lumpia", bahanRecipe: [
     "10 buah pisang mengkal, iris tipis", "Minyak goreng", "5 sdm air hangat", "3 sdm gula pasir", "1/4 sdt garam"
     ], instruksiRecipe: [
     "Kupas pisang raja",
@@ -112,22 +112,22 @@ let listResep = [
     "Goreng irisan pisang kuning keemasan",
     "Siap disajikan"
     ], source: ""),
-    Resep(jenisPisang: .Uli, tingkatKematangan: .Mengkal, namaRecipe: "Pisang Goreng", description: "Makanan ringan berbahan dasar pisang, dibungkus dengan adonan dan digoreng dengan minyak panas.  ", gambarRecipe: "", bahanRecipe: [
+    Resep(jenisPisang: .Uli, tingkatKematangan: .Mengkal, namaRecipe: "Pisang Goreng", description: "Makanan ringan berbahan dasar pisang, dibungkus dengan adonan dan digoreng dengan minyak panas.  ", gambarRecipe: "pisang_goreng", bahanRecipe: [
         "1 sisir pisang dibelah 2", "150 gr tepung terigu", "2 sdm tepung beras", "3 sdm gula pasir", "1 sdt vanili", "sejumput garam", "secukupnya air", "minyak untuk menggoreng"
     ], instruksiRecipe: [
     "Campur tepung terigu, tepung beras, gula, vanili, garam","Aduk dan beri air hingga adonan mengental","Pisang yang telah dibelah 2, dimasukan ke dalam adonan tepung lalu di goreng"
     ], source: ""),
-    Resep(jenisPisang: .Uli, tingkatKematangan: .Mengkal, namaRecipe: "Pisang Molen", description: "Variasi gorengan pisang yang dilapisi gulungan lembar-lembar adonan pastri. Kulit tipis, garing, dan renyah!", gambarRecipe: "", bahanRecipe: [
+    Resep(jenisPisang: .Uli, tingkatKematangan: .Mengkal, namaRecipe: "Pisang Molen", description: "Variasi gorengan pisang yang dilapisi gulungan lembar-lembar adonan pastri. Kulit tipis, garing, dan renyah!", gambarRecipe: "pisang_molen", bahanRecipe: [
         "1 sisir pisang yang masih mengkal","500 gr tepung terigu","100 gr margarin","3 sdm gula halus","1/4 sdt vanili bubuk","secukupnya air","minyak untuk menggoreng"
     ], instruksiRecipe: [
     "Campur tepung terigu, gula halus, margarin dan vanili","Tuangi air sedikit demi sedikit sambil di uleni sampai kalis","Giling adonan sampai ketebelan yang diinginkan. Lilitkan adonan pada pisang","Goreng adonan pada minyak yang belum terlalu panas sampai coklat ke emasan"
     ], source: ""),
-    Resep(jenisPisang: .Uli, tingkatKematangan: .Matang, namaRecipe: "Bolu Marmer Pisang", description: "Cemilan manis legendaris Indonesia dengan berbahan dasar tepung dan campuran pisang yang memiliki tekstur yang padat dan aroma yang harum.", gambarRecipe: "", bahanRecipe: [
+    Resep(jenisPisang: .Uli, tingkatKematangan: .Matang, namaRecipe: "Bolu Marmer Pisang", description: "Cemilan manis legendaris Indonesia dengan berbahan dasar tepung dan campuran pisang yang memiliki tekstur yang padat dan aroma yang harum.", gambarRecipe: "Bolu_marmer", bahanRecipe: [
         "250 gr tepung terigu", "250 gr pisang", "3 buah telur", "150 gr gula pasir", "110 ml minyak sayur", "110 ml susu (susu bubuk + air)", "1 sdt baking powder", "1/2 sdt baking soda", "1/2 bks vanili bubuk", "pasta coklat"
     ], instruksiRecipe: [
     "Panaskan oven. Selama itu siapkan loyang yang diolesi mentega dan taburan tepung terigu", "Mixer telur dan gula dengan kecepatan tinggi sampai putih mengental", "Masukan tepung terigu yang sudah ditambahi baking powder, baking soda, vanili. Matikan mixer", "Masukan ke dalam adonan, campuran minyak sayur, susu dan pisang yang sudah dilumatkan. aduk rata dengan spatula", "Tuangkan adonan ke dalam loyang dan masukan ke oven dan panggang", "Sebelum benar-benar matang, berikan pasta coklat ke dalam adonan dan panggang hingga matang"
     ], source: ""),
-    Resep(jenisPisang: .Uli, tingkatKematangan: .Matang, namaRecipe: "Nagasari", description: "Salah satu jenis kue basah tradisional yang terbuat dari tepung dan pisang yang dibungkus dan dikukus hingga matang.", gambarRecipe: "", bahanRecipe: [
+    Resep(jenisPisang: .Uli, tingkatKematangan: .Matang, namaRecipe: "Nagasari", description: "Salah satu jenis kue basah tradisional yang terbuat dari tepung dan pisang yang dibungkus dan dikukus hingga matang.", gambarRecipe: "Nagasari", bahanRecipe: [
         "9 buah pisang",
         "300 gr tepung beras",
           "3 sdm nutrijel plain",
@@ -141,7 +141,7 @@ let listResep = [
     ], instruksiRecipe: [
     "Campur semua bahan (tepung beras, tepung maizena, nutrijel plain, gula, vanili, air, 2 daun pandan, garam) lalu panaskan diatas kompor sampai menjadi bubur","Bersihkan daun pisang, potong kecil2 pisang dan daun pandan","Panaskan kukusan, letakan adonan tepung yang sudah menjadi bubur ke daun pisang, tambahkan pisang, kemudian tutup pisang dengan adonan dan beri potongan daun pandan","Bungkus nagasari dan kukus dalam waktu 30 menit"
     ], source: ""),
-    Resep(jenisPisang: .Uli, tingkatKematangan: .Matang, namaRecipe: "Kolak Pisang", description: "Salah satu jenis minuman khas Indonesia yang dapat dijadikan hidangan penutup berbahan dasar pisang yang direbus dengan santan dan gula aren.", gambarRecipe: "", bahanRecipe: [
+    Resep(jenisPisang: .Uli, tingkatKematangan: .Matang, namaRecipe: "Kolak Pisang", description: "Salah satu jenis minuman khas Indonesia yang dapat dijadikan hidangan penutup berbahan dasar pisang yang direbus dengan santan dan gula aren.", gambarRecipe: "kolak_bali", bahanRecipe: [
         "2 sisir pisang",
           "3-4 sdm gula merah yang sudah di iris",
           "3 sdm gula pasir",

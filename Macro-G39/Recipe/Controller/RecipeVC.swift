@@ -26,17 +26,23 @@ class RecipeVC: UIViewController{
         recipeCollectionView.dataSource = self
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        self.navigationController?.navigationBar.isHidden = false
+
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.navigationBar.isHidden = false
+
     }
 }
 extension RecipeVC: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 6
+        return listResep.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "recipeCell", for: indexPath) as! RecipeCollectionViewCell
+        cell.recipeNameLabel.text = listResep[indexPath.row].namaRecipe
+        cell.bananaRipenessLabel.text = listResep[indexPath.row].tingkatKematangan.rawValue
+        cell.bananaTypeLabel.text = listResep[indexPath.row].jenisPisang.rawValue
+        cell.recipeImage.image = UIImage(named: listResep[indexPath.row].gambarRecipe)
         return cell
     }
     

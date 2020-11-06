@@ -17,12 +17,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Hpi-qx-GHa">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Hpi-qx-GHa">
                                 <rect key="frame" x="0.0" y="88" width="375" height="690"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.9876531959" green="0.96585875750000005" blue="0.90195178990000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+
+                                <color key="backgroundColor" red="0.98015600439999995" green="0.96965402359999997" blue="0.90979415180000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="16" minimumInteritemSpacing="16" id="sz7-TS-Kyc">
-                                    <size key="itemSize" width="159.5" height="182"/>
+                                    <size key="itemSize" width="159.5" height="185"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="16" minY="16" maxX="16" maxY="0.0"/>
@@ -43,7 +44,15 @@
                             </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="XOr-dq-sJ0"/>
-                        <color key="backgroundColor" red="0.9876531959" green="0.96585875750000005" blue="0.90195178990000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+
+                        <color key="backgroundColor" red="0.98015600439999995" green="0.96965402359999997" blue="0.90979415180000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="Hpi-qx-GHa" firstAttribute="bottom" secondItem="XOr-dq-sJ0" secondAttribute="bottom" id="OBD-hF-9g6"/>
+                            <constraint firstItem="Hpi-qx-GHa" firstAttribute="top" secondItem="XOr-dq-sJ0" secondAttribute="top" id="fuu-da-7TK"/>
+                            <constraint firstItem="Hpi-qx-GHa" firstAttribute="leading" secondItem="XOr-dq-sJ0" secondAttribute="leading" id="tTy-WT-Tx2"/>
+                            <constraint firstItem="Hpi-qx-GHa" firstAttribute="trailing" secondItem="XOr-dq-sJ0" secondAttribute="trailing" id="xVd-vp-NMO"/>
+                        </constraints>
+
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics"/>
                     <connections>

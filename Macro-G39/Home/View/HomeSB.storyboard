@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="H6Z-vM-PjZ">
-    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
@@ -14,30 +14,55 @@
             <objects>
                 <viewController storyboardIdentifier="HomeSB" id="PUw-yW-RSh" customClass="HomeVC" customModule="Macro_G39" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9hw-Tk-mj0">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Resep" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4oq-mT-gJh">
-                                <rect key="frame" x="24" y="526" width="62" height="26"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Resep" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4oq-mT-gJh">
+                                <rect key="frame" x="20" y="528" width="62" height="26"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="8ZL-em-zan">
-                                <rect key="frame" x="16" y="567" width="359" height="160"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.9876531959" green="0.96585875750000005" blue="0.90195178990000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="24" minimumInteritemSpacing="24" id="TX6-ic-PaS">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Deteksi Pisang" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nu7-oX-HCV">
+                                <rect key="frame" x="20" y="44" width="146" height="26"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xEG-rQ-Cd4">
+                                <rect key="frame" x="20" y="94" width="374" height="402"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="xEG-rQ-Cd4" secondAttribute="height" multiplier="67:72" id="t8M-k1-euA"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="goToCameraPage:" destination="PUw-yW-RSh" eventType="touchUpInside" id="tyg-Bp-cWl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N5o-eK-83F">
+                                <rect key="frame" x="309" y="528" width="85" height="30"/>
+                                <state key="normal" title="Lihat Semua">
+                                    <color key="titleColor" red="0.78713983300000001" green="0.46141541000000003" blue="0.2940555513" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="goToRecipePage:" destination="PUw-yW-RSh" eventType="touchUpInside" id="lqy-5G-uEd"/>
+                                </connections>
+                            </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="8ZL-em-zan">
+                                <rect key="frame" x="20" y="574" width="394" height="212"/>
+                                <color key="backgroundColor" red="0.98431372549999996" green="0.96470588239999999" blue="0.90980392160000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="16" minimumInteritemSpacing="16" id="TX6-ic-PaS">
+
                                     <size key="itemSize" width="195" height="145"/>
-                                    <size key="estimatedItemSize" width="195" height="145"/>
+                                    <size key="estimatedItemSize" width="195" height="150"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="" id="i3o-fO-wPP">
-                                        <rect key="frame" x="0.0" y="7.666666666666667" width="195" height="145"/>
+                                        <rect key="frame" x="0.0" y="33.5" width="195" height="145"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="GUc-rh-Dny">
                                             <rect key="frame" x="0.0" y="0.0" width="195" height="145"/>
@@ -46,42 +71,37 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N5o-eK-83F">
-                                <rect key="frame" x="270" y="526" width="85" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Lihat Semua">
-                                    <color key="titleColor" red="0.78713983300000001" green="0.46141541000000003" blue="0.2940555513" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                </state>
-                                <connections>
-                                    <action selector="goToRecipePage:" destination="PUw-yW-RSh" eventType="touchUpInside" id="lqy-5G-uEd"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Buynana" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nu7-oX-HCV">
-                                <rect key="frame" x="24" y="60" width="135" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="33"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xEG-rQ-Cd4">
-                                <rect key="frame" x="1" y="102" width="374" height="404"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="DeteksiPisangButton"/>
-                                <connections>
-                                    <action selector="goToCameraPage:" destination="PUw-yW-RSh" eventType="touchUpInside" id="tyg-Bp-cWl"/>
-                                </connections>
-                            </button>
+
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Oha-yE-zoy"/>
-                        <color key="backgroundColor" red="0.98380786180000002" green="0.96571832899999999" blue="0.90979623789999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.98431372549019602" green="0.96470588235294119" blue="0.90980392156862744" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="Oha-yE-zoy" firstAttribute="bottom" secondItem="8ZL-em-zan" secondAttribute="bottom" constant="76" id="4WB-Mc-AR8"/>
+                            <constraint firstItem="8ZL-em-zan" firstAttribute="trailing" secondItem="Oha-yE-zoy" secondAttribute="trailing" id="81Z-38-B4K"/>
+                            <constraint firstItem="4oq-mT-gJh" firstAttribute="leading" secondItem="Oha-yE-zoy" secondAttribute="leading" constant="20" id="A80-QP-KGR"/>
+                            <constraint firstItem="8ZL-em-zan" firstAttribute="top" secondItem="N5o-eK-83F" secondAttribute="bottom" constant="16" id="Fxd-ig-ZE5"/>
+                            <constraint firstItem="Nu7-oX-HCV" firstAttribute="leading" secondItem="Oha-yE-zoy" secondAttribute="leading" constant="20" id="OB3-Dn-3L9"/>
+                            <constraint firstItem="8ZL-em-zan" firstAttribute="leading" secondItem="Oha-yE-zoy" secondAttribute="leading" constant="20" id="UNZ-KM-VA7"/>
+                            <constraint firstItem="4oq-mT-gJh" firstAttribute="top" secondItem="xEG-rQ-Cd4" secondAttribute="bottom" constant="32" id="VpW-hR-Ev2"/>
+                            <constraint firstItem="N5o-eK-83F" firstAttribute="top" secondItem="xEG-rQ-Cd4" secondAttribute="bottom" constant="32" id="grd-eN-lbC"/>
+                            <constraint firstItem="Oha-yE-zoy" firstAttribute="trailing" secondItem="N5o-eK-83F" secondAttribute="trailing" constant="20" id="hzn-Rw-UUh"/>
+                            <constraint firstItem="Oha-yE-zoy" firstAttribute="trailing" secondItem="xEG-rQ-Cd4" secondAttribute="trailing" constant="20" id="m2t-yB-G2U"/>
+                            <constraint firstItem="xEG-rQ-Cd4" firstAttribute="leading" secondItem="Oha-yE-zoy" secondAttribute="leading" constant="20" id="pDh-Qn-NRl"/>
+                            <constraint firstItem="Nu7-oX-HCV" firstAttribute="top" secondItem="Oha-yE-zoy" secondAttribute="top" id="vOy-FO-v6y"/>
+                            <constraint firstItem="xEG-rQ-Cd4" firstAttribute="top" secondItem="Nu7-oX-HCV" secondAttribute="bottom" constant="24" id="zM2-G5-Rq0"/>
+                        </constraints>
+
                     </view>
                     <navigationItem key="navigationItem" id="hp9-TM-kle"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
-                        <outlet property="cameraButton" destination="xEG-rQ-Cd4" id="EXP-dI-Shy"/>
+
+                        <outlet property="cameraButton" destination="xEG-rQ-Cd4" id="Gqe-en-cKs"/>
+
                         <outlet property="homeCollectionView" destination="8ZL-em-zan" id="i4J-gh-yGJ"/>
                         <segue destination="0UZ-Ei-Czu" kind="show" identifier="segueToRecipe" id="oB0-bD-kjY"/>
                         <segue destination="WyH-aV-RE8" kind="show" identifier="segueToCamera" id="4Vt-AN-QGE"/>
+                        <segue destination="0c2-1g-3e1" kind="show" identifier="segueToDetail" id="uiz-BR-ZKX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cqU-LP-Ndb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -108,13 +128,23 @@
             </objects>
             <point key="canvasLocation" x="2017" y="217"/>
         </scene>
+        <!--DetailRecipeSB-->
+        <scene sceneID="JzI-QK-YQj">
+            <objects>
+                <viewControllerPlaceholder storyboardName="DetailRecipeSB" id="0c2-1g-3e1" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="xXF-QA-wLa"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qMD-qu-U9I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2002" y="293"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="pxi-aR-xyT">
             <objects>
                 <navigationController storyboardIdentifier="Home" automaticallyAdjustsScrollViewInsets="NO" id="H6Z-vM-PjZ" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="wsC-ek-UTf">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.9876531959" green="0.96585875750000005" blue="0.90195178990000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <color key="barTintColor" red="0.9876531959" green="0.96585875750000005" blue="0.90195178990000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -129,7 +159,4 @@
             <point key="canvasLocation" x="200.00000000000003" y="129.91071428571428"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="DeteksiPisangButton" width="374" height="404"/>
-    </resources>
 </document>
