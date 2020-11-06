@@ -22,6 +22,10 @@ class DetailRecipeVC: UITableViewController {
         
         self.tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        navigationController?.navigationBar.isHidden = false
+    }
     @objc func HomeTapped(){
         self.navigationController?.popToRootViewController(animated: true)
     }
