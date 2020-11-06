@@ -99,8 +99,8 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bJX-qv-K2i">
                                                     <rect key="frame" x="0.0" y="86" width="414" height="14"/>
                                                     <subviews>
-                                                        <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ruV-1K-2Vv">
-                                                            <rect key="frame" x="20" y="0.0" width="374" height="15"/>
+                                                        <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" misplaced="YES" progressViewStyle="bar" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ruV-1K-2Vv">
+                                                            <rect key="frame" x="40.184915048776475" y="0.56960982191230869" width="330.00000000000023" height="15.000000000000043"/>
                                                         </progressView>
                                                     </subviews>
                                                     <color key="backgroundColor" red="0.99149972200000003" green="0.96599751710000004" blue="0.8941074014" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>

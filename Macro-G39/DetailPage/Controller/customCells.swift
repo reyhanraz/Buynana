@@ -36,6 +36,7 @@ class CustomCellProgressBar: UITableViewCell{
                                                   locations: [0.0, 1.0])?.withHorizontallyFlippedOrientation()
         progressBar.transform = CGAffineTransform(scaleX: -1.0, y: -1.0)
         progressBar.progressTintColor = UIColor.customColor.customYellow
+        progressBar.roundCorners(corners: .allCorners, radius: 7.0)
         progressBar.trackImage = gradientImage
     }
     override func prepareForReuse() {
@@ -50,6 +51,7 @@ class CustomCellProgressBar: UITableViewCell{
                                                   locations: [0.0, 1.0])?.withHorizontallyFlippedOrientation()
         progressBar.transform = CGAffineTransform(scaleX: -1.0, y: -1.0)
         progressBar.progressTintColor = UIColor.customColor.customYellow
+        progressBar.roundCorners(corners: .allCorners, radius: 7.0)
         progressBar.trackImage = gradientImage
     }
 }
