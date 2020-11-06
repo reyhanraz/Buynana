@@ -31,6 +31,12 @@ class CustomCellProgressBar: UITableViewCell{
         image1.layer.cornerRadius = 10
         image2.layer.cornerRadius = 10
         image3.layer.cornerRadius = 10
+        
+        let gradientImage = UIImage.gradientImage(with: progressBar.frame,
+                                                  locations: [0.0, 1.0])?.withHorizontallyFlippedOrientation()
+        progressBar.transform = CGAffineTransform(scaleX: -1.0, y: -1.0)
+        progressBar.progressTintColor = UIColor.customColor.customYellow
+        progressBar.trackImage = gradientImage
     }
     override func prepareForReuse() {
         super.prepareForReuse()
