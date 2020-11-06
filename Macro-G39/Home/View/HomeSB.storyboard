@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="H6Z-vM-PjZ">
-    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
@@ -14,23 +14,23 @@
             <objects>
                 <viewController storyboardIdentifier="HomeVC" title="HomeVC" id="PUw-yW-RSh" customClass="HomeVC" customModule="Macro_G39" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9hw-Tk-mj0">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Resep" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4oq-mT-gJh">
-                                <rect key="frame" x="20" y="486" width="62" height="26"/>
+                                <rect key="frame" x="20" y="528" width="62" height="26"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Deteksi Pisang" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nu7-oX-HCV">
-                                <rect key="frame" x="20" y="44" width="145.66666666666666" height="26"/>
+                                <rect key="frame" x="20" y="44" width="146" height="26"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xEG-rQ-Cd4">
-                                <rect key="frame" x="20" y="94" width="335" height="360"/>
+                                <rect key="frame" x="20" y="94" width="374" height="402"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="xEG-rQ-Cd4" secondAttribute="height" multiplier="67:72" id="t8M-k1-euA"/>
@@ -41,7 +41,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N5o-eK-83F">
-                                <rect key="frame" x="270" y="486" width="85" height="30"/>
+                                <rect key="frame" x="309" y="528" width="85" height="30"/>
                                 <state key="normal" title="Lihat Semua">
                                     <color key="titleColor" red="0.78713983300000001" green="0.46141541000000003" blue="0.2940555513" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
@@ -50,7 +50,7 @@
                                 </connections>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="8ZL-em-zan">
-                                <rect key="frame" x="20" y="532" width="355" height="170"/>
+                                <rect key="frame" x="20" y="574" width="394" height="212"/>
                                 <color key="backgroundColor" red="0.98431372549999996" green="0.96470588239999999" blue="0.90980392160000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="16" minimumInteritemSpacing="16" id="TX6-ic-PaS">
                                     <size key="itemSize" width="195" height="145"/>
@@ -61,7 +61,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="" id="i3o-fO-wPP">
-                                        <rect key="frame" x="0.0" y="12.666666666666666" width="195" height="145"/>
+                                        <rect key="frame" x="0.0" y="33.5" width="195" height="145"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="GUc-rh-Dny">
                                             <rect key="frame" x="0.0" y="0.0" width="195" height="145"/>
@@ -139,7 +139,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="H6Z-vM-PjZ" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="wsC-ek-UTf">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
