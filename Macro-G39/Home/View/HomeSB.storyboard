@@ -17,32 +17,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Resep" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4oq-mT-gJh">
-                                <rect key="frame" x="20" y="516" width="62" height="26"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Resep" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4oq-mT-gJh">
+                                <rect key="frame" x="20" y="486" width="62" height="26"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Deteksi Pisang" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nu7-oX-HCV">
-                                <rect key="frame" x="20" y="64" width="179" height="26"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Deteksi Pisang" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nu7-oX-HCV">
+                                <rect key="frame" x="20" y="44" width="145.66666666666666" height="26"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xEG-rQ-Cd4">
-                                <rect key="frame" x="20" y="124" width="335" height="360"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xEG-rQ-Cd4">
+                                <rect key="frame" x="20" y="94" width="335" height="360"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="xEG-rQ-Cd4" secondAttribute="height" multiplier="67:72" id="t8M-k1-euA"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="goToCameraPage:" destination="PUw-yW-RSh" eventType="touchUpInside" id="tyg-Bp-cWl"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N5o-eK-83F">
-                                <rect key="frame" x="270" y="514" width="85" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N5o-eK-83F">
+                                <rect key="frame" x="270" y="486" width="85" height="30"/>
                                 <state key="normal" title="Lihat Semua">
                                     <color key="titleColor" red="0.78713983300000001" green="0.46141541000000003" blue="0.2940555513" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
@@ -50,9 +49,8 @@
                                     <action selector="goToRecipePage:" destination="PUw-yW-RSh" eventType="touchUpInside" id="lqy-5G-uEd"/>
                                 </connections>
                             </button>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="8ZL-em-zan">
-                                <rect key="frame" x="16" y="552" width="359" height="150"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="8ZL-em-zan">
+                                <rect key="frame" x="20" y="532" width="355" height="170"/>
                                 <color key="backgroundColor" red="0.98431372549999996" green="0.96470588239999999" blue="0.90980392160000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="16" minimumInteritemSpacing="16" id="TX6-ic-PaS">
                                     <size key="itemSize" width="195" height="145"/>
@@ -63,7 +61,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="" id="i3o-fO-wPP">
-                                        <rect key="frame" x="0.0" y="2.6666666666666665" width="195" height="145"/>
+                                        <rect key="frame" x="0.0" y="12.666666666666666" width="195" height="145"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="GUc-rh-Dny">
                                             <rect key="frame" x="0.0" y="0.0" width="195" height="145"/>
@@ -75,6 +73,21 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Oha-yE-zoy"/>
                         <color key="backgroundColor" red="0.98431372549019602" green="0.96470588235294119" blue="0.90980392156862744" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="Oha-yE-zoy" firstAttribute="bottom" secondItem="8ZL-em-zan" secondAttribute="bottom" constant="76" id="4WB-Mc-AR8"/>
+                            <constraint firstItem="8ZL-em-zan" firstAttribute="trailing" secondItem="Oha-yE-zoy" secondAttribute="trailing" id="81Z-38-B4K"/>
+                            <constraint firstItem="4oq-mT-gJh" firstAttribute="leading" secondItem="Oha-yE-zoy" secondAttribute="leading" constant="20" id="A80-QP-KGR"/>
+                            <constraint firstItem="8ZL-em-zan" firstAttribute="top" secondItem="N5o-eK-83F" secondAttribute="bottom" constant="16" id="Fxd-ig-ZE5"/>
+                            <constraint firstItem="Nu7-oX-HCV" firstAttribute="leading" secondItem="Oha-yE-zoy" secondAttribute="leading" constant="20" id="OB3-Dn-3L9"/>
+                            <constraint firstItem="8ZL-em-zan" firstAttribute="leading" secondItem="Oha-yE-zoy" secondAttribute="leading" constant="20" id="UNZ-KM-VA7"/>
+                            <constraint firstItem="4oq-mT-gJh" firstAttribute="top" secondItem="xEG-rQ-Cd4" secondAttribute="bottom" constant="32" id="VpW-hR-Ev2"/>
+                            <constraint firstItem="N5o-eK-83F" firstAttribute="top" secondItem="xEG-rQ-Cd4" secondAttribute="bottom" constant="32" id="grd-eN-lbC"/>
+                            <constraint firstItem="Oha-yE-zoy" firstAttribute="trailing" secondItem="N5o-eK-83F" secondAttribute="trailing" constant="20" id="hzn-Rw-UUh"/>
+                            <constraint firstItem="Oha-yE-zoy" firstAttribute="trailing" secondItem="xEG-rQ-Cd4" secondAttribute="trailing" constant="20" id="m2t-yB-G2U"/>
+                            <constraint firstItem="xEG-rQ-Cd4" firstAttribute="leading" secondItem="Oha-yE-zoy" secondAttribute="leading" constant="20" id="pDh-Qn-NRl"/>
+                            <constraint firstItem="Nu7-oX-HCV" firstAttribute="top" secondItem="Oha-yE-zoy" secondAttribute="top" id="vOy-FO-v6y"/>
+                            <constraint firstItem="xEG-rQ-Cd4" firstAttribute="top" secondItem="Nu7-oX-HCV" secondAttribute="bottom" constant="24" id="zM2-G5-Rq0"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="hp9-TM-kle"/>
                     <nil key="simulatedTopBarMetrics"/>
