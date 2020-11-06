@@ -8,15 +8,9 @@
 
 import UIKit
 import Photos
-import Vision
-import CoreML
 
 class MainController: UIViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
-    
-    public var sendImage = #imageLiteral(resourceName: "camera-button")
-    public var typeAccuration = "100%"
-    public var typeBanana = "Pisang"
-    @IBOutlet weak var thisLabel: UILabel!
+    public var sendImage:UIImage = #imageLiteral(resourceName: "DSC08830")
     
     @IBOutlet fileprivate var captureButton: UIButton!
     
@@ -32,11 +26,19 @@ class MainController: UIViewController, UIImagePickerControllerDelegate & UINavi
     
     override var prefersStatusBarHidden: Bool { return true }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? DetailPageVC{
+            destination.delegate = self
+            destination.image = sendImage
+        }
+        if segue.destination is HomeVC{
+            self.navigationController?.popToRootViewController(animated: true)
+        }
+    }
 }
 
 extension MainController {
     override func viewDidLoad() {
-        
         func configureCameraController() {
             cameraController.prepare {(error) in
                 if let error = error {
@@ -46,60 +48,32 @@ extension MainController {
                 try? self.cameraController.displayPreview(on: self.capturePreviewView)
             }
         }
-        self.navigationController?.navigationBar.isHidden = true
         configureCameraController()
-        detectTypeImage()
-        
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.isHidden = true
     }
 }
 
 extension MainController {
-    func detectTypeImage() {
-        guard let model = try? VNCoreMLModel(for: JenisPisang1().model) else {
-            fatalError("Failed to load model")
-        }
-        
-        // Create a vision request
-        let request = VNCoreMLRequest(model: model) {[weak self] request, error in
-            guard let results = request.results as? [VNClassificationObservation],
-                let topResult = results.first
-                else {
-                    fatalError("Unexpected results")
-            }
-            
-            // Update the Main UI Thread with our result
-            DispatchQueue.main.async { [weak self] in
-                print("\(Int(topResult.confidence * 100))% \(topResult.identifier)")
-                self?.typeAccuration = "\(Int(topResult.confidence * 100))%"
-                self?.typeBanana = "\(topResult.identifier)"
-                self?.thisLabel.text = "\(Int(topResult.confidence * 100))% \(topResult.identifier)"
-            }
-        }
-        
-        guard let ciImage = CIImage(image: self.sendImage)
-            else { fatalError("Cant create CIImage from UIImage") }
-        
-        // Run klasifikasi jenis pisang
-        let handler = VNImageRequestHandler(ciImage: ciImage)
-        DispatchQueue.global().async {
-            do {
-                try handler.perform([request])
-            } catch {
-                print(error)
-            }
-        }
-        
+    func toDetailPage(){
+        performSegue(withIdentifier: "toDetailPage", sender: nil)
+    }
+    @IBAction func backButtonTapped(_ sender: UIButton){    navigationController?.popViewController(animated: true)
+        dismiss(animated: true, completion: nil)
     }
     
     @IBAction func toggleFlash(_ sender: UIButton) {
         if cameraController.flashMode == .on {
             cameraController.flashMode = .off
             toggleFlashButton.setImage(#imageLiteral(resourceName: "blitz-icon"), for: .normal)
+            toggleFlashButton.contentMode = .scaleToFill
         }
             
         else {
             cameraController.flashMode = .on
             toggleFlashButton.setImage(#imageLiteral(resourceName: "flash"), for: .normal)
+            toggleFlashButton.contentMode = .scaleToFill
         }
     }
     
@@ -125,29 +99,23 @@ extension MainController {
     }
     
     @IBAction func takeImage(_ sender: UIButton){
-        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerController.SourceType.photoLibrary) {
-            let imagePicker = UIImagePickerController()
-            imagePicker.delegate = self
-            imagePicker.sourceType = UIImagePickerController.SourceType.photoLibrary
-            imagePicker.allowsEditing = true
-            self.present(imagePicker, animated: true, completion: nil)
-        }
+        let imagePicker = UIImagePickerController()
+        imagePicker.delegate = self
+        imagePicker.sourceType = .photoLibrary
+        imagePicker.allowsEditing = true
+        present(imagePicker, animated: true, completion: nil)
     }
     
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        if let pickedImage = info[UIImagePickerController.InfoKey.originalImage.rawValue] as? UIImage {
-//            myPhoto.contentMode = .scaleToFill
-//            myPhoto.image = pickedImage
-            self.sendImage = pickedImage
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let pickedImage = info[UIImagePickerController.InfoKey(rawValue: UIImagePickerController.InfoKey.editedImage.rawValue)] as? UIImage {
+            sendImage = pickedImage
         }
-        picker.dismiss(animated: true, completion: nil)
-        detectTypeImage()
-    }
+        picker.dismiss(animated: true, completion: self.toDetailPage)
     
+    }
     
     @IBAction func captureImage(_ sender: UIButton) {
         cameraController.captureImage {(image, error) in
-            self.sendImage = image!
             guard let image = image else {
                 print(error ?? "Image capture error")
                 return
@@ -155,15 +123,11 @@ extension MainController {
             
             try? PHPhotoLibrary.shared().performChangesAndWait {
                 PHAssetChangeRequest.creationRequestForAsset(from: image)
+                self.sendImage = image
+                self.toDetailPage()
             }
         }
-        detectTypeImage()
-        performSegue(withIdentifier: "captureToDetailPage", sender: nil)
-    }
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-            if let destination = segue.destination as? DetailPageVC{
-                destination.delegate = self
-            }
+        
     }
 }
 extension MainController: ModalHandler{

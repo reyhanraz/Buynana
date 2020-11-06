@@ -9,11 +9,7 @@ import UIKit
 
 class CustomCellImage: UITableViewCell{
     @IBOutlet weak var imageTop: UIImageView!
-    
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        imageTop.roundCorners(corners: [.bottomLeft, .bottomRight], radius: 50)
-    }
+
 }
 
 class CustomCellProgressBar: UITableViewCell{
@@ -31,21 +27,32 @@ class CustomCellProgressBar: UITableViewCell{
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        stackView.backgroundColor = UIColor.customColor.customWhite
-        viewCont1.backgroundColor = UIColor.customColor.customWhite
-        viewCont2.backgroundColor = UIColor.customColor.customWhite
-        viewCont3.backgroundColor = UIColor.customColor.customWhite
-
+        progressBar.layer.cornerRadius = 7
+        image1.layer.cornerRadius = 10
+        image2.layer.cornerRadius = 10
+        image3.layer.cornerRadius = 10
+        
         let gradientImage = UIImage.gradientImage(with: progressBar.frame,
                                                   locations: [0.0, 1.0])?.withHorizontallyFlippedOrientation()
         progressBar.transform = CGAffineTransform(scaleX: -1.0, y: -1.0)
         progressBar.progressTintColor = UIColor.customColor.customYellow
+        progressBar.roundCorners(corners: .allCorners, radius: 7.0)
         progressBar.trackImage = gradientImage
-
-        progressBar.roundCorners(corners: [.allCorners], radius: 7)
-        image1.roundCorners(corners: [.allCorners], radius: 10)
-        image2.roundCorners(corners: [.allCorners], radius: 10)
-        image3.roundCorners(corners: [.allCorners], radius: 10)
+    }
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        
+        stackView.backgroundColor = UIColor.customColor.customWhite
+        viewCont1.backgroundColor = UIColor.customColor.customWhite
+        viewCont2.backgroundColor = UIColor.customColor.customWhite
+        viewCont3.backgroundColor = UIColor.customColor.customWhite
+        
+        let gradientImage = UIImage.gradientImage(with: progressBar.frame,
+                                                  locations: [0.0, 1.0])?.withHorizontallyFlippedOrientation()
+        progressBar.transform = CGAffineTransform(scaleX: -1.0, y: -1.0)
+        progressBar.progressTintColor = UIColor.customColor.customYellow
+        progressBar.roundCorners(corners: .allCorners, radius: 7.0)
+        progressBar.trackImage = gradientImage
     }
 }
 
@@ -124,7 +131,7 @@ extension UIColor {
         static let customYellow = UIColor.init(netHex: 0xF6D275)
         static let customBlue = UIColor(netHex: 0xF6D275)
         static let customOrange = UIColor(netHex: 0xCD784D)
-        static let customWhite = UIColor(netHex: 0xFBF6E8)
+        static let customWhite = UIColor(netHex: 0xE3DDCD)
         static let progressGreen = UIColor(netHex: 0x92BD02)
         static let progressYellow = UIColor(netHex: 0xFFCB00)
         static let progressBrown = UIColor(netHex: 0x3D2C00)

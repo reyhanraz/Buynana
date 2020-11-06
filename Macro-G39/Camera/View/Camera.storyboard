@@ -16,8 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lnd-7g-U5f">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lnd-7g-U5f">
+                                <rect key="frame" x="0.0" y="5" width="414" height="896"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dNR-Vo-zfA">
                                         <rect key="frame" x="287" y="797" width="66" height="44"/>
@@ -40,7 +40,7 @@
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <state key="normal" image="chevron-icon"/>
                                         <connections>
-                                            <segue destination="rjz-nv-V3D" kind="custom" identifier="cevronToHome" id="Kbw-SG-SCb"/>
+                                            <action selector="backButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qk6-nc-JxT"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TK7-Oc-3y1">
@@ -63,28 +63,23 @@
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="TK7-Oc-3y1" secondAttribute="trailing" constant="20" id="03q-d4-XOZ"/>
                                     <constraint firstAttribute="bottom" secondItem="Akr-g7-ggC" secondAttribute="bottom" constant="40" id="4HI-U0-IWx"/>
-                                    <constraint firstItem="nmX-pG-pvs" firstAttribute="top" secondItem="Lnd-7g-U5f" secondAttribute="top" constant="20" id="L3M-Bn-FJc"/>
+                                    <constraint firstItem="dNR-Vo-zfA" firstAttribute="centerY" secondItem="Akr-g7-ggC" secondAttribute="centerY" id="Dif-iQ-pRl"/>
+                                    <constraint firstItem="nmX-pG-pvs" firstAttribute="top" secondItem="Lnd-7g-U5f" secondAttribute="top" constant="40" id="L3M-Bn-FJc"/>
                                     <constraint firstItem="Akr-g7-ggC" firstAttribute="centerX" secondItem="Lnd-7g-U5f" secondAttribute="centerX" id="Snx-0O-O54"/>
                                     <constraint firstItem="nmX-pG-pvs" firstAttribute="leading" secondItem="Lnd-7g-U5f" secondAttribute="leading" constant="20" id="TNW-20-VrT"/>
                                     <constraint firstItem="pfX-fU-RS1" firstAttribute="leading" secondItem="Lnd-7g-U5f" secondAttribute="leading" constant="20" id="YFg-t1-c8u"/>
                                     <constraint firstAttribute="trailing" secondItem="dNR-Vo-zfA" secondAttribute="trailing" constant="20" id="bix-Cy-hEW"/>
-                                    <constraint firstItem="TK7-Oc-3y1" firstAttribute="top" secondItem="Lnd-7g-U5f" secondAttribute="top" constant="20" id="ddR-Xi-8Ff"/>
-                                    <constraint firstAttribute="bottom" secondItem="dNR-Vo-zfA" secondAttribute="bottom" constant="55" id="iK6-Z1-Atu"/>
-                                    <constraint firstAttribute="bottom" secondItem="pfX-fU-RS1" secondAttribute="bottom" constant="55" id="yj2-jW-pXK"/>
+                                    <constraint firstItem="TK7-Oc-3y1" firstAttribute="top" secondItem="Lnd-7g-U5f" secondAttribute="top" constant="40" id="ddR-Xi-8Ff"/>
+                                    <constraint firstItem="pfX-fU-RS1" firstAttribute="centerY" secondItem="Akr-g7-ggC" secondAttribute="centerY" id="qtt-bC-tRZ"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aCB-gS-v5E">
-                                <rect key="frame" x="57" y="398" width="300" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="2HW-yE-h8z"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="Lnd-7g-U5f" firstAttribute="centerY" secondItem="2HW-yE-h8z" secondAttribute="centerY" id="LJr-I6-kgJ"/>
                             <constraint firstItem="Lnd-7g-U5f" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="PIA-R9-Oqt"/>
+                            <constraint firstItem="Lnd-7g-U5f" firstAttribute="centerX" secondItem="2HW-yE-h8z" secondAttribute="centerX" id="anG-Z7-00h"/>
                             <constraint firstItem="Lnd-7g-U5f" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="q0r-oK-xXL"/>
                         </constraints>
                     </view>
@@ -93,10 +88,9 @@
                         <outlet property="backButton" destination="nmX-pG-pvs" id="Koe-BN-52j"/>
                         <outlet property="captureButton" destination="Akr-g7-ggC" id="ZHd-4Q-aGF"/>
                         <outlet property="capturePreviewView" destination="Lnd-7g-U5f" id="1h1-9E-VM0"/>
-                        <outlet property="thisLabel" destination="aCB-gS-v5E" id="GkH-kw-wbX"/>
                         <outlet property="toggleCameraButton" destination="dNR-Vo-zfA" id="Tc7-9N-4bs"/>
                         <outlet property="toggleFlashButton" destination="TK7-Oc-3y1" id="pfk-k4-hgk"/>
-                        <segue destination="qoK-V1-qDW" kind="show" identifier="captureToDetailPage" id="SC9-1H-o2Z"/>
+                        <segue destination="qoK-V1-qDW" kind="show" identifier="toDetailPage" id="SC9-1H-o2Z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -106,20 +100,12 @@
         <!--DetailPageSB-->
         <scene sceneID="9n0-9J-QdB">
             <objects>
-                <viewControllerPlaceholder storyboardName="DetailPageSB" id="qoK-V1-qDW" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardIdentifier="DetailPageSB" storyboardName="DetailPageSB" id="qoK-V1-qDW" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="Mab-eb-V8Y"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a5Z-Q2-WFf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="670" y="139"/>
-        </scene>
-        <!--HomeSB-->
-        <scene sceneID="OPJ-9m-meJ">
-            <objects>
-                <viewControllerPlaceholder storyboardName="HomeSB" id="rjz-nv-V3D" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wzT-yJ-Yhg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="136" y="574"/>
         </scene>
     </scenes>
     <resources>

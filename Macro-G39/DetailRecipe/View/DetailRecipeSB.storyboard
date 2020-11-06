@@ -1,23 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Tbi-wa-6WH">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
-
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Compact-Display-Regular.otf">
+            <string>SFCompactDisplay-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Detail RecipeVC-->
         <scene sceneID="7Rs-rv-8P1">
             <objects>
                 <tableViewController id="Tbi-wa-6WH" customClass="DetailRecipeVC" customModule="Macro_G39" customModuleProvider="target" sceneMemberID="viewController">
-
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="jH0-gY-SAn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.9876531959" green="0.96585875750000005" blue="0.90195178990000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="customCellImageRecipe" rowHeight="210" id="rLV-rw-gaL" customClass="CustomCellImageRecipe" customModule="Macro_G39" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="210"/>
@@ -30,7 +33,6 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="210"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="210" id="l2F-Vn-rCH"/>
-
                                             </constraints>
                                         </imageView>
                                     </subviews>
@@ -41,66 +43,107 @@
                                         <constraint firstItem="vTT-0J-oAq" firstAttribute="top" secondItem="77n-4f-zeg" secondAttribute="top" id="zQi-ME-SFg"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.9876531959" green="0.96585875750000005" blue="0.90195178990000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <outlet property="imageTop" destination="vTT-0J-oAq" id="DeD-Jf-x9E"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CustomCellInstruction" id="b9d-Ad-dCB" customClass="CustomCellInstruction" customModule="Macro_G39" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="238" width="414" height="42.5"/>
+                                <rect key="frame" x="0.0" y="238" width="414" height="40.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="b9d-Ad-dCB" id="Wlp-Wx-9Os">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="42.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="40.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6cp-4P-G0Y">
-                                            <rect key="frame" x="20" y="5" width="374" height="32.5"/>
+                                            <rect key="frame" x="20" y="4" width="374" height="32.5"/>
 
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xFe-hB-Pd8">
-                                                    <rect key="frame" x="14" y="6" width="28" height="19.5"/>
+                                                    <rect key="frame" x="14" y="6.5" width="20" height="19.5"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="28" id="3WE-dv-dke"/>
+                                                        <constraint firstAttribute="width" constant="20" id="3WE-dv-dke"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                                    <fontDescription key="fontDescription" name="SFCompactDisplay-Regular" family="SF Compact Display" pointSize="16"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vtA-bT-9Bu">
+                                                    <rect key="frame" x="42" y="6" width="324" height="21.5"/>
 
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vtA-bT-9Bu">
-                                                    <rect key="frame" x="50" y="6" width="316" height="21.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="x8b-L1-Yd2"/>
-
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="SFCompactDisplay-Regular" family="SF Compact Display" pointSize="16"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-
                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-
                                             <constraints>
                                                 <constraint firstItem="vtA-bT-9Bu" firstAttribute="leading" secondItem="xFe-hB-Pd8" secondAttribute="trailing" constant="8" id="IvC-EK-zfQ"/>
-                                                <constraint firstItem="xFe-hB-Pd8" firstAttribute="top" secondItem="6cp-4P-G0Y" secondAttribute="top" constant="6" id="Of6-BM-SC2"/>
                                                 <constraint firstItem="vtA-bT-9Bu" firstAttribute="top" secondItem="6cp-4P-G0Y" secondAttribute="top" constant="6" id="Stf-gh-btH"/>
                                                 <constraint firstItem="xFe-hB-Pd8" firstAttribute="leading" secondItem="6cp-4P-G0Y" secondAttribute="leading" constant="14" id="aq7-XE-CxN"/>
                                                 <constraint firstAttribute="trailing" secondItem="vtA-bT-9Bu" secondAttribute="trailing" constant="8" id="g1D-RD-8D3"/>
                                                 <constraint firstAttribute="bottom" secondItem="vtA-bT-9Bu" secondAttribute="bottom" constant="5" id="p3F-RL-1Up"/>
+                                                <constraint firstItem="xFe-hB-Pd8" firstAttribute="centerY" secondItem="6cp-4P-G0Y" secondAttribute="centerY" id="xU0-bK-d8E"/>
                                             </constraints>
                                         </view>
                                     </subviews>
+                                    <color key="tintColor" red="0.9876531959" green="0.96585875750000005" blue="0.90195178990000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <constraints>
-                                        <constraint firstAttribute="bottom" secondItem="6cp-4P-G0Y" secondAttribute="bottom" constant="5" id="7HA-sW-8ES"/>
-                                        <constraint firstItem="6cp-4P-G0Y" firstAttribute="top" secondItem="Wlp-Wx-9Os" secondAttribute="top" constant="5" id="AvA-Rb-OI3"/>
+                                        <constraint firstAttribute="bottom" secondItem="6cp-4P-G0Y" secondAttribute="bottom" constant="4" id="7HA-sW-8ES"/>
+                                        <constraint firstItem="6cp-4P-G0Y" firstAttribute="top" secondItem="Wlp-Wx-9Os" secondAttribute="top" constant="4" id="AvA-Rb-OI3"/>
                                         <constraint firstAttribute="trailing" secondItem="6cp-4P-G0Y" secondAttribute="trailing" constant="20" id="Yzk-to-I5G"/>
                                         <constraint firstItem="6cp-4P-G0Y" firstAttribute="leading" secondItem="Wlp-Wx-9Os" secondAttribute="leading" constant="20" id="wIP-Ff-Lua"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.9876531959" green="0.96585875750000005" blue="0.90195178990000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <outlet property="containerView" destination="6cp-4P-G0Y" id="Oki-lX-ZY8"/>
                                     <outlet property="labelInstruction" destination="vtA-bT-9Bu" id="Egt-Ou-CpQ"/>
                                     <outlet property="labelNumber" destination="xFe-hB-Pd8" id="vAJ-Wv-Tho"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CustomCellIngredients" rowHeight="21" id="i7a-XF-MiM" customClass="CustomCellIngredients" customModule="Macro_G39" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="278.5" width="414" height="21"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="i7a-XF-MiM" id="oXf-WB-T7w">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="21"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oaH-Oc-J4U">
+                                            <rect key="frame" x="62" y="0.0" width="332" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="Xv4-wd-axO"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="SFCompactDisplay-Regular" family="SF Compact Display" pointSize="16"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="•" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ht8-HX-bzr">
+                                            <rect key="frame" x="34" y="0.0" width="20" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="HsM-NY-vnh"/>
+                                                <constraint firstAttribute="width" constant="20" id="mn0-bq-9Aa"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="oaH-Oc-J4U" firstAttribute="leading" secondItem="Ht8-HX-bzr" secondAttribute="trailing" constant="8" id="AEy-aM-9cH"/>
+                                        <constraint firstAttribute="bottom" secondItem="Ht8-HX-bzr" secondAttribute="bottom" id="NDM-X7-iII"/>
+                                        <constraint firstItem="oaH-Oc-J4U" firstAttribute="top" secondItem="oXf-WB-T7w" secondAttribute="top" id="OYB-na-DEm"/>
+                                        <constraint firstItem="Ht8-HX-bzr" firstAttribute="leading" secondItem="oXf-WB-T7w" secondAttribute="leading" constant="34" id="PLi-1b-TH1"/>
+                                        <constraint firstAttribute="trailing" secondItem="oaH-Oc-J4U" secondAttribute="trailing" constant="20" id="fl7-0l-jnB"/>
+                                        <constraint firstItem="Ht8-HX-bzr" firstAttribute="top" secondItem="oXf-WB-T7w" secondAttribute="top" id="oFM-it-e2a"/>
+                                        <constraint firstAttribute="bottom" secondItem="oaH-Oc-J4U" secondAttribute="bottom" id="vFH-ZV-jlQ"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="lableIngredients" destination="oaH-Oc-J4U" id="W45-Dg-ahZ"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -119,9 +162,9 @@
     </scenes>
     <resources>
         <image name="DSC08830" width="5618" height="3745"/>
+
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-
     </resources>
 </document>
