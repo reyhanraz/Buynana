@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lnd-7g-U5f">
-                                <rect key="frame" x="0.0" y="5" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dNR-Vo-zfA">
                                         <rect key="frame" x="287" y="797" width="66" height="44"/>
@@ -77,9 +77,9 @@
                         <viewLayoutGuide key="safeArea" id="2HW-yE-h8z"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Lnd-7g-U5f" firstAttribute="centerY" secondItem="2HW-yE-h8z" secondAttribute="centerY" id="LJr-I6-kgJ"/>
+                            <constraint firstItem="Lnd-7g-U5f" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="LJr-I6-kgJ"/>
                             <constraint firstItem="Lnd-7g-U5f" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="PIA-R9-Oqt"/>
-                            <constraint firstItem="Lnd-7g-U5f" firstAttribute="centerX" secondItem="2HW-yE-h8z" secondAttribute="centerX" id="anG-Z7-00h"/>
+                            <constraint firstItem="Lnd-7g-U5f" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="anG-Z7-00h"/>
                             <constraint firstItem="Lnd-7g-U5f" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="q0r-oK-xXL"/>
                         </constraints>
                     </view>
