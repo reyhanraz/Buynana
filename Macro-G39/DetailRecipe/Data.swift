@@ -68,7 +68,7 @@ let listResep = [
     ], instruksiRecipe: [
         "Campur bahan kering jadi satu, sisihkan. Di mangkuk lain, haluskan pisang dengan garpu atau potato masher,campur rata dengan bahan basah lainnya.", "Tuangkan bahan basah ke mangkuk bahan kering, aduk secukupnya hingga rata. Jangan terlalu lama mengaduk, karena banana bread nanti bisa jadi bantat.", "Tuangkan ke loyang, kukus selama 50-60 menit atau hingga matang. Bisa juga dipanggang di oven selama 50-60 menit dengan suhu sekitar 180-200 derajat Celcius."
     ], source: ""),
-    Resep(jenisPisang: .Ambon, tingkatKematangan: .Kematengan, namaRecipe: "Lumpia roti goreng isi pisang selai kacang", description: "Cemilan lumpia berkulit roti, dilengkapi dengan kelezatan selai kacang di dalamnya.", gambarRecipe: "lumpia", bahanRecipe: [
+    Resep(jenisPisang: .Ambon, tingkatKematangan: .Kematengan, namaRecipe: "Lumpia Roti Goreng Isi Pisang Selai Kacang", description: "Cemilan lumpia berkulit roti, dilengkapi dengan kelezatan selai kacang di dalamnya.", gambarRecipe: "lumpia", bahanRecipe: [
         "4 lembar roti tawar tanpa kulit, tipiskan",
         "2 buah pisang ambon, potong jadi 2",
         "1 sdm margarin",
@@ -311,7 +311,7 @@ let listResep = [
 //    "Gulung adonan kemudian angkat",
 //    "Tata di atas piring dan sajikan"
 //    ], source: "https://cookpad.com/id/resep/731084-roti-pisang-banjar"),
-    Resep(jenisPisang: .Kepok, tingkatKematangan: .Kematengan, namaRecipe: "Godok-godok Pisang", description: "Makanan khas Rejang yang berupa penganan dengan komposisi terdiri dari pisang yang dicampur dengan terigu dan daging buah kelapa yang telah diparut.", gambarRecipe: "", bahanRecipe: [
+    Resep(jenisPisang: .Kepok, tingkatKematangan: .Kematengan, namaRecipe: "Godok-Godok Pisang", description: "Makanan khas Rejang yang berupa penganan dengan komposisi terdiri dari pisang yang dicampur dengan terigu dan daging buah kelapa yang telah diparut.", gambarRecipe: "", bahanRecipe: [
         "4 buah Pisang",
           "3 sdm Kelapa Parut (optional)",
           "100 gr Tepung Terigu",
