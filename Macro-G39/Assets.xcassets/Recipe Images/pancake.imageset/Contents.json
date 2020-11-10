@@ -1,10 +1,12 @@
 {
   "images" : [
     {
+      "filename" : "pancake@1x.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "pancake@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },

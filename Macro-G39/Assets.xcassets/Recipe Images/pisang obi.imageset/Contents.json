@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "lumpia@1x.png",
+      "filename" : "pisang obi.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "lumpia@2x.png",
+      "filename" : "pisang obi@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "lumpia@3x.png",
+      "filename" : "pisang obi@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

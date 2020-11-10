@@ -1,10 +1,12 @@
 {
   "images" : [
     {
+      "filename" : "pisang_molen@1x.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "pisang_molen@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
