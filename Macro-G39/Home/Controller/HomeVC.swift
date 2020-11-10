@@ -36,8 +36,10 @@ class HomeVC: UIViewController {
         self.navigationController?.navigationBar.isTranslucent = true
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         
-        cameraButton.setImage(UIImage(named: "Deteksi_pisang_button"), for: .normal)
+        cameraButton.setBackgroundImage(UIImage(named: "Deteksi_pisang_button-1"), for: .normal)
         cameraButton.backgroundColor = UIColor.clear
+        cameraButton.contentVerticalAlignment = .fill
+        cameraButton.contentHorizontalAlignment = .fill
     }
     
     override func viewDidAppear(_ animated: Bool) {
