@@ -59,7 +59,7 @@ class DetailPageVC: UITableViewController {
         }else if indexPath.section == 2{
             let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCellProgressBar") as! CustomCellProgressBar
             detectRipeImage()
-            cell.progressBar.setProgress((100-80)/100, animated: true)
+            cell.progressBar.setProgress(1, animated: true)
             
             cell.label1.text = "Mentah"
             cell.label2.text = "Matang"
@@ -86,7 +86,7 @@ class DetailPageVC: UITableViewController {
             case 3:
                 detectAgeImage()
                 cell.backgroundColor = view.backgroundColor
-                    cell.textLabel?.text = "\(ageBanana)"
+                    cell.textLabel?.text = "\(ageBanana) hari menuju busuk"
             case 4:
                 cell.backgroundColor = view.backgroundColor
                 cell.textLabel?.text = "Simpan dalam Kulkas Selama 4 Hari"
