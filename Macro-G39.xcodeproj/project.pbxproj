@@ -15,7 +15,6 @@
 		4B6F083F252B00640054C1FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B6F083D252B00640054C1FA /* LaunchScreen.storyboard */; };
 		4B6F084A252B00640054C1FA /* Macro_G39Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6F0849252B00640054C1FA /* Macro_G39Tests.swift */; };
 		4B6F0855252B00640054C1FA /* Macro_G39UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6F0854252B00640054C1FA /* Macro_G39UITests.swift */; };
-		4B6F0869252B02690054C1FA /* OnBoardingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6F0868252B02690054C1FA /* OnBoardingVC.swift */; };
 		4B6F086E252B027C0054C1FA /* DetailPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6F086D252B027C0054C1FA /* DetailPageVC.swift */; };
 		4B6F087D252B02B50054C1FA /* RecipeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6F087C252B02B50054C1FA /* RecipeVC.swift */; };
 		4B6F0882252B02D30054C1FA /* DetailPageSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B6F0881252B02D30054C1FA /* DetailPageSB.storyboard */; };
@@ -40,6 +39,8 @@
 		946036B125464ED900BF9072 /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946036AF25464ED900BF9072 /* HomeCollectionViewCell.swift */; };
 		946036B225464ED900BF9072 /* HomeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 946036B025464ED900BF9072 /* HomeCollectionViewCell.xib */; };
 		946036B72546B27F00BF9072 /* DetailRecipeSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 946036B62546B27F00BF9072 /* DetailRecipeSB.storyboard */; };
+		94D506592558DDD50013BAE5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D506572558DDD50013BAE5 /* ViewController.swift */; };
+		94D5065A2558DDD50013BAE5 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D506582558DDD50013BAE5 /* SecondViewController.swift */; };
 		AE1B8BAB2550BCB000D1DC40 /* CameraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1B8BA72550BCB000D1DC40 /* CameraController.swift */; };
 		AE1B8BAC2550BCB000D1DC40 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1B8BA82550BCB000D1DC40 /* MainController.swift */; };
 		AE1B8BAD2550BCB000D1DC40 /* Camera.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE1B8BAA2550BCB000D1DC40 /* Camera.storyboard */; };
@@ -80,7 +81,6 @@
 		4B6F0850252B00640054C1FA /* Macro-G39UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Macro-G39UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B6F0854252B00640054C1FA /* Macro_G39UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Macro_G39UITests.swift; sourceTree = "<group>"; };
 		4B6F0856252B00640054C1FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4B6F0868252B02690054C1FA /* OnBoardingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingVC.swift; sourceTree = "<group>"; };
 		4B6F086D252B027C0054C1FA /* DetailPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPageVC.swift; sourceTree = "<group>"; };
 		4B6F087C252B02B50054C1FA /* RecipeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeVC.swift; sourceTree = "<group>"; };
 		4B6F0881252B02D30054C1FA /* DetailPageSB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailPageSB.storyboard; sourceTree = "<group>"; };
@@ -105,6 +105,8 @@
 		946036AF25464ED900BF9072 /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
 		946036B025464ED900BF9072 /* HomeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCollectionViewCell.xib; sourceTree = "<group>"; };
 		946036B62546B27F00BF9072 /* DetailRecipeSB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailRecipeSB.storyboard; sourceTree = "<group>"; };
+		94D506572558DDD50013BAE5 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		94D506582558DDD50013BAE5 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		AE1B8BA72550BCB000D1DC40 /* CameraController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraController.swift; sourceTree = "<group>"; };
 		AE1B8BA82550BCB000D1DC40 /* MainController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
 		AE1B8BAA2550BCB000D1DC40 /* Camera.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Camera.storyboard; sourceTree = "<group>"; };
@@ -270,7 +272,8 @@
 		9460369E253FE49600BF9072 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				4B6F0868252B02690054C1FA /* OnBoardingVC.swift */,
+				94D506582558DDD50013BAE5 /* SecondViewController.swift */,
+				94D506572558DDD50013BAE5 /* ViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -520,18 +523,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				946036AD2542755500BF9072 /* RecipeCollectionViewCell.swift in Sources */,
+				94D506592558DDD50013BAE5 /* ViewController.swift in Sources */,
 				946036AA2542732800BF9072 /* RecipeView.swift in Sources */,
 				AE1B8BAB2550BCB000D1DC40 /* CameraController.swift in Sources */,
 				94603698253FDFC100BF9072 /* HomeVC.swift in Sources */,
 				AE1B8BAC2550BCB000D1DC40 /* MainController.swift in Sources */,
 				4B0F39782540175F00A5E80F /* customCells.swift in Sources */,
 				AE1B8BBD2550E89700D1DC40 /* UmurPisang1.mlmodel in Sources */,
+				94D5065A2558DDD50013BAE5 /* SecondViewController.swift in Sources */,
 				4BE0CF242541CAC600142FFA /* customCellDetailRecipe.swift in Sources */,
 				4B6F086E252B027C0054C1FA /* DetailPageVC.swift in Sources */,
 				AE1B8BB52550BFCE00D1DC40 /* JenisPisang1.mlmodel in Sources */,
 				4B6F087D252B02B50054C1FA /* RecipeVC.swift in Sources */,
 				4B2376F6254ED3D500674F99 /* Data.swift in Sources */,
-				4B6F0869252B02690054C1FA /* OnBoardingVC.swift in Sources */,
 				4B6F0833252B00630054C1FA /* AppDelegate.swift in Sources */,
 				4B6F0835252B00630054C1FA /* SceneDelegate.swift in Sources */,
 				946036B125464ED900BF9072 /* HomeCollectionViewCell.swift in Sources */,
@@ -715,7 +719,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "reyhan.ADA.Macro-G39";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -735,7 +739,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "reyhan.ADA.Macro-G39";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

@@ -20,6 +20,16 @@ class HomeVC: UIViewController {
         setUpView()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        let defaults = UserDefaults.standard
+        if defaults.object(forKey: "isFirstTime") == nil {
+            defaults.set("No", forKey:"isFirstTime")
+            let storyBoard = UIStoryboard(name: "OnboardingSB", bundle: nil)
+            let mainViewController = storyBoard.instantiateViewController(withIdentifier: "ViewController")
+            self.navigationController?.pushViewController(mainViewController, animated: true)
+        }
+    }
+    
     func setUpView() {
         self.navigationController?.navigationBar.tintColor = UIColor.customColor.customOrange
         self.navigationController?.navigationBar.barTintColor = UIColor.customColor.customWhite
