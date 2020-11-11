@@ -83,5 +83,18 @@ extension HomeVC: UICollectionViewDataSource, UICollectionViewDelegate {
         let resep = listResep[indexPath.row]
         performSegue(withIdentifier: "segueToDetail", sender: resep)
     }
+    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+        let layout = self.homeCollectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        let cellWidthIncludeSpacing = layout.itemSize.width + layout.minimumLineSpacing
+        
+        var offset = targetContentOffset.pointee
+        let index = (offset.x + scrollView.contentInset.left) / (cellWidthIncludeSpacing)
+        
+        let roundedIndex = round(index)
+        
+        offset = CGPoint(x: roundedIndex * cellWidthIncludeSpacing - scrollView.contentInset.left, y: scrollView.contentInset.top)
+        
+        targetContentOffset.pointee = offset
+    }
     
 }

@@ -35,7 +35,6 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="xEG-rQ-Cd4" secondAttribute="height" multiplier="67:72" id="t8M-k1-euA"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="goToCameraPage:" destination="PUw-yW-RSh" eventType="touchUpInside" id="tyg-Bp-cWl"/>
                                 </connections>
@@ -50,21 +49,21 @@
                                 </connections>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="8ZL-em-zan">
-                                <rect key="frame" x="20" y="574" width="394" height="212"/>
+                                <rect key="frame" x="0.0" y="574" width="414" height="200"/>
                                 <color key="backgroundColor" red="0.98431372549999996" green="0.96470588239999999" blue="0.90980392160000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="16" minimumInteritemSpacing="16" id="TX6-ic-PaS">
-                                    <size key="itemSize" width="195" height="145"/>
-                                    <size key="estimatedItemSize" width="195" height="150"/>
+                                    <size key="itemSize" width="170" height="145"/>
+                                    <size key="estimatedItemSize" width="170" height="150"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <inset key="sectionInset" minX="28" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="" id="i3o-fO-wPP">
-                                        <rect key="frame" x="0.0" y="33.5" width="195" height="145"/>
+                                        <rect key="frame" x="28" y="27.5" width="170" height="145"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="GUc-rh-Dny">
-                                            <rect key="frame" x="0.0" y="0.0" width="195" height="145"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="170" height="145"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </collectionViewCellContentView>
                                     </collectionViewCell>
@@ -74,12 +73,12 @@
                         <viewLayoutGuide key="safeArea" id="Oha-yE-zoy"/>
                         <color key="backgroundColor" red="0.98431372549019602" green="0.96470588235294119" blue="0.90980392156862744" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="Oha-yE-zoy" firstAttribute="bottom" secondItem="8ZL-em-zan" secondAttribute="bottom" constant="76" id="4WB-Mc-AR8"/>
+                            <constraint firstItem="Oha-yE-zoy" firstAttribute="bottom" secondItem="8ZL-em-zan" secondAttribute="bottom" constant="88" id="4WB-Mc-AR8"/>
                             <constraint firstItem="8ZL-em-zan" firstAttribute="trailing" secondItem="Oha-yE-zoy" secondAttribute="trailing" id="81Z-38-B4K"/>
                             <constraint firstItem="4oq-mT-gJh" firstAttribute="leading" secondItem="Oha-yE-zoy" secondAttribute="leading" constant="20" id="A80-QP-KGR"/>
                             <constraint firstItem="8ZL-em-zan" firstAttribute="top" secondItem="N5o-eK-83F" secondAttribute="bottom" constant="16" id="Fxd-ig-ZE5"/>
                             <constraint firstItem="Nu7-oX-HCV" firstAttribute="leading" secondItem="Oha-yE-zoy" secondAttribute="leading" constant="20" id="OB3-Dn-3L9"/>
-                            <constraint firstItem="8ZL-em-zan" firstAttribute="leading" secondItem="Oha-yE-zoy" secondAttribute="leading" constant="20" id="UNZ-KM-VA7"/>
+                            <constraint firstItem="8ZL-em-zan" firstAttribute="leading" secondItem="Oha-yE-zoy" secondAttribute="leading" id="UNZ-KM-VA7"/>
                             <constraint firstItem="4oq-mT-gJh" firstAttribute="top" secondItem="xEG-rQ-Cd4" secondAttribute="bottom" constant="32" id="VpW-hR-Ev2"/>
                             <constraint firstItem="N5o-eK-83F" firstAttribute="top" secondItem="xEG-rQ-Cd4" secondAttribute="bottom" constant="32" id="grd-eN-lbC"/>
                             <constraint firstItem="Oha-yE-zoy" firstAttribute="trailing" secondItem="N5o-eK-83F" secondAttribute="trailing" constant="20" id="hzn-Rw-UUh"/>
@@ -102,7 +101,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cqU-LP-Ndb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1109.5999999999999" y="129.31034482758622"/>
+            <point key="canvasLocation" x="1108.6956521739132" y="129.24107142857142"/>
         </scene>
         <!--RecipeSB-->
         <scene sceneID="gLO-jH-gF7">

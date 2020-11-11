@@ -43,6 +43,8 @@ class HomeCollectionViewCell: UICollectionViewCell {
         recipeImageView.layer.cornerRadius = 20
         recipeImageView.clipsToBounds = true
         
+        recipeImageView.backgroundColor = .clear
+        recipeView.backgroundColor = .clear
     }
 
 }
