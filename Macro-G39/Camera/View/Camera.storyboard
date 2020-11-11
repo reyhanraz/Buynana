@@ -73,14 +73,20 @@
                                     <constraint firstItem="pfX-fU-RS1" firstAttribute="centerY" secondItem="Akr-g7-ggC" secondAttribute="centerY" id="qtt-bC-tRZ"/>
                                 </constraints>
                             </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zfy-fk-UFe">
+                                <rect key="frame" x="77" y="298" width="260" height="300"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="2HW-yE-h8z"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="zfy-fk-UFe" firstAttribute="centerY" secondItem="Lnd-7g-U5f" secondAttribute="centerY" id="9Xm-Fl-QEg"/>
                             <constraint firstItem="Lnd-7g-U5f" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="LJr-I6-kgJ"/>
+                            <constraint firstItem="zfy-fk-UFe" firstAttribute="width" secondItem="Lnd-7g-U5f" secondAttribute="height" multiplier="65:224" id="LhJ-7d-C63"/>
                             <constraint firstItem="Lnd-7g-U5f" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="PIA-R9-Oqt"/>
                             <constraint firstItem="Lnd-7g-U5f" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="anG-Z7-00h"/>
                             <constraint firstItem="Lnd-7g-U5f" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="q0r-oK-xXL"/>
+                            <constraint firstItem="zfy-fk-UFe" firstAttribute="centerX" secondItem="Lnd-7g-U5f" secondAttribute="centerX" id="wkr-pi-lFp"/>
                         </constraints>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
@@ -88,6 +94,7 @@
                         <outlet property="backButton" destination="nmX-pG-pvs" id="Koe-BN-52j"/>
                         <outlet property="captureButton" destination="Akr-g7-ggC" id="ZHd-4Q-aGF"/>
                         <outlet property="capturePreviewView" destination="Lnd-7g-U5f" id="1h1-9E-VM0"/>
+                        <outlet property="detectorView" destination="zfy-fk-UFe" id="crt-4l-9hi"/>
                         <outlet property="toggleCameraButton" destination="dNR-Vo-zfA" id="Tc7-9N-4bs"/>
                         <outlet property="toggleFlashButton" destination="TK7-Oc-3y1" id="pfk-k4-hgk"/>
                         <segue destination="qoK-V1-qDW" kind="show" identifier="toDetailPage" id="SC9-1H-o2Z"/>

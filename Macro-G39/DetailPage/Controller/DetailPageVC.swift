@@ -27,7 +27,8 @@ class DetailPageVC: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let image = UIImage(systemName: "house")
+//        let image = UIImage(systemName: "house")
+        let image = #imageLiteral(resourceName: "bananaKuning")
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: image, style: .plain, target: self, action: #selector(HomeTapped))
         self.navigationController?.navigationBar.tintColor = UIColor.customColor.customOrange
 

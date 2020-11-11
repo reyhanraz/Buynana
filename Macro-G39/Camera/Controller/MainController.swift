@@ -8,11 +8,13 @@
 
 import UIKit
 import Photos
+import Vision
 
 class MainController: UIViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
-//    var detailPageVC = DetailPageVC()
+    var timer = Timer()
+    public var sendImage:UIImage = #imageLiteral(resourceName: "bananaKuning")
     
-    public var sendImage:UIImage = #imageLiteral(resourceName: "DSC08830")
+    @IBOutlet weak var detectorView: UIImageView!
     
     @IBOutlet fileprivate var captureButton: UIButton!
     
@@ -41,16 +43,8 @@ class MainController: UIViewController, UIImagePickerControllerDelegate & UINavi
 
 extension MainController {
     override func viewDidLoad() {
-        func configureCameraController() {
-            cameraController.prepare {(error) in
-                if let error = error {
-                    print(error)
-                }
-                
-                try? self.cameraController.displayPreview(on: self.capturePreviewView)
-            }
-        }
         configureCameraController()
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: Selector(("liveDetector")), userInfo: nil, repeats: true)
     }
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.navigationBar.isHidden = true
@@ -58,8 +52,66 @@ extension MainController {
 }
 
 extension MainController {
-    func runDetector(){
-        
+    func configureCameraController() {
+        cameraController.prepare {(error) in
+            if let error = error {
+                print(error)
+            }
+            try? self.cameraController.displayPreview(on: self.capturePreviewView)
+        }
+    }
+    
+    @objc func liveDetector(){
+        cameraController.captureImage {(image, error) in
+            guard let image = image else {
+                print(error ?? "Image capture error")
+                return
+            }
+            
+            // START: detection camera image
+            guard let model = try? VNCoreMLModel(for: JenisPisang1().model) else {
+                fatalError("Failed to load model")
+            }
+            
+            // Create a vision request
+            let request = VNCoreMLRequest(model: model) {[weak self] request, error in
+                guard let results = request.results as? [VNClassificationObservation],
+                    let topResult = results.first
+                    else {
+                        fatalError("Unexpected results")
+                }
+                    print("\(Int(topResult.confidence * 100))% \(topResult.identifier)")
+                var messageDetector = ""
+                var confidentLevel = 0
+                    
+                    if (topResult.confidence > 0.5 ) {
+                        confidentLevel = Int ( topResult.confidence * 100 )
+                        let identifierObject = topResult.identifier.split(separator: ",")
+                        messageDetector = "Ini adalah \(confidentLevel)% \(identifierObject[0])"
+                        if (confidentLevel >= 90) {
+                            self!.detectorView.image = #imageLiteral(resourceName: "GroupG")
+                        }else{
+                            self!.detectorView.image = #imageLiteral(resourceName: "GroupR")
+                        }
+                    } else {
+                        messageDetector = "Ini bukan pisang"
+                    }
+                    
+                    print(messageDetector)
+            }
+            
+            guard let ciImage = CIImage(image: image)
+                else { fatalError("Cant create CIImage from UIImage") }
+            
+            // Run klasifikasi jenis pisang
+            let handler = VNImageRequestHandler(ciImage: ciImage)
+                do {
+                    try handler.perform([request])
+                } catch {
+                    print(error)
+                }
+            // END: detection camera image
+        }
     }
     
     func toDetailPage(){
