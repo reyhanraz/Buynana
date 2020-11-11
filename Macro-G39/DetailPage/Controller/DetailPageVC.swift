@@ -207,7 +207,7 @@ class DetailPageVC: UITableViewController {
         }else{
             tableView.deleteRows(at: indexPath, with: .fade)
         }
-        let image = button.currentImage?.rotate(radians: isExpand ? .pi/2 : 0)
+        let image = button.currentImage?.rotate(radians: isExpand ? .pi/2 : -(.pi/2))
         button.setImage(image, for: .normal)
         
     }
