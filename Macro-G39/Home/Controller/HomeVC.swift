@@ -20,14 +20,26 @@ class HomeVC: UIViewController {
         setUpView()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        let defaults = UserDefaults.standard
+        if defaults.object(forKey: "isFirstTime") == nil {
+            defaults.set("No", forKey:"isFirstTime")
+            let storyBoard = UIStoryboard(name: "OnboardingSB", bundle: nil)
+            let mainViewController = storyBoard.instantiateViewController(withIdentifier: "ViewController")
+            self.navigationController?.pushViewController(mainViewController, animated: true)
+        }
+    }
+    
     func setUpView() {
         self.navigationController?.navigationBar.tintColor = UIColor.customColor.customOrange
         self.navigationController?.navigationBar.barTintColor = UIColor.customColor.customWhite
         self.navigationController?.navigationBar.isTranslucent = true
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         
-        cameraButton.setImage(UIImage(named: "Deteksi_pisang_button"), for: .normal)
+        cameraButton.setBackgroundImage(UIImage(named: "Deteksi_pisang_button-1"), for: .normal)
         cameraButton.backgroundColor = UIColor.clear
+        cameraButton.contentVerticalAlignment = .fill
+        cameraButton.contentHorizontalAlignment = .fill
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -70,6 +82,19 @@ extension HomeVC: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let resep = listResep[indexPath.row]
         performSegue(withIdentifier: "segueToDetail", sender: resep)
+    }
+    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+        let layout = self.homeCollectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        let cellWidthIncludeSpacing = layout.itemSize.width + layout.minimumLineSpacing
+        
+        var offset = targetContentOffset.pointee
+        let index = (offset.x + scrollView.contentInset.left) / (cellWidthIncludeSpacing)
+        
+        let roundedIndex = round(index)
+        
+        offset = CGPoint(x: roundedIndex * cellWidthIncludeSpacing - scrollView.contentInset.left, y: scrollView.contentInset.top)
+        
+        targetContentOffset.pointee = offset
     }
     
 }

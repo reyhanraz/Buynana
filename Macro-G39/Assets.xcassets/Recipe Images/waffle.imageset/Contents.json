@@ -1,10 +1,12 @@
 {
   "images" : [
     {
+      "filename" : "waffle@1x.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "waffle@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },

@@ -68,7 +68,7 @@ let listResep = [
     ], instruksiRecipe: [
         "Campur bahan kering jadi satu, sisihkan. Di mangkuk lain, haluskan pisang dengan garpu atau potato masher,campur rata dengan bahan basah lainnya.", "Tuangkan bahan basah ke mangkuk bahan kering, aduk secukupnya hingga rata. Jangan terlalu lama mengaduk, karena banana bread nanti bisa jadi bantat.", "Tuangkan ke loyang, kukus selama 50-60 menit atau hingga matang. Bisa juga dipanggang di oven selama 50-60 menit dengan suhu sekitar 180-200 derajat Celcius."
     ], source: ""),
-    Resep(jenisPisang: .Ambon, tingkatKematangan: .Kematengan, namaRecipe: "Lumpia roti goreng isi pisang selai kacang", description: "Cemilan lumpia berkulit roti, dilengkapi dengan kelezatan selai kacang di dalamnya.", gambarRecipe: "lumpia", bahanRecipe: [
+    Resep(jenisPisang: .Ambon, tingkatKematangan: .Kematengan, namaRecipe: "Lumpia Roti Goreng Isi Pisang Selai Kacang", description: "Cemilan lumpia berkulit roti, dilengkapi dengan kelezatan selai kacang di dalamnya.", gambarRecipe: "lumpia", bahanRecipe: [
         "4 lembar roti tawar tanpa kulit, tipiskan",
         "2 buah pisang ambon, potong jadi 2",
         "1 sdm margarin",
@@ -101,7 +101,7 @@ let listResep = [
         "Masukkan ke loyang, hias dengan kenari jika ingin",
         "Panggang dengan suhu 180 derajat celsius selama 1 jam atau sampai matang"
     ], source: "https://cookpad.com/id/resep/9504581-apple-banana-cake?via=search&search_term=pisang%20ambon%20terlalu%20matang"),
-    Resep(jenisPisang: .General, tingkatKematangan: .Mengkal, namaRecipe: "Keripik Pisang", description: "Makanan yang terbuat dari pisang yang diiris tipis kemudian digoreng. biasanya rasanya adalah asin dengan aroma bawang yang gurih ", gambarRecipe: "", bahanRecipe: [
+    Resep(jenisPisang: .General, tingkatKematangan: .Mengkal, namaRecipe: "Keripik Pisang", description: "Makanan yang terbuat dari pisang yang diiris tipis kemudian digoreng. biasanya rasanya adalah asin dengan aroma bawang yang gurih ", gambarRecipe: "Keripik pisang", bahanRecipe: [
     "10 buah pisang mengkal, iris tipis", "Minyak goreng", "5 sdm air hangat", "3 sdm gula pasir", "1/4 sdt garam"
     ], instruksiRecipe: [
     "Kupas pisang raja",
@@ -157,27 +157,27 @@ let listResep = [
         "Masukan pisang dan tunggu hingga tekstur pisang mulai lembut",
         "Angkat dan kolak pisang siap disajikan"
     ], source: ""),
-    Resep(jenisPisang: .Uli, tingkatKematangan: .Matang, namaRecipe: "Bolu Pisang", description: "Kue yang sangat mudah untuk dibuat dengan bahan dasar tepung dan pisang dan menghasilkan tekstur kue yang lembut dan aroma yang harum.", gambarRecipe: "", bahanRecipe: [
-        "5 buah pisang",
-          "3 butir telur",
-          "100 gr gula pasir",
-          "125 gr terigu",
-          "1 sachet susu bubuk",
-          "1 sdm maizena",
-          "1/2 sdm bubuk kayu manis",
-          "120 gr margarin cair",
-          "Keju kraft cheddar untuk topping"
-    ], instruksiRecipe: [
-    "Siapkan loyang. Oles dengan margarin dan taburi dengan tepung terigu",
-        "Haluskan pisang dengan garpu",
-        "Panaskan oven dengan api kecil",
-        "Mixer telur dan gula dengan kecepatan penuh hingga pucat dan mengembang",
-        "Masukan pisang, mixer dengan kecepatan rendah. aduk hingga rata",
-        "Masukan terigu dan maizena yang telah disaring, susu bubuk, kayu manis, margarin cair. aduk hingga rata",
-        "Masukkan adonan ke loyang. Panggang di oven. Ketika bolu sudah stengah matang, beri keju parut diatasnya",
-        "Panggang lagi hingga bolu matang"
-    ], source: ""),
-    Resep(jenisPisang: .Uli, tingkatKematangan: .Matang, namaRecipe: "Pisang Nugget", description: "pisang yang dibalut dengan telur, tepung terigu dan tepung panir/tepung roti lalu digoreng dan diberi topping sesuai keinginan, biasanya coklat leleh.", gambarRecipe: "", bahanRecipe: [
+//    Resep(jenisPisang: .Uli, tingkatKematangan: .Matang, namaRecipe: "Bolu Pisang", description: "Kue yang sangat mudah untuk dibuat dengan bahan dasar tepung dan pisang dan menghasilkan tekstur kue yang lembut dan aroma yang harum.", gambarRecipe: "", bahanRecipe: [
+//        "5 buah pisang",
+//          "3 butir telur",
+//          "100 gr gula pasir",
+//          "125 gr terigu",
+//          "1 sachet susu bubuk",
+//          "1 sdm maizena",
+//          "1/2 sdm bubuk kayu manis",
+//          "120 gr margarin cair",
+//          "Keju kraft cheddar untuk topping"
+//    ], instruksiRecipe: [
+//    "Siapkan loyang. Oles dengan margarin dan taburi dengan tepung terigu",
+//        "Haluskan pisang dengan garpu",
+//        "Panaskan oven dengan api kecil",
+//        "Mixer telur dan gula dengan kecepatan penuh hingga pucat dan mengembang",
+//        "Masukan pisang, mixer dengan kecepatan rendah. aduk hingga rata",
+//        "Masukan terigu dan maizena yang telah disaring, susu bubuk, kayu manis, margarin cair. aduk hingga rata",
+//        "Masukkan adonan ke loyang. Panggang di oven. Ketika bolu sudah stengah matang, beri keju parut diatasnya",
+//        "Panggang lagi hingga bolu matang"
+//    ], source: ""),
+    Resep(jenisPisang: .Uli, tingkatKematangan: .Matang, namaRecipe: "Pisang Nugget", description: "pisang yang dibalut dengan telur, tepung terigu dan tepung panir/tepung roti lalu digoreng dan diberi topping sesuai keinginan, biasanya coklat leleh.", gambarRecipe: "bananaKuning", bahanRecipe: [
         "4 butir telur",
           "150gr tepung terigu",
           "15gr gula pasir",
@@ -263,17 +263,17 @@ let listResep = [
         "Masukan kembali dalam freezer hingga membeku.",
         "Es krim siap disantap!"
     ], source: "https://www.tokopedia.com/blog/resep-cara-membuat-olahan-pisang/"),
-    Resep(jenisPisang: .Kepok, tingkatKematangan: .Matang, namaRecipe: "Roasted Banana Cinnamon", description: "Cemilan berbahan dasar pisang yang diolah dengan cara dipanggang dan memiliki cita rasa kayu manis yang harum", gambarRecipe: "", bahanRecipe: [
-        "10 buah pisang kepok matang",
-          "2-3 sdm butter",
-          "3 sdm madu",
-          "Bubuk kayu manis secukupnya"
-    ], instruksiRecipe: [
-    "Bakar/panggang pisang di atas pan dengan api kecil, sambil digepengkan dengan cara ditekan-tekan.",
-        "Panaskan pan, tuangkan butter, tunggu sampai butter meleleh, tambahkan madu dan bubuk kayu manis. Aduk rata.",
-        "Masukkan pisang yang sudah dipanggang/bakar, aduk pisang sampai tercampur rata.",
-        "Angkat dan sajikan."
-    ], source: "https://brilicious.brilio.net/masak-yuk/25-resep-camilan-dari-pisang-enak-dan-mudah-dibuat-di-rumah-190802h.html"),
+//    Resep(jenisPisang: .Kepok, tingkatKematangan: .Matang, namaRecipe: "Roasted Banana Cinnamon", description: "Cemilan berbahan dasar pisang yang diolah dengan cara dipanggang dan memiliki cita rasa kayu manis yang harum", gambarRecipe: "", bahanRecipe: [
+//        "10 buah pisang kepok matang",
+//          "2-3 sdm butter",
+//          "3 sdm madu",
+//          "Bubuk kayu manis secukupnya"
+//    ], instruksiRecipe: [
+//    "Bakar/panggang pisang di atas pan dengan api kecil, sambil digepengkan dengan cara ditekan-tekan.",
+//        "Panaskan pan, tuangkan butter, tunggu sampai butter meleleh, tambahkan madu dan bubuk kayu manis. Aduk rata.",
+//        "Masukkan pisang yang sudah dipanggang/bakar, aduk pisang sampai tercampur rata.",
+//        "Angkat dan sajikan."
+//    ], source: "https://brilicious.brilio.net/masak-yuk/25-resep-camilan-dari-pisang-enak-dan-mudah-dibuat-di-rumah-190802h.html"),
     Resep(jenisPisang: .Kepok, tingkatKematangan: .Matang, namaRecipe: "Muffin Pisang Kepok", description: "Kue panggang yang biasanya berukuran kecil dengan bahan dasar tepung terigu tetapi memiliki campuran pisang supaya memiliki cita rasa yang lebih nikmat", gambarRecipe: "banana muffin", bahanRecipe: [
         "10 pisang kepok ukuran sedang",
           "2 butir telur",
@@ -311,19 +311,19 @@ let listResep = [
 //    "Gulung adonan kemudian angkat",
 //    "Tata di atas piring dan sajikan"
 //    ], source: "https://cookpad.com/id/resep/731084-roti-pisang-banjar"),
-    Resep(jenisPisang: .Kepok, tingkatKematangan: .Kematengan, namaRecipe: "Godok-godok Pisang", description: "Makanan khas Rejang yang berupa penganan dengan komposisi terdiri dari pisang yang dicampur dengan terigu dan daging buah kelapa yang telah diparut.", gambarRecipe: "", bahanRecipe: [
-        "4 buah Pisang",
-          "3 sdm Kelapa Parut (optional)",
-          "100 gr Tepung Terigu",
-          "1 sdm Gula Pasir",
-          "1/2 sdt Garam",
-          "Minyak Goreng",
-    ], instruksiRecipe: [
-    "Kupas kulit pisang dan tumbuk hingga halus di dalam wadah",
-        "Campurkan pisang yang telah dihaluskan dengan tepung terigu, kelapa parut, gula dan garam. Aduk hingga semua bahan tercampur rata. Tes rasanya.",
-        "Panaskan minyak dengan api sedang. Ambil satu sendok makan adonan godok-godok dan goreng hingga kuning kecokelatan.",
-        "Angkat dan tiriskan. Sajikan godok-godok pisang selagi hangat!",
-    ], source: "https://m.caping.co.id/news/detailop/7854614?utm_content=1036127558&utm_campaign=f7f0e1796cec814478480b770ecd6e1e"),
+//    Resep(jenisPisang: .Kepok, tingkatKematangan: .Kematengan, namaRecipe: "Godok-Godok Pisang", description: "Makanan khas Rejang yang berupa penganan dengan komposisi terdiri dari pisang yang dicampur dengan terigu dan daging buah kelapa yang telah diparut.", gambarRecipe: "", bahanRecipe: [
+//        "4 buah Pisang",
+//          "3 sdm Kelapa Parut (optional)",
+//          "100 gr Tepung Terigu",
+//          "1 sdm Gula Pasir",
+//          "1/2 sdt Garam",
+//          "Minyak Goreng",
+//    ], instruksiRecipe: [
+//    "Kupas kulit pisang dan tumbuk hingga halus di dalam wadah",
+//        "Campurkan pisang yang telah dihaluskan dengan tepung terigu, kelapa parut, gula dan garam. Aduk hingga semua bahan tercampur rata. Tes rasanya.",
+//        "Panaskan minyak dengan api sedang. Ambil satu sendok makan adonan godok-godok dan goreng hingga kuning kecokelatan.",
+//        "Angkat dan tiriskan. Sajikan godok-godok pisang selagi hangat!",
+//    ], source: "https://m.caping.co.id/news/detailop/7854614?utm_content=1036127558&utm_campaign=f7f0e1796cec814478480b770ecd6e1e"),
     Resep(jenisPisang: .Kepok, tingkatKematangan: .Kematengan, namaRecipe: "Kolak Pisang Bali", description: "Tidak seperti kolak pada umumnya, kolak pisang bali tidak berkuah namun sangat kental.", gambarRecipe: "kolak_bali", bahanRecipe: [
         "1 sisir pisang raja yang Masih mengkal",
           "250gr Gula merah",
@@ -338,7 +338,7 @@ let listResep = [
         "Aduk sampai kuah mengental dan sampai pisang matang",
         "Siap disajikan"
     ], source: ""),
-    Resep(jenisPisang: .Kepok, tingkatKematangan: .Matang, namaRecipe: "Pisang Goreng Kembung Ala Bali", description: "Seperti pisang goreng seperti biasa namun bentuknya memanjang dan terlihat kembung, lalu dimakan menggunakan gula merah yang lezat.", gambarRecipe: "", bahanRecipe: [
+    Resep(jenisPisang: .Kepok, tingkatKematangan: .Matang, namaRecipe: "Pisang Goreng Kembung Ala Bali", description: "Seperti pisang goreng seperti biasa namun bentuknya memanjang dan terlihat kembung, lalu dimakan menggunakan gula merah yang lezat.", gambarRecipe: "pisang obi", bahanRecipe: [
         "250gr tepung terigu",
           "150gr tepung beras",
           "100gr gula pasir",
@@ -372,5 +372,20 @@ let listResep = [
     ], instruksiRecipe: [
     "Campur semua Bahan ke dalam blender",
     "Blender sampai mengental seperti smoothie"
+    ], source: ""),
+    Resep(jenisPisang: .Kepok, tingkatKematangan: .Matang, namaRecipe: "Pisang Bakar Kepok", description: "Cemilan berbahan dasar pisang yang diolah dengan cara dipanggang, mudah dan cepat untuk dibuat. Cocok untuk cemilan sehari-hari.", gambarRecipe: "pisang_bakar", bahanRecipe: [
+        "1 sisir Pisang kepok",
+          "Keju",
+          "Secukupnya Margarin",
+          "Secukupnya Seres",
+          "Susu kental manis"
+    ], instruksiRecipe: [
+        "Kupas pisang kepok, dan belah menjadi 2 bagian, atau sesuai selera",
+        "Oleskan margarin pada teflon, lalu panaskan dengan api kecil",
+        "Masukan pisang yang sudah dibelah ke dalam teflon yang sudah diolesi margarin, dan yang sudah di panaskan",
+        "Tunggu sampai kuning kecoklatan, sambil membolak-balik pisang",
+        "Setelah matang, siapkan di atas piring",
+        "Tambahkan susu, taburi seres, taburi keju yang telah di parut. Tambahkan sesuai selera",
+        "Siap di hidangkan"
     ], source: "")
 ]

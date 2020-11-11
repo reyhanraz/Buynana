@@ -1,10 +1,12 @@
 {
   "images" : [
     {
+      "filename" : "banana_cheesecake_lumer@1x.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "banana_cheesecake_lumer@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },

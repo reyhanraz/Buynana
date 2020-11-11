@@ -1,10 +1,12 @@
 {
   "images" : [
     {
+      "filename" : "apple_banana_cake@1x.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "apple_banana_cake@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },

@@ -1,10 +1,12 @@
 {
   "images" : [
     {
+      "filename" : "Kolak pisang@1x.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "Kolak pisang@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },

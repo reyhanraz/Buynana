@@ -1,10 +1,12 @@
 {
   "images" : [
     {
+      "filename" : "lumpia@1x.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "lumpia@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
