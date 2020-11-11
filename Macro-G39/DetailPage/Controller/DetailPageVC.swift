@@ -21,6 +21,8 @@ class DetailPageVC: UITableViewController {
     var ageBanana:String = "--"
     var ripeAccuration:String = "--%"
     var ripeBanana:String = "--"
+    var isExpand = false
+    let arrTips = ["a","b","c"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,7 +50,16 @@ class DetailPageVC: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        switch section{
+        case 4:
+            if !isExpand{
+                return 0
+            }else{
+                return arrTips.count
+            }
+        default:
+            return 1
+        }
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -72,13 +83,31 @@ class DetailPageVC: UITableViewController {
             }else if ripeBanana == "Kematangan"{
                 cell.progressBar.setProgress((100-75)/100, animated: true)
             }else{
-                cell.progressBar.setProgress(0.5, animated: true)
+                cell.progressBar.setProgress(0, animated: true)
             }
             
             return cell
         }else if indexPath.section == 5{
             let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCellButton") as! customCellButton
             cell.delegate = self
+            switch ripeBanana {
+            case "Mentah":
+                cell.label.text = "Eh, pisang kamu belum matang.. Tunggu matang [xx] hari lagi, ya!"
+                cell.buttonNext.alpha = 0
+            case "Matang":
+                cell.label.text = "Wah, pisangnya udah matang nih! Bisa langsung dimakan, tapi diolah jadi cemilan juga enak!"
+            case "Kematangan":
+                cell.label.text = "Eits, pisang kamu yang kematangan ini masih bisa diolah jadi santapan lezat, kok!"
+            default:
+                cell.label.text = "Yah, pisang kamu udah terlalu busuk untuk dikonsumsi atau diolah lagi. :("
+                cell.buttonNext.alpha = 0
+            }
+            return cell
+        }else if indexPath.section == 4{
+            let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCellCaraPenyimpanan") as! CustomCellCaraPenyimpanan
+            cell.backgroundColor = view.backgroundColor
+            cell.labelNumber.text = "\(indexPath.row+1)."
+            cell.labelInstruction.text = arrTips[indexPath.row]
             return cell
         } else{
             let cell = UITableViewCell()
@@ -86,6 +115,7 @@ class DetailPageVC: UITableViewController {
             case 3:
                 detectAgeImage()
                 cell.backgroundColor = view.backgroundColor
+                    cell.textLabel?.text = "\(ageBanana)"
                     cell.textLabel?.text = "\(ageBanana) hari menuju busuk"
             case 4:
                 cell.backgroundColor = view.backgroundColor
@@ -111,7 +141,7 @@ class DetailPageVC: UITableViewController {
         case 3:
             return "Umur Pisang"
         case 4:
-            return "Tips and Trick"
+            return "Cara Penyimpanan"
         default:
            return ""
         }
@@ -139,19 +169,47 @@ class DetailPageVC: UITableViewController {
     }
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
             let myLabel = UILabel()
-            myLabel.frame = CGRect(x: view.layoutMargins.left, y: 0, width: 300, height: 18)
+            let button = UIButton()
+            myLabel.frame = CGRect(x: view.layoutMargins.left, y: 0, width: 200, height: 18)
             myLabel.font = UIFontMetrics.default.scaledFont(for: UIFont.customFont.heading!)
             myLabel.adjustsFontForContentSizeCategory = true
             myLabel.text = self.tableView(tableView, titleForHeaderInSection: section)
             let headerView = UIView()
             headerView.backgroundColor = UIColor.clear
             headerView.addSubview(myLabel)
+            if section == 4{
+                let image = UIImage(named: "chevron")
+                button.setImage(image, for: .normal)
+                let x = UIScreen.main.bounds.width - self.view.directionalLayoutMargins.leading
+                button.frame = CGRect(x: x-12, y: 0, width: 12, height: 18)
+                button.addTarget(self, action: #selector(self.action), for: .touchUpInside)
+            }
+        headerView.addSubview(button)
             return headerView
     }
     override func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         let footer = UIView()
         footer.backgroundColor = UIColor.clear
         return footer
+    }
+    
+    @objc func action(button: UIButton){
+        let expand = isExpand
+        self.isExpand = !expand
+        
+        var indexPath = [IndexPath]()
+        for row in arrTips.indices{
+            let index = IndexPath(row: row, section: 4)
+            indexPath.append(index)
+        }
+        if isExpand{
+            tableView.insertRows(at: indexPath, with: .fade)
+        }else{
+            tableView.deleteRows(at: indexPath, with: .fade)
+        }
+        let image = button.currentImage?.rotate(radians: isExpand ? .pi/2 : 0)
+        button.setImage(image, for: .normal)
+        
     }
 
 }
