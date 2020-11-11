@@ -10,6 +10,8 @@ import UIKit
 import Photos
 
 class MainController: UIViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
+//    var detailPageVC = DetailPageVC()
+    
     public var sendImage:UIImage = #imageLiteral(resourceName: "DSC08830")
     
     @IBOutlet fileprivate var captureButton: UIButton!
@@ -56,6 +58,10 @@ extension MainController {
 }
 
 extension MainController {
+    func runDetector(){
+        
+    }
+    
     func toDetailPage(){
         performSegue(withIdentifier: "toDetailPage", sender: nil)
     }
@@ -120,12 +126,12 @@ extension MainController {
                 print(error ?? "Image capture error")
                 return
             }
-            
-            try? PHPhotoLibrary.shared().performChangesAndWait {
-                PHAssetChangeRequest.creationRequestForAsset(from: image)
-                self.sendImage = image
-                self.toDetailPage()
-            }
+            self.sendImage = image
+            self.toDetailPage()
+//            try? PHPhotoLibrary.shared().performChangesAndWait {
+//                PHAssetChangeRequest.creationRequestForAsset(from: image)
+//
+//            }
         }
         
     }
