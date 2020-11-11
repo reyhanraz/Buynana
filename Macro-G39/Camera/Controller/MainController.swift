@@ -44,10 +44,14 @@ class MainController: UIViewController, UIImagePickerControllerDelegate & UINavi
 extension MainController {
     override func viewDidLoad() {
         configureCameraController()
-        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: Selector(("liveDetector")), userInfo: nil, repeats: true)
+        
     }
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.navigationBar.isHidden = true
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: Selector(("liveDetector")), userInfo: nil, repeats: true)
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        timer.invalidate()
     }
 }
 
