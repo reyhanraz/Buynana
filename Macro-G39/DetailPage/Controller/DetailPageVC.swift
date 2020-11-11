@@ -26,7 +26,6 @@ class DetailPageVC: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-//        self.view.backgroundColor = UIColor.customColor.customWhite
 
         let image = UIImage(systemName: "house")
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: image, style: .plain, target: self, action: #selector(HomeTapped))
@@ -291,8 +290,8 @@ extension DetailPageVC{
             
             // Update the Main UI Thread with our result
                 print("\(Int(topResult.confidence * 100))% \(topResult.identifier)")
-                self?.ageAccuration = "\(Int(topResult.confidence * 100))%"
-                self?.ageBanana = "\(topResult.identifier)"
+                self?.ripeAccuration = "\(Int(topResult.confidence * 100))%"
+                self?.ripeBanana = "\(topResult.identifier)"
         }
         
         guard let ciImage = CIImage(image: image!)
