@@ -22,13 +22,12 @@ class DetailPageVC: UITableViewController {
     var ripeAccuration:String = "--%"
     var ripeBanana:String = "--"
     var isExpand = false
-    let arrTips = ["a","b","c"]
+    let arrTips = ["Bungkus batang/bonggol pisang dengan plastik. Simpan dengan cara digantung","Jauhkan pisang dari buah lain","Simpan irisan pisang di wadah kedap udara", "Sebelum disimpan, berikan sedikit perasan jeruk lemon, air nanas, atau cuka", "Pastikan pisang mendapat sirkulasi udara", "Jika sudah matang, lepaskan pisang dari tandannya", " Masukkan pisang ke lemari es"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-//        let image = UIImage(systemName: "house")
-        let image = #imageLiteral(resourceName: "bananaKuning")
+        let image = UIImage(systemName: "house")
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: image, style: .plain, target: self, action: #selector(HomeTapped))
         self.navigationController?.navigationBar.tintColor = UIColor.customColor.customOrange
 
@@ -117,9 +116,6 @@ class DetailPageVC: UITableViewController {
                 cell.backgroundColor = view.backgroundColor
                     cell.textLabel?.text = "\(ageBanana)"
                     cell.textLabel?.text = "\(ageBanana) hari menuju busuk"
-            case 4:
-                cell.backgroundColor = view.backgroundColor
-                cell.textLabel?.text = "Simpan dalam Kulkas Selama 4 Hari"
             default:
                 detectTypeImage()
                 cell.backgroundColor = view.backgroundColor
