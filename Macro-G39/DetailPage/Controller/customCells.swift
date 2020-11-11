@@ -35,9 +35,10 @@ class CustomCellProgressBar: UITableViewCell{
         let gradientImage = UIImage.gradientImage(with: progressBar.frame,
                                                   locations: [0.0, 1.0])?.withHorizontallyFlippedOrientation()
         progressBar.transform = CGAffineTransform(scaleX: -1.0, y: -1.0)
-        progressBar.progressTintColor = UIColor.customColor.customYellow
         progressBar.roundCorners(corners: .allCorners, radius: 7.0)
         progressBar.trackImage = gradientImage
+        progressBar.progressTintColor = UIColor.customColor.tintColor
+
     }
     override func prepareForReuse() {
         super.prepareForReuse()
@@ -47,12 +48,9 @@ class CustomCellProgressBar: UITableViewCell{
         viewCont2.backgroundColor = UIColor.customColor.customWhite
         viewCont3.backgroundColor = UIColor.customColor.customWhite
         
-        let gradientImage = UIImage.gradientImage(with: progressBar.frame,
-                                                  locations: [0.0, 1.0])?.withHorizontallyFlippedOrientation()
+       
         progressBar.transform = CGAffineTransform(scaleX: -1.0, y: -1.0)
-        progressBar.progressTintColor = UIColor.customColor.customYellow
         progressBar.roundCorners(corners: .allCorners, radius: 7.0)
-        progressBar.trackImage = gradientImage
     }
 }
 
@@ -60,9 +58,12 @@ class customCellButton: UITableViewCell{
     
     weak var delegate: customCellButtonDelegate?
     @IBOutlet weak var buttonNext: UIButton!
+    @IBOutlet weak var label: UILabel!
     
     override func layoutSubviews() {
         super.layoutSubviews()
+        buttonNext.setTitle("Lihat resep 􀆊", for: .normal)
+
         buttonNext.backgroundColor = UIColor.customColor.customYellow
 
         buttonNext.layer.shadowColor = UIColor(netHex: 0xCCAD5B).cgColor
@@ -71,7 +72,13 @@ class customCellButton: UITableViewCell{
         buttonNext.layer.shadowOpacity = 1.0
         buttonNext.layer.shadowRadius = 0.0
         buttonNext.layer.masksToBounds = false
-        buttonNext.layer.cornerRadius = 25
+        buttonNext.layer.cornerRadius = 12.5
+        contentView.backgroundColor = UIColor.customColor.customOrange
+
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
 
     }
     
@@ -80,6 +87,22 @@ class customCellButton: UITableViewCell{
     }
 
 }
+
+class CustomCellCaraPenyimpanan: UITableViewCell{
+        
+    @IBOutlet weak var containerView: UIView!
+    @IBOutlet weak var labelNumber: UILabel!
+    @IBOutlet weak var labelInstruction: UILabel!
+
+    override func layoutSubviews() {
+        super.layoutSubviews()
+
+        containerView.backgroundColor = UIColor.customColor.customYellow
+        containerView.layer.cornerRadius = 12
+    }
+
+}
+
 
 protocol customCellButtonDelegate: AnyObject {
     func didTapButton()
@@ -93,7 +116,7 @@ extension UIView {
     }
 }
 
-fileprivate extension UIImage {
+extension UIImage {
     static func gradientImage(with bounds: CGRect,
                             locations: [NSNumber]?) -> UIImage? {
 
@@ -113,6 +136,23 @@ fileprivate extension UIImage {
         UIGraphicsEndImageContext()
         return image
     }
+    func rotate(radians: Float) -> UIImage? {
+            var newSize = CGRect(origin: CGPoint.zero, size: self.size).applying(CGAffineTransform(rotationAngle: CGFloat(radians))).size
+            newSize.width = floor(newSize.width)
+            newSize.height = floor(newSize.height)
+
+            UIGraphicsBeginImageContextWithOptions(newSize, false, self.scale)
+            let context = UIGraphicsGetCurrentContext()!
+
+            context.translateBy(x: newSize.width/2, y: newSize.height/2)
+            context.rotate(by: CGFloat(radians))
+            self.draw(in: CGRect(x: -self.size.width/2, y: -self.size.height/2, width: self.size.width, height: self.size.height))
+
+            let newImage = UIGraphicsGetImageFromCurrentImageContext()
+            UIGraphicsEndImageContext()
+
+            return newImage
+        }
 }
 
 extension UIColor {
@@ -135,6 +175,7 @@ extension UIColor {
         static let progressGreen = UIColor(netHex: 0x92BD02)
         static let progressYellow = UIColor(netHex: 0xFFCB00)
         static let progressBrown = UIColor(netHex: 0x3D2C00)
+        static let tintColor = UIColor(netHex: 0xE1DDD2)
 
     }
 }
