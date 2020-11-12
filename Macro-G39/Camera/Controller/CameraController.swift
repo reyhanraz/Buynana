@@ -2,7 +2,7 @@
 //  CameraController.swift
 //  Macro-G39
 //
-//  Created by Faris Ali Yafie on 02/11/20.
+//  Modified by Faris Ali Yafie on 02/11/20.
 //
 
 import UIKit
@@ -180,6 +180,16 @@ extension CameraController {
         
         let settings = AVCapturePhotoSettings()
         settings.flashMode = self.flashMode
+        
+        self.photoOutput?.capturePhoto(with: settings, delegate: self)
+        self.photoCaptureCompletionBlock = completion
+    }
+    
+    func liveImage(completion: @escaping (UIImage?, Error?) -> Void) {
+        guard let captureSession = captureSession, captureSession.isRunning else { completion(nil, CameraControllerError.captureSessionIsMissing); return }
+        
+        let settings = AVCapturePhotoSettings()
+        settings.flashMode = AVCaptureDevice.FlashMode.off
         
         self.photoOutput?.capturePhoto(with: settings, delegate: self)
         self.photoCaptureCompletionBlock = completion

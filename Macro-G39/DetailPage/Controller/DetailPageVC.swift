@@ -224,9 +224,13 @@ extension DetailPageVC{
             }
             
             // Update the Main UI Thread with our result
+            if (topResult.confidence >= 0.2) {
                 print("\(Int(topResult.confidence * 100))% \(topResult.identifier)")
                 self?.typeAccuration = "\(Int(topResult.confidence * 100))%"
                 self?.typeBanana = "\(topResult.identifier)"
+            }else{
+                
+            }
         }
         
         guard let ciImage = CIImage(image: image!)
@@ -255,9 +259,13 @@ extension DetailPageVC{
             }
             
             // Update the Main UI Thread with our result
+            if (topResult.confidence >= 0.2){
                 print("\(Int(topResult.confidence * 100))% \(topResult.identifier)")
                 self?.ageAccuration = "\(Int(topResult.confidence * 100))%"
                 self?.ageBanana = "\(topResult.identifier)"
+            }else{
+                
+            }
         }
         
         guard let ciImage = CIImage(image: image!)
@@ -286,9 +294,11 @@ extension DetailPageVC{
             }
             
             // Update the Main UI Thread with our result
+            if (topResult.confidence >= 0.2){
                 print("\(Int(topResult.confidence * 100))% \(topResult.identifier)")
                 self?.ripeAccuration = "\(Int(topResult.confidence * 100))%"
                 self?.ripeBanana = "\(topResult.identifier)"
+            }
         }
         
         guard let ciImage = CIImage(image: image!)

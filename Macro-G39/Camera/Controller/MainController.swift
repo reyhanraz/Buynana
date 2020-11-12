@@ -48,7 +48,7 @@ extension MainController {
     }
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.navigationBar.isHidden = true
-        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: Selector(("liveDetector")), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: Selector(("liveDetector")), userInfo: nil, repeats: true)
     }
     override func viewWillDisappear(_ animated: Bool) {
         timer.invalidate()
@@ -66,7 +66,7 @@ extension MainController {
     }
     
     @objc func liveDetector(){
-        cameraController.captureImage {(image, error) in
+        cameraController.liveImage {(image, error) in
             guard let image = image else {
                 print(error ?? "Image capture error")
                 return
@@ -88,17 +88,18 @@ extension MainController {
                 var messageDetector = ""
                 var confidentLevel = 0
                     
-                    if (topResult.confidence > 0.5 ) {
+                    if (topResult.confidence > 0.9 ) {
                         confidentLevel = Int ( topResult.confidence * 100 )
                         let identifierObject = topResult.identifier.split(separator: ",")
                         messageDetector = "Ini adalah \(confidentLevel)% \(identifierObject[0])"
-                        if (confidentLevel >= 90) {
+                        if (confidentLevel >= 99) {
                             self!.detectorView.image = #imageLiteral(resourceName: "GroupG")
                         }else{
                             self!.detectorView.image = #imageLiteral(resourceName: "GroupR")
                         }
                     } else {
                         messageDetector = "Ini bukan pisang"
+                        self!.detectorView.image = nil
                     }
                     
                     print(messageDetector)
@@ -177,6 +178,7 @@ extension MainController {
     }
     
     @IBAction func captureImage(_ sender: UIButton) {
+        timer.invalidate()
         cameraController.captureImage {(image, error) in
             guard let image = image else {
                 print(error ?? "Image capture error")

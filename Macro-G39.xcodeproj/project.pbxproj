@@ -44,9 +44,9 @@
 		AE1B8BAB2550BCB000D1DC40 /* CameraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1B8BA72550BCB000D1DC40 /* CameraController.swift */; };
 		AE1B8BAC2550BCB000D1DC40 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1B8BA82550BCB000D1DC40 /* MainController.swift */; };
 		AE1B8BAD2550BCB000D1DC40 /* Camera.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE1B8BAA2550BCB000D1DC40 /* Camera.storyboard */; };
-		AE1B8BB52550BFCE00D1DC40 /* JenisPisang1.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = AE1B8BB42550BFCE00D1DC40 /* JenisPisang1.mlmodel */; };
 		AE1B8BBD2550E89700D1DC40 /* UmurPisang1.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = AE1B8BBC2550E89700D1DC40 /* UmurPisang1.mlmodel */; };
-		AE680ED025538AD0008FAA2C /* KematanganPisang1.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = AE680ECF25538AD0008FAA2C /* KematanganPisang1.mlmodel */; };
+		AE6944B2255CD60E0073BF58 /* JenisPisang1.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = AE6944B1255CD60E0073BF58 /* JenisPisang1.mlmodel */; };
+		AE6944BA255CE5F50073BF58 /* KematanganPisang1.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = AE6944B9255CE5F50073BF58 /* KematanganPisang1.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,9 +110,9 @@
 		AE1B8BA72550BCB000D1DC40 /* CameraController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraController.swift; sourceTree = "<group>"; };
 		AE1B8BA82550BCB000D1DC40 /* MainController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
 		AE1B8BAA2550BCB000D1DC40 /* Camera.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Camera.storyboard; sourceTree = "<group>"; };
-		AE1B8BB42550BFCE00D1DC40 /* JenisPisang1.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = JenisPisang1.mlmodel; sourceTree = "<group>"; };
 		AE1B8BBC2550E89700D1DC40 /* UmurPisang1.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = UmurPisang1.mlmodel; sourceTree = "<group>"; };
-		AE680ECF25538AD0008FAA2C /* KematanganPisang1.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = KematanganPisang1.mlmodel; sourceTree = "<group>"; };
+		AE6944B1255CD60E0073BF58 /* JenisPisang1.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = JenisPisang1.mlmodel; sourceTree = "<group>"; };
+		AE6944B9255CE5F50073BF58 /* KematanganPisang1.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = KematanganPisang1.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,10 +163,10 @@
 		4B6F0831252B00630054C1FA /* Macro-G39 */ = {
 			isa = PBXGroup;
 			children = (
-				4B78B4FC2552A27C00FD40C0 /* Font */,
-				AE680ECF25538AD0008FAA2C /* KematanganPisang1.mlmodel */,
+				AE6944B1255CD60E0073BF58 /* JenisPisang1.mlmodel */,
+				AE6944B9255CE5F50073BF58 /* KematanganPisang1.mlmodel */,
 				AE1B8BBC2550E89700D1DC40 /* UmurPisang1.mlmodel */,
-				AE1B8BB42550BFCE00D1DC40 /* JenisPisang1.mlmodel */,
+				4B78B4FC2552A27C00FD40C0 /* Font */,
 				4B6F0832252B00630054C1FA /* AppDelegate.swift */,
 				4B6F0834252B00630054C1FA /* SceneDelegate.swift */,
 				94603694253F1F2500BF9072 /* Onboarding */,
@@ -529,18 +529,18 @@
 				94603698253FDFC100BF9072 /* HomeVC.swift in Sources */,
 				AE1B8BAC2550BCB000D1DC40 /* MainController.swift in Sources */,
 				4B0F39782540175F00A5E80F /* customCells.swift in Sources */,
+				AE6944B2255CD60E0073BF58 /* JenisPisang1.mlmodel in Sources */,
 				AE1B8BBD2550E89700D1DC40 /* UmurPisang1.mlmodel in Sources */,
 				94D5065A2558DDD50013BAE5 /* SecondViewController.swift in Sources */,
 				4BE0CF242541CAC600142FFA /* customCellDetailRecipe.swift in Sources */,
 				4B6F086E252B027C0054C1FA /* DetailPageVC.swift in Sources */,
-				AE1B8BB52550BFCE00D1DC40 /* JenisPisang1.mlmodel in Sources */,
 				4B6F087D252B02B50054C1FA /* RecipeVC.swift in Sources */,
 				4B2376F6254ED3D500674F99 /* Data.swift in Sources */,
 				4B6F0833252B00630054C1FA /* AppDelegate.swift in Sources */,
 				4B6F0835252B00630054C1FA /* SceneDelegate.swift in Sources */,
 				946036B125464ED900BF9072 /* HomeCollectionViewCell.swift in Sources */,
+				AE6944BA255CE5F50073BF58 /* KematanganPisang1.mlmodel in Sources */,
 				4BE0CF1F2541CA3E00142FFA /* DetailRecipeVC.swift in Sources */,
-				AE680ED025538AD0008FAA2C /* KematanganPisang1.mlmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -710,7 +710,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 3;
-				DEVELOPMENT_TEAM = 9G44XW2W74;
+				DEVELOPMENT_TEAM = LU7959C5GC;
 				INFOPLIST_FILE = "Macro-G39/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -732,7 +732,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 3;
-				DEVELOPMENT_TEAM = 9G44XW2W74;
+				DEVELOPMENT_TEAM = LU7959C5GC;
 				INFOPLIST_FILE = "Macro-G39/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
