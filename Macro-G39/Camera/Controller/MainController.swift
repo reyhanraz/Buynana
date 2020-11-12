@@ -66,6 +66,7 @@ extension MainController {
     }
     
     @objc func liveDetector(){
+
         cameraController.liveImage {(image, error) in
             guard let image = image else {
                 print(error ?? "Image capture error")
