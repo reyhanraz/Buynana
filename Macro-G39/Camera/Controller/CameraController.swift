@@ -201,7 +201,6 @@ extension CameraController: AVCapturePhotoCaptureDelegate {
             // dispose system shutter sound
             AudioServicesDisposeSystemSoundID(1108)
         }
-    
     public func photoOutput(_ captureOutput: AVCapturePhotoOutput, didFinishProcessingPhoto photoSampleBuffer: CMSampleBuffer?, previewPhoto previewPhotoSampleBuffer: CMSampleBuffer?,
                         resolvedSettings: AVCaptureResolvedPhotoSettings, bracketSettings: AVCaptureBracketedStillImageSettings?, error: Swift.Error?) {
         if let error = error { self.photoCaptureCompletionBlock?(nil, error) }

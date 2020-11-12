@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class HomeVC: UIViewController {
 
@@ -97,4 +98,11 @@ extension HomeVC: UICollectionViewDataSource, UICollectionViewDelegate {
         targetContentOffset.pointee = offset
     }
     
+}
+
+extension HomeVC: AVCapturePhotoCaptureDelegate {
+    public func photoOutput(_ output: AVCapturePhotoOutput, willCapturePhotoFor resolvedSettings: AVCaptureResolvedPhotoSettings) {
+            // dispose system shutter sound
+            AudioServicesDisposeSystemSoundID(1108)
+        }
 }

@@ -103,7 +103,7 @@ extension MainController {
                         self!.detectorView.image = nil
                     }
                     
-                    print(messageDetector)
+                    print("\(messageDetector)")
             }
             
             guard let ciImage = CIImage(image: image)
