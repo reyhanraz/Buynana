@@ -11,7 +11,7 @@ import Photos
 import Vision
 
 class MainController: UIViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
-    var timer = Timer()
+    public var timer = Timer()
     public var sendImage:UIImage = #imageLiteral(resourceName: "bananaKuning")
     
     @IBOutlet weak var detectorView: UIImageView!
@@ -48,11 +48,12 @@ extension MainController {
     }
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.navigationBar.isHidden = true
-        timer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: Selector(("liveDetector")), userInfo: nil, repeats: true)
-    }
-    override func viewWillDisappear(_ animated: Bool) {
         timer.invalidate()
+        timer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(self.liveDetector), userInfo: nil, repeats: true)
     }
+//    override func viewWillDisappear(_ animated: Bool) {
+//        timer.invalidate()
+//    }
 }
 
 extension MainController {
@@ -66,7 +67,6 @@ extension MainController {
     }
     
     @objc func liveDetector(){
-
         cameraController.liveImage {(image, error) in
             guard let image = image else {
                 print(error ?? "Image capture error")
@@ -121,7 +121,7 @@ extension MainController {
     }
     
     func toDetailPage(){
-        performSegue(withIdentifier: "toDetailPage", sender: nil)
+            self.performSegue(withIdentifier: "toDetailPage", sender: nil)
     }
     @IBAction func backButtonTapped(_ sender: UIButton){    navigationController?.popViewController(animated: true)
         dismiss(animated: true, completion: nil)
@@ -180,17 +180,19 @@ extension MainController {
     
     @IBAction func captureImage(_ sender: UIButton) {
         timer.invalidate()
-        cameraController.captureImage {(image, error) in
-            guard let image = image else {
-                print(error ?? "Image capture error")
-                return
-            }
+        if (timer.isValid == false)  {
+            cameraController.captureImage {(image, error) in
+                guard let image = image else {
+                    print(error ?? "Image capture error")
+                    return
+                }
             self.sendImage = image
             self.toDetailPage()
 //            try? PHPhotoLibrary.shared().performChangesAndWait {
 //                PHAssetChangeRequest.creationRequestForAsset(from: image)
 //
 //            }
+            }
         }
         
     }

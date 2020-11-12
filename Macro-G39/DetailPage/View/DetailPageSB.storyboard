@@ -103,7 +103,7 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bJX-qv-K2i">
                                                     <rect key="frame" x="0.0" y="86" width="414" height="14"/>
                                                     <subviews>
-                                                        <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" misplaced="YES" progressViewStyle="bar" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ruV-1K-2Vv">
+                                                        <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" misplaced="YES" progressViewStyle="bar" translatesAutoresizingMaskIntoConstraints="NO" id="ruV-1K-2Vv">
                                                             <rect key="frame" x="40.184915048776475" y="0.56960982191230869" width="330.00000000000023" height="15.000000000000043"/>
                                                         </progressView>
                                                     </subviews>

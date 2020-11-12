@@ -69,7 +69,7 @@ class DetailPageVC: UITableViewController {
         }else if indexPath.section == 2{
             let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCellProgressBar") as! CustomCellProgressBar
             detectRipeImage()
-            cell.progressBar.setProgress(1, animated: true)
+            cell.progressBar.setProgress(0, animated: true)
             
             cell.label1.text = "Mentah"
             cell.label2.text = "Matang"
