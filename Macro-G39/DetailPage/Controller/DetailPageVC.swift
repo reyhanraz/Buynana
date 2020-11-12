@@ -174,10 +174,12 @@ class DetailPageVC: UITableViewController {
             headerView.backgroundColor = UIColor.clear
             headerView.addSubview(myLabel)
             if section == 4{
-                let image = UIImage(named: "chevron")
+                let image = UIImage(systemName: "chevron.right")
                 button.setImage(image, for: .normal)
-                let x = UIScreen.main.bounds.width - self.view.directionalLayoutMargins.leading
-                button.frame = CGRect(x: x-12, y: 0, width: 12, height: 18)
+                button.tintColor = .black
+                button.contentHorizontalAlignment = .right
+                let x = UIScreen.main.bounds.width - self.view.directionalLayoutMargins.leading * 2
+                button.frame = CGRect(x: view.directionalLayoutMargins.leading, y: 0, width: x, height: 18)
                 button.addTarget(self, action: #selector(self.action), for: .touchUpInside)
             }
         headerView.addSubview(button)
