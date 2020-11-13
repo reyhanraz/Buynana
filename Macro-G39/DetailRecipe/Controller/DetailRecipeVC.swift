@@ -10,19 +10,24 @@ import UIKit
 class DetailRecipeVC: UITableViewController {
 
     var Resep: Resep?
+    var source: VC?
     override func viewDidLoad() {
         self.view.backgroundColor = UIColor.customColor.customWhite
-        let image = UIImage(systemName: "house")
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: image, style: .plain, target: self, action: #selector(HomeTapped))
+        
         self.navigationController?.navigationBar.tintColor = UIColor.customColor.customOrange
         self.navigationController?.navigationBar.barTintColor = UIColor.customColor.customWhite
         self.navigationController?.navigationBar.isTranslucent = true
         self.title = Resep?.namaRecipe
         
         self.tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
+        self.tableView.allowsSelection = false
     }
     
-    override func viewDidAppear(_ animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
+        if source == .Recipe{
+            let image = UIImage(systemName: "house")
+            self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: image, style: .plain, target: self, action: #selector(HomeTapped))
+        }
         navigationController?.navigationBar.isHidden = false
     }
     @objc func HomeTapped(){
@@ -48,9 +53,6 @@ class DetailRecipeVC: UITableViewController {
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         switch section {
-        case 1:
-            return "a"
-
         case 2:
             return "Bahan - Bahan"
         case 3:
@@ -83,8 +85,8 @@ class DetailRecipeVC: UITableViewController {
 
             cell.textLabel?.numberOfLines = 0
             cell.textLabel?.textAlignment = .justified
-            cell.textLabel?.font = UIFontMetrics.default.scaledFont(for: UIFont.customFont.body!)
-            cell.textLabel?.adjustsFontForContentSizeCategory = true
+            cell.textLabel?.font = UIFont(name: "SFCompactDisplay-Regular", size: 16)
+            cell.textLabel?.adjustsFontForContentSizeCategory = false
             cell.backgroundColor = UIColor.customColor.customWhite
             return cell
         }else{
@@ -104,43 +106,43 @@ class DetailRecipeVC: UITableViewController {
 
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         if section == 0 || section == 1{
-            return 0
+            return CGFloat.leastNormalMagnitude
         }else{
-            return 18
+            return 34
         }
     }
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let v = UIView(frame: CGRect(x: view.layoutMargins.left, y:0, width: UIScreen.main.bounds.width - view.layoutMargins.left*2, height: 1))
+        v.backgroundColor = .gray
         let myLabel = UILabel()
-        myLabel.frame = CGRect(x: view.layoutMargins.left, y: 0, width: 300, height: 18)
+        myLabel.frame = CGRect(x: view.layoutMargins.left, y: 16, width: 300, height: 18)
         myLabel.font = UIFont.boldSystemFont(ofSize: 16)
         myLabel.text = self.tableView(tableView, titleForHeaderInSection: section)
         let headerView = UIView()
         headerView.backgroundColor = UIColor.clear
         headerView.addSubview(myLabel)
+        headerView.addSubview(v)
         return headerView
     }
     
     override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         if section == 3{
-            return 0
+            return CGFloat.leastNormalMagnitude
         }else{
-            return 16
+            return 14
         }
     }
     
     override func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         // UIView with darkGray background for section-separators as Section Footer
-        
-        let v = UIView(frame: CGRect(x: view.layoutMargins.left, y:0, width: UIScreen.main.bounds.width - view.layoutMargins.left*2, height: 1))
-        v.backgroundColor = .gray
-        
         let headerView = UIView()
         headerView.backgroundColor = UIColor.clear
-        headerView.addSubview(v)
-        
         return headerView
-
     }
     
 
+}
+enum VC {
+    case Home
+    case Recipe
 }

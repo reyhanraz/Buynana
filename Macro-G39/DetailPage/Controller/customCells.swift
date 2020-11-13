@@ -27,6 +27,10 @@ class CustomCellProgressBar: UITableViewCell{
     
     override func layoutSubviews() {
         super.layoutSubviews()
+        stackView.backgroundColor = UIColor.customColor.customWhite
+        viewCont1.backgroundColor = UIColor.customColor.customWhite
+        viewCont2.backgroundColor = UIColor.customColor.customWhite
+        viewCont3.backgroundColor = UIColor.customColor.customWhite
         progressBar.layer.cornerRadius = 7
         image1.layer.cornerRadius = 10
         image2.layer.cornerRadius = 10
@@ -42,13 +46,6 @@ class CustomCellProgressBar: UITableViewCell{
     }
     override func prepareForReuse() {
         super.prepareForReuse()
-        
-        stackView.backgroundColor = UIColor.customColor.customWhite
-        viewCont1.backgroundColor = UIColor.customColor.customWhite
-        viewCont2.backgroundColor = UIColor.customColor.customWhite
-        viewCont3.backgroundColor = UIColor.customColor.customWhite
-        
-       
         progressBar.transform = CGAffineTransform(scaleX: -1.0, y: -1.0)
         progressBar.roundCorners(corners: .allCorners, radius: 7.0)
     }
@@ -59,6 +56,7 @@ class customCellButton: UITableViewCell{
     weak var delegate: customCellButtonDelegate?
     @IBOutlet weak var buttonNext: UIButton!
     @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var view: UIView!
     
     override func layoutSubviews() {
         super.layoutSubviews()
@@ -73,13 +71,12 @@ class customCellButton: UITableViewCell{
         buttonNext.layer.shadowRadius = 0.0
         buttonNext.layer.masksToBounds = false
         buttonNext.layer.cornerRadius = 12.5
-        contentView.backgroundColor = UIColor.customColor.customOrange
 
     }
     
     override func prepareForReuse() {
         super.prepareForReuse()
-
+        view.backgroundColor = UIColor.customColor.customOrange
     }
     
     @IBAction func toRecipetapped(){
@@ -96,8 +93,8 @@ class CustomCellCaraPenyimpanan: UITableViewCell{
 
     override func layoutSubviews() {
         super.layoutSubviews()
-
-        containerView.backgroundColor = UIColor.customColor.customYellow
+        contentView.backgroundColor = UIColor.customColor.customWhite
+        containerView.backgroundColor = UIColor.clear
         containerView.layer.cornerRadius = 12
     }
 
@@ -170,8 +167,8 @@ extension UIColor {
     struct customColor {
         static let customYellow = UIColor.init(netHex: 0xF6D275)
         static let customBlue = UIColor(netHex: 0xF6D275)
-        static let customOrange = UIColor(netHex: 0xCD784D)
-        static let customWhite = UIColor(netHex: 0xE3DDCD)
+        static let customOrange = UIColor(red: 205/255, green: 120/255, blue: 77/255, alpha: 1.0)
+        static let customWhite = UIColor(netHex: 0xFDF6E4)
         static let progressGreen = UIColor(netHex: 0x92BD02)
         static let progressYellow = UIColor(netHex: 0xFFCB00)
         static let progressBrown = UIColor(netHex: 0x3D2C00)

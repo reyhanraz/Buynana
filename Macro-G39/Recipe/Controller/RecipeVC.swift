@@ -54,6 +54,7 @@ extension RecipeVC: UICollectionViewDelegate, UICollectionViewDataSource {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let dest = segue.destination as? DetailRecipeVC{
             dest.Resep = (sender as! Resep)
+            dest.source = .Recipe
         }
     }
     
