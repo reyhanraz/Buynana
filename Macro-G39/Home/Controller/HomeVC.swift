@@ -28,6 +28,7 @@ class HomeVC: UIViewController {
             let mainViewController = storyBoard.instantiateViewController(withIdentifier: "ViewController")
             self.navigationController?.pushViewController(mainViewController, animated: true)
         }
+        self.navigationController?.navigationBar.isHidden = true
     }
     
     func setUpView() {
@@ -40,10 +41,6 @@ class HomeVC: UIViewController {
         cameraButton.backgroundColor = UIColor.clear
         cameraButton.contentVerticalAlignment = .fill
         cameraButton.contentHorizontalAlignment = .fill
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        self.navigationController?.navigationBar.isHidden = true
     }
     
     @IBAction func goToRecipePage(_ sender: Any) {
