@@ -93,13 +93,35 @@ class DetailPageVC: UITableViewController {
             let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCellButton") as! customCellButton
             cell.delegate = self
             switch ripeBanana {
-            case "Mentah":
+            // case mentah
+            case "13":
                 cell.label.text = "Eh, pisang kamu belum matang.. Tunggu matang [xx] hari lagi, ya!"
                 cell.buttonNext.alpha = 0
-            case "Matang":
+            case "12":
+                cell.label.text = "Eh, pisang kamu belum matang.. Tunggu matang [xx] hari lagi, ya!"
+                cell.buttonNext.alpha = 0
+            case "11":
+                cell.label.text = "Eh, pisang kamu belum matang.. Tunggu matang [xx] hari lagi, ya!"
+                cell.buttonNext.alpha = 0
+            // case matang
+            case "10":
                 cell.label.text = "Wah, pisangnya udah matang nih! Bisa langsung dimakan, tapi diolah jadi cemilan juga enak!"
-            case "Kematangan":
+            case "9":
+                cell.label.text = "Wah, pisangnya udah matang nih! Bisa langsung dimakan, tapi diolah jadi cemilan juga enak!"
+            case "8":
+                cell.label.text = "Wah, pisangnya udah matang nih! Bisa langsung dimakan, tapi diolah jadi cemilan juga enak!"
+            // case kematangan
+            case "7":
                 cell.label.text = "Eits, pisang kamu yang kematangan ini masih bisa diolah jadi santapan lezat, kok!"
+            case "6":
+                cell.label.text = "Eits, pisang kamu yang kematangan ini masih bisa diolah jadi santapan lezat, kok!"
+            case "5":
+                cell.label.text = "Eits, pisang kamu yang kematangan ini masih bisa diolah jadi santapan lezat, kok!"
+            case "4":
+                cell.label.text = "Eits, pisang kamu yang kematangan ini masih bisa diolah jadi santapan lezat, kok!"
+            case "3":
+                cell.label.text = "Eits, pisang kamu yang kematangan ini masih bisa diolah jadi santapan lezat, kok!"
+            // case busuk
             default:
                 cell.label.text = "Yah, pisang kamu udah terlalu busuk untuk dikonsumsi atau diolah lagi. :("
                 cell.buttonNext.alpha = 0
