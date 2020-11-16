@@ -71,18 +71,18 @@ class DetailPageVC: UITableViewController {
         }else if indexPath.section == 2{
             let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCellProgressBar") as! CustomCellProgressBar
             detectAgeImage()
-            cell.progressBar.setProgress(0, animated: true)
+            cell.progressBar.setProgress(1, animated: true)
             
             cell.label1.text = "Mentah"
             cell.label2.text = "Matang"
             cell.label3.text = "Busuk"
             
             // progressbar based on banana age model
-            if ripeBanana == "13" || ripeBanana == "12" || ripeBanana == "11"{
+            if ripeBanana == "13" || ripeBanana == "12" || ripeBanana == "11" || ripeBanana == "10"{
                 cell.progressBar.setProgress(90/100, animated: true)
-            }else if ripeBanana == "10" || ripeBanana == "9" || ripeBanana == "8"{
+            }else if ripeBanana == "9" || ripeBanana == "8" || ripeBanana == "7"{
                 cell.progressBar.setProgress(50/100, animated: true)
-            }else if ripeBanana == "7" || ripeBanana == "6" || ripeBanana == "5" || ripeBanana == "4" || ripeBanana == "3"{
+            }else if ripeBanana == "6" || ripeBanana == "5" || ripeBanana == "4" || ripeBanana == "3"{
                 cell.progressBar.setProgress((100-75)/100, animated: true)
             }else{
                 cell.progressBar.setProgress(0, animated: true)
@@ -103,16 +103,17 @@ class DetailPageVC: UITableViewController {
             case "11":
                 cell.label.text = "Eh, pisang kamu belum matang.. Tunggu matang [xx] hari lagi, ya!"
                 cell.buttonNext.alpha = 0
-            // case matang
             case "10":
-                cell.label.text = "Wah, pisangnya udah matang nih! Bisa langsung dimakan, tapi diolah jadi cemilan juga enak!"
+                cell.label.text = "Eh, pisang kamu belum matang.. Tunggu matang [xx] hari lagi, ya!"
+                cell.buttonNext.alpha = 0
+            // case matang
             case "9":
                 cell.label.text = "Wah, pisangnya udah matang nih! Bisa langsung dimakan, tapi diolah jadi cemilan juga enak!"
             case "8":
                 cell.label.text = "Wah, pisangnya udah matang nih! Bisa langsung dimakan, tapi diolah jadi cemilan juga enak!"
-            // case kematangan
             case "7":
-                cell.label.text = "Eits, pisang kamu yang kematangan ini masih bisa diolah jadi santapan lezat, kok!"
+                cell.label.text = "Wah, pisangnya udah matang nih! Bisa langsung dimakan, tapi diolah jadi cemilan juga enak!"
+            // case kematangan
             case "6":
                 cell.label.text = "Eits, pisang kamu yang kematangan ini masih bisa diolah jadi santapan lezat, kok!"
             case "5":
