@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "app_icon_appstore@1x.png",
+      "filename" : "detailpisang_bg@1x.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "detailpisang_bg@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "detailpisang_bg@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

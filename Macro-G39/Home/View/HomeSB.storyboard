@@ -18,19 +18,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Resep" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4oq-mT-gJh">
-                                <rect key="frame" x="20" y="528" width="62" height="26"/>
+                                <rect key="frame" x="20" y="548" width="62" height="26"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Deteksi Pisang" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nu7-oX-HCV">
-                                <rect key="frame" x="20" y="44" width="146" height="26"/>
+                                <rect key="frame" x="20" y="64" width="146" height="26"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xEG-rQ-Cd4">
-                                <rect key="frame" x="20" y="94" width="374" height="402"/>
+                                <rect key="frame" x="20" y="114" width="374" height="402"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="xEG-rQ-Cd4" secondAttribute="height" multiplier="67:72" id="t8M-k1-euA"/>
@@ -40,7 +40,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N5o-eK-83F">
-                                <rect key="frame" x="309" y="528" width="85" height="30"/>
+                                <rect key="frame" x="309" y="548" width="85" height="30"/>
                                 <state key="normal" title="Lihat Semua">
                                     <color key="titleColor" red="0.78713983300000001" green="0.46141541000000003" blue="0.2940555513" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
@@ -49,7 +49,7 @@
                                 </connections>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="8ZL-em-zan">
-                                <rect key="frame" x="0.0" y="574" width="414" height="200"/>
+                                <rect key="frame" x="0.0" y="594" width="414" height="200"/>
                                 <color key="backgroundColor" red="0.98431372549999996" green="0.96470588239999999" blue="0.90980392160000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="16" minimumInteritemSpacing="16" id="TX6-ic-PaS">
                                     <size key="itemSize" width="170" height="145"/>
@@ -73,7 +73,7 @@
                         <viewLayoutGuide key="safeArea" id="Oha-yE-zoy"/>
                         <color key="backgroundColor" red="0.98431372549019602" green="0.96470588235294119" blue="0.90980392156862744" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="Oha-yE-zoy" firstAttribute="bottom" secondItem="8ZL-em-zan" secondAttribute="bottom" constant="88" id="4WB-Mc-AR8"/>
+                            <constraint firstItem="Oha-yE-zoy" firstAttribute="bottom" secondItem="8ZL-em-zan" secondAttribute="bottom" constant="68" id="4WB-Mc-AR8"/>
                             <constraint firstItem="8ZL-em-zan" firstAttribute="trailing" secondItem="Oha-yE-zoy" secondAttribute="trailing" id="81Z-38-B4K"/>
                             <constraint firstItem="4oq-mT-gJh" firstAttribute="leading" secondItem="Oha-yE-zoy" secondAttribute="leading" constant="20" id="A80-QP-KGR"/>
                             <constraint firstItem="8ZL-em-zan" firstAttribute="top" secondItem="N5o-eK-83F" secondAttribute="bottom" constant="16" id="Fxd-ig-ZE5"/>
@@ -84,7 +84,7 @@
                             <constraint firstItem="Oha-yE-zoy" firstAttribute="trailing" secondItem="N5o-eK-83F" secondAttribute="trailing" constant="20" id="hzn-Rw-UUh"/>
                             <constraint firstItem="Oha-yE-zoy" firstAttribute="trailing" secondItem="xEG-rQ-Cd4" secondAttribute="trailing" constant="20" id="m2t-yB-G2U"/>
                             <constraint firstItem="xEG-rQ-Cd4" firstAttribute="leading" secondItem="Oha-yE-zoy" secondAttribute="leading" constant="20" id="pDh-Qn-NRl"/>
-                            <constraint firstItem="Nu7-oX-HCV" firstAttribute="top" secondItem="Oha-yE-zoy" secondAttribute="top" id="vOy-FO-v6y"/>
+                            <constraint firstItem="Nu7-oX-HCV" firstAttribute="top" secondItem="Oha-yE-zoy" secondAttribute="top" constant="20" id="vOy-FO-v6y"/>
                             <constraint firstItem="xEG-rQ-Cd4" firstAttribute="top" secondItem="Nu7-oX-HCV" secondAttribute="bottom" constant="24" id="zM2-G5-Rq0"/>
                         </constraints>
                     </view>

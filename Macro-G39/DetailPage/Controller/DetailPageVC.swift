@@ -26,6 +26,7 @@ class DetailPageVC: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tableView.backgroundColor = UIColor.customColor.customWhite
 
         let image = UIImage(systemName: "house")
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: image, style: .plain, target: self, action: #selector(HomeTapped))
@@ -36,6 +37,7 @@ class DetailPageVC: UITableViewController {
         self.title = "Detail Pisang"
         
         self.tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
+        self.tableView.allowsSelection = false
     }
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.navigationBar.isHidden = false
@@ -76,7 +78,7 @@ class DetailPageVC: UITableViewController {
             cell.label3.text = "Busuk"
             
             if ripeBanana == "Mentah"{
-                cell.progressBar.setProgress(1, animated: true)
+                cell.progressBar.setProgress(90/100, animated: true)
             }else if ripeBanana == "Matang"{
                 cell.progressBar.setProgress(50/100, animated: true)
             }else if ripeBanana == "Kematangan"{
@@ -104,7 +106,6 @@ class DetailPageVC: UITableViewController {
             return cell
         }else if indexPath.section == 4{
             let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCellCaraPenyimpanan") as! CustomCellCaraPenyimpanan
-            cell.backgroundColor = view.backgroundColor
             cell.labelNumber.text = "\(indexPath.row+1)."
             cell.labelInstruction.text = arrTips[indexPath.row]
             return cell
@@ -113,16 +114,14 @@ class DetailPageVC: UITableViewController {
             switch indexPath.section {
             case 3:
                 detectAgeImage()
-                cell.backgroundColor = view.backgroundColor
-                    cell.textLabel?.text = "\(ageBanana)"
                     cell.textLabel?.text = "\(ageBanana) hari menuju busuk"
             default:
                 detectTypeImage()
-                cell.backgroundColor = view.backgroundColor
                     cell.textLabel?.text = "\(typeBanana)"
             }
             cell.textLabel?.font = UIFontMetrics.default.scaledFont(for: UIFont.customFont.body!)
             cell.textLabel?.adjustsFontForContentSizeCategory = true
+            cell.backgroundColor = UIColor.customColor.customWhite
             return cell
 
         }
@@ -145,8 +144,8 @@ class DetailPageVC: UITableViewController {
     
 
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        if section == 0{
-            return 0
+        if section == 0 || section == 5{
+            return CGFloat.leastNormalMagnitude
         }else{
             return  18
         }
@@ -158,8 +157,8 @@ class DetailPageVC: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        if section == 2{
-            return 24
+        if section == 0 || section == 2 || section == 5{
+            return CGFloat.leastNormalMagnitude
         }
         return 16
     }
@@ -171,13 +170,15 @@ class DetailPageVC: UITableViewController {
             myLabel.adjustsFontForContentSizeCategory = true
             myLabel.text = self.tableView(tableView, titleForHeaderInSection: section)
             let headerView = UIView()
-            headerView.backgroundColor = UIColor.clear
+        headerView.backgroundColor = UIColor.customColor.customWhite
             headerView.addSubview(myLabel)
             if section == 4{
-                let image = UIImage(named: "chevron")
+                let image = UIImage(systemName: "chevron.right")
                 button.setImage(image, for: .normal)
-                let x = UIScreen.main.bounds.width - self.view.directionalLayoutMargins.leading
-                button.frame = CGRect(x: x-12, y: 0, width: 12, height: 18)
+                button.tintColor = .black
+                button.contentHorizontalAlignment = .right
+                let x = UIScreen.main.bounds.width - self.view.directionalLayoutMargins.leading * 2
+                button.frame = CGRect(x: view.directionalLayoutMargins.leading, y: 0, width: x, height: 18)
                 button.addTarget(self, action: #selector(self.action), for: .touchUpInside)
             }
         headerView.addSubview(button)
@@ -185,7 +186,7 @@ class DetailPageVC: UITableViewController {
     }
     override func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         let footer = UIView()
-        footer.backgroundColor = UIColor.clear
+        footer.backgroundColor = UIColor.customColor.customWhite
         return footer
     }
     
