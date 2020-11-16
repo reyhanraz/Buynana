@@ -70,18 +70,19 @@ class DetailPageVC: UITableViewController {
             return cell
         }else if indexPath.section == 2{
             let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCellProgressBar") as! CustomCellProgressBar
-            detectRipeImage()
+            detectAgeImage()
             cell.progressBar.setProgress(0, animated: true)
             
             cell.label1.text = "Mentah"
             cell.label2.text = "Matang"
             cell.label3.text = "Busuk"
             
-            if ripeBanana == "Mentah"{
+            // progressbar based on banana age model
+            if ripeBanana == "13" || ripeBanana == "12" || ripeBanana == "11"{
                 cell.progressBar.setProgress(90/100, animated: true)
-            }else if ripeBanana == "Matang"{
+            }else if ripeBanana == "10" || ripeBanana == "9" || ripeBanana == "8"{
                 cell.progressBar.setProgress(50/100, animated: true)
-            }else if ripeBanana == "Kematangan"{
+            }else if ripeBanana == "7" || ripeBanana == "6" || ripeBanana == "5" || ripeBanana == "4" || ripeBanana == "3"{
                 cell.progressBar.setProgress((100-75)/100, animated: true)
             }else{
                 cell.progressBar.setProgress(0, animated: true)
