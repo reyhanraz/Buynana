@@ -110,12 +110,12 @@
                                                         </progressView>
                                                     </subviews>
                                                     <constraints>
-                                                        <constraint firstAttribute="trailing" secondItem="ruV-1K-2Vv" secondAttribute="trailing" constant="43.815084951223298" id="8Ll-Ch-gfO"/>
-                                                        <constraint firstItem="ruV-1K-2Vv" firstAttribute="centerX" secondItem="bJX-qv-K2i" secondAttribute="centerX" constant="-1.8150849512234117" id="EdC-sf-aft"/>
+                                                        <constraint firstAttribute="trailing" secondItem="ruV-1K-2Vv" secondAttribute="trailing" constant="30" id="8Ll-Ch-gfO"/>
+                                                        <constraint firstItem="ruV-1K-2Vv" firstAttribute="centerX" secondItem="bJX-qv-K2i" secondAttribute="centerX" id="EdC-sf-aft"/>
                                                         <constraint firstItem="ruV-1K-2Vv" firstAttribute="top" secondItem="bJX-qv-K2i" secondAttribute="top" id="NOB-Xg-J4o"/>
                                                         <constraint firstAttribute="height" constant="14" id="Wom-2T-BXA"/>
                                                         <constraint firstAttribute="bottom" secondItem="ruV-1K-2Vv" secondAttribute="bottom" id="m08-fT-8YA"/>
-                                                        <constraint firstItem="ruV-1K-2Vv" firstAttribute="leading" secondItem="bJX-qv-K2i" secondAttribute="leading" constant="40.184915048776475" id="v3y-Lp-Khm"/>
+                                                        <constraint firstItem="ruV-1K-2Vv" firstAttribute="leading" secondItem="bJX-qv-K2i" secondAttribute="leading" constant="30" id="v3y-Lp-Khm"/>
                                                     </constraints>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xpS-C9-FMA">

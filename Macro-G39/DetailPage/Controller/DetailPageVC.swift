@@ -265,6 +265,8 @@ extension DetailPageVC{
                 print("\(Int(topResult.confidence * 100))% \(topResult.identifier)")
                 self?.ageAccuration = "\(Int(topResult.confidence * 100))%"
                 self?.ageBanana = "\(topResult.identifier)"
+                self?.ripeAccuration = "\(Int(topResult.confidence * 100))%"
+                self?.ripeBanana = "\(topResult.identifier)"
             }else{
                 
             }
