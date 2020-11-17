@@ -47,6 +47,8 @@
 		AE1B8BBD2550E89700D1DC40 /* UmurPisang1.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = AE1B8BBC2550E89700D1DC40 /* UmurPisang1.mlmodel */; };
 		AE6944B2255CD60E0073BF58 /* JenisPisang1.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = AE6944B1255CD60E0073BF58 /* JenisPisang1.mlmodel */; };
 		AE6944BA255CE5F50073BF58 /* KematanganPisang1.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = AE6944B9255CE5F50073BF58 /* KematanganPisang1.mlmodel */; };
+		AE8AE5D2256370D10099808B /* JenisPisang100.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = AE8AE5D1256370D10099808B /* JenisPisang100.mlmodel */; };
+		AE8AE5D7256388900099808B /* UmurPisang100.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = AE8AE5D6256388900099808B /* UmurPisang100.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,6 +115,8 @@
 		AE1B8BBC2550E89700D1DC40 /* UmurPisang1.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = UmurPisang1.mlmodel; sourceTree = "<group>"; };
 		AE6944B1255CD60E0073BF58 /* JenisPisang1.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = JenisPisang1.mlmodel; sourceTree = "<group>"; };
 		AE6944B9255CE5F50073BF58 /* KematanganPisang1.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = KematanganPisang1.mlmodel; sourceTree = "<group>"; };
+		AE8AE5D1256370D10099808B /* JenisPisang100.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = JenisPisang100.mlmodel; sourceTree = "<group>"; };
+		AE8AE5D6256388900099808B /* UmurPisang100.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = UmurPisang100.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +167,8 @@
 		4B6F0831252B00630054C1FA /* Macro-G39 */ = {
 			isa = PBXGroup;
 			children = (
+				AE8AE5D6256388900099808B /* UmurPisang100.mlmodel */,
+				AE8AE5D1256370D10099808B /* JenisPisang100.mlmodel */,
 				AE6944B1255CD60E0073BF58 /* JenisPisang1.mlmodel */,
 				AE6944B9255CE5F50073BF58 /* KematanganPisang1.mlmodel */,
 				AE1B8BBC2550E89700D1DC40 /* UmurPisang1.mlmodel */,
@@ -522,12 +528,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE8AE5D7256388900099808B /* UmurPisang100.mlmodel in Sources */,
 				946036AD2542755500BF9072 /* RecipeCollectionViewCell.swift in Sources */,
 				94D506592558DDD50013BAE5 /* ViewController.swift in Sources */,
 				946036AA2542732800BF9072 /* RecipeView.swift in Sources */,
 				AE1B8BAB2550BCB000D1DC40 /* CameraController.swift in Sources */,
 				94603698253FDFC100BF9072 /* HomeVC.swift in Sources */,
 				AE1B8BAC2550BCB000D1DC40 /* MainController.swift in Sources */,
+				AE8AE5D2256370D10099808B /* JenisPisang100.mlmodel in Sources */,
 				4B0F39782540175F00A5E80F /* customCells.swift in Sources */,
 				AE6944B2255CD60E0073BF58 /* JenisPisang1.mlmodel in Sources */,
 				AE1B8BBD2550E89700D1DC40 /* UmurPisang1.mlmodel in Sources */,

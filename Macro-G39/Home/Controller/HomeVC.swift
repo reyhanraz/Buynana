@@ -22,6 +22,7 @@ class HomeVC: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        AudioServicesDisposeSystemSoundID(1108)
         let defaults = UserDefaults.standard
         if defaults.object(forKey: "isFirstTime") == nil {
             defaults.set("No", forKey:"isFirstTime")

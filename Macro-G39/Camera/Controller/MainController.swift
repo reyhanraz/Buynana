@@ -74,7 +74,7 @@ extension MainController {
             }
             
             // START: detection camera image
-            guard let model = try? VNCoreMLModel(for: JenisPisang1().model) else {
+            guard let model = try? VNCoreMLModel(for: JenisPisang100().model) else {
                 fatalError("Failed to load model")
             }
             

@@ -78,11 +78,11 @@ class DetailPageVC: UITableViewController {
             cell.label3.text = "Busuk"
             
             // progressbar based on banana age model
-            if ripeBanana == "13" || ripeBanana == "12" || ripeBanana == "11" || ripeBanana == "10"{
+            if ripeBanana == "8-10"{
                 cell.progressBar.setProgress(90/100, animated: true)
-            }else if ripeBanana == "9" || ripeBanana == "8" || ripeBanana == "7"{
+            }else if ripeBanana == "4-7"{
                 cell.progressBar.setProgress(50/100, animated: true)
-            }else if ripeBanana == "6" || ripeBanana == "5" || ripeBanana == "4" || ripeBanana == "3"{
+            }else if ripeBanana == "1-3"{
                 cell.progressBar.setProgress((100-75)/100, animated: true)
             }else{
                 cell.progressBar.setProgress(0, animated: true)
@@ -94,33 +94,14 @@ class DetailPageVC: UITableViewController {
             cell.delegate = self
             switch ripeBanana {
             // case mentah
-            case "13":
-                cell.label.text = "Eh, pisang kamu belum matang.. Tunggu matang [xx] hari lagi, ya!"
-                cell.buttonNext.alpha = 0
-            case "12":
-                cell.label.text = "Eh, pisang kamu belum matang.. Tunggu matang [xx] hari lagi, ya!"
-                cell.buttonNext.alpha = 0
-            case "11":
-                cell.label.text = "Eh, pisang kamu belum matang.. Tunggu matang [xx] hari lagi, ya!"
-                cell.buttonNext.alpha = 0
-            case "10":
+            case "8-10":
                 cell.label.text = "Eh, pisang kamu belum matang.. Tunggu matang [xx] hari lagi, ya!"
                 cell.buttonNext.alpha = 0
             // case matang
-            case "9":
-                cell.label.text = "Wah, pisangnya udah matang nih! Bisa langsung dimakan, tapi diolah jadi cemilan juga enak!"
-            case "8":
-                cell.label.text = "Wah, pisangnya udah matang nih! Bisa langsung dimakan, tapi diolah jadi cemilan juga enak!"
-            case "7":
+            case "4-7":
                 cell.label.text = "Wah, pisangnya udah matang nih! Bisa langsung dimakan, tapi diolah jadi cemilan juga enak!"
             // case kematangan
-            case "6":
-                cell.label.text = "Eits, pisang kamu yang kematangan ini masih bisa diolah jadi santapan lezat, kok!"
-            case "5":
-                cell.label.text = "Eits, pisang kamu yang kematangan ini masih bisa diolah jadi santapan lezat, kok!"
-            case "4":
-                cell.label.text = "Eits, pisang kamu yang kematangan ini masih bisa diolah jadi santapan lezat, kok!"
-            case "3":
+            case "1-3":
                 cell.label.text = "Eits, pisang kamu yang kematangan ini masih bisa diolah jadi santapan lezat, kok!"
             // case busuk
             default:
@@ -236,7 +217,7 @@ class DetailPageVC: UITableViewController {
 }
 extension DetailPageVC{
     func detectTypeImage() {
-        guard let model = try? VNCoreMLModel(for: JenisPisang1().model) else {
+        guard let model = try? VNCoreMLModel(for: JenisPisang100().model) else {
             fatalError("Failed to load model")
         }
         
@@ -271,7 +252,7 @@ extension DetailPageVC{
     }
     
     func detectAgeImage() {
-        guard let model = try? VNCoreMLModel(for: UmurPisang1().model) else {
+        guard let model = try? VNCoreMLModel(for: UmurPisang100().model) else {
             fatalError("Failed to load model")
         }
         
@@ -307,39 +288,42 @@ extension DetailPageVC{
             }
     }
     
-    func detectRipeImage() {
-        guard let model = try? VNCoreMLModel(for: KematanganPisang1().model) else {
-            fatalError("Failed to load model")
-        }
-        
-        // Create a vision request
-        let request = VNCoreMLRequest(model: model) {[weak self] request, error in
-            guard let results = request.results as? [VNClassificationObservation],
-                let topResult = results.first
-                else {
-                    fatalError("Unexpected results")
-            }
-            
-            // Update the Main UI Thread with our result
-            if (topResult.confidence >= 0.2){
-                print("\(Int(topResult.confidence * 100))% \(topResult.identifier)")
-                self?.ripeAccuration = "\(Int(topResult.confidence * 100))%"
-                self?.ripeBanana = "\(topResult.identifier)"
-            }
-        }
-        
-        guard let ciImage = CIImage(image: image!)
-            else { fatalError("Cant create CIImage from UIImage") }
-        
-        // Run klasifikasi kematangan pisang
-        let handler = VNImageRequestHandler(ciImage: ciImage)
-            do {
-                try handler.perform([request])
-            } catch {
-                print(error)
-            }
-    }
+    // Unused for now
+    
+//    func detectRipeImage() {
+//        guard let model = try? VNCoreMLModel(for: KematanganPisang1().model) else {
+//            fatalError("Failed to load model")
+//        }
+//
+//        // Create a vision request
+//        let request = VNCoreMLRequest(model: model) {[weak self] request, error in
+//            guard let results = request.results as? [VNClassificationObservation],
+//                let topResult = results.first
+//                else {
+//                    fatalError("Unexpected results")
+//            }
+//
+//            // Update the Main UI Thread with our result
+//            if (topResult.confidence >= 0.2){
+//                print("\(Int(topResult.confidence * 100))% \(topResult.identifier)")
+//                self?.ripeAccuration = "\(Int(topResult.confidence * 100))%"
+//                self?.ripeBanana = "\(topResult.identifier)"
+//            }
+//        }
+//
+//        guard let ciImage = CIImage(image: image!)
+//            else { fatalError("Cant create CIImage from UIImage") }
+//
+//        // Run klasifikasi kematangan pisang
+//        let handler = VNImageRequestHandler(ciImage: ciImage)
+//            do {
+//                try handler.perform([request])
+//            } catch {
+//                print(error)
+//            }
+//    }
 }
+    
 extension DetailPageVC: customCellButtonDelegate{
     
     func didTapButton() {
