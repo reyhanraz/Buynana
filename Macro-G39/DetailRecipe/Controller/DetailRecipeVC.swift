@@ -56,7 +56,7 @@ class DetailRecipeVC: UITableViewController {
         case 2:
             return "Bahan - Bahan"
         case 3:
-            return "Instruction"
+            return "Cara Pembuatan"
         default:
             return ""
         }
