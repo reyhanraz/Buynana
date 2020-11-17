@@ -18,9 +18,8 @@
                 <rect key="frame" x="0.0" y="0.0" width="183" height="204"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SW8-5v-lDL">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SW8-5v-lDL">
                         <rect key="frame" x="0.0" y="0.0" width="183" height="204"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="set-55-dM6">
                                 <rect key="frame" x="0.0" y="0.0" width="183" height="204"/>
@@ -30,9 +29,12 @@
                                 <rect key="frame" x="0.0" y="27" width="183" height="177"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uhX-Lf-qB6">
-                                <rect key="frame" x="8" y="86" width="167" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uhX-Lf-qB6">
+                                <rect key="frame" x="8" y="85" width="167" height="23"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="22" id="gLc-VW-6M3"/>
+                                    <constraint firstAttribute="width" constant="167" id="mxG-PK-CYB"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -53,10 +55,21 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="uhX-Lf-qB6" secondAttribute="bottom" constant="96" id="82U-Db-a4e"/>
+                            <constraint firstAttribute="trailing" secondItem="uhX-Lf-qB6" secondAttribute="trailing" constant="8" id="CbS-gr-cCE"/>
+                            <constraint firstItem="uhX-Lf-qB6" firstAttribute="leading" secondItem="SW8-5v-lDL" secondAttribute="leading" constant="8" id="bcV-jO-D3r"/>
+                        </constraints>
                     </view>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="SW8-5v-lDL" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="d62-R5-FSw"/>
+                <constraint firstItem="SW8-5v-lDL" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="jM4-El-dPQ"/>
+                <constraint firstAttribute="trailing" secondItem="SW8-5v-lDL" secondAttribute="trailing" id="jN1-bd-Klo"/>
+                <constraint firstAttribute="bottom" secondItem="SW8-5v-lDL" secondAttribute="bottom" id="kji-73-3gq"/>
+            </constraints>
             <size key="customSize" width="156" height="178"/>
             <connections>
                 <outlet property="RecipeView" destination="SW8-5v-lDL" id="FsJ-pa-0zj"/>
