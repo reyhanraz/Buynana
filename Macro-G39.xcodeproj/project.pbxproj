@@ -49,6 +49,8 @@
 		AE6944BA255CE5F50073BF58 /* KematanganPisang1.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = AE6944B9255CE5F50073BF58 /* KematanganPisang1.mlmodel */; };
 		AE8AE5D2256370D10099808B /* JenisPisang100.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = AE8AE5D1256370D10099808B /* JenisPisang100.mlmodel */; };
 		AE8AE5D7256388900099808B /* UmurPisang100.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = AE8AE5D6256388900099808B /* UmurPisang100.mlmodel */; };
+		AE8AE5F5256757B80099808B /* Buah.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = AE8AE5F4256757B80099808B /* Buah.mlmodel */; };
+		AE8AE5FA2567676D0099808B /* Pisang.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = AE8AE5F92567676D0099808B /* Pisang.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,6 +119,8 @@
 		AE6944B9255CE5F50073BF58 /* KematanganPisang1.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = KematanganPisang1.mlmodel; sourceTree = "<group>"; };
 		AE8AE5D1256370D10099808B /* JenisPisang100.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = JenisPisang100.mlmodel; sourceTree = "<group>"; };
 		AE8AE5D6256388900099808B /* UmurPisang100.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = UmurPisang100.mlmodel; sourceTree = "<group>"; };
+		AE8AE5F4256757B80099808B /* Buah.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Buah.mlmodel; sourceTree = "<group>"; };
+		AE8AE5F92567676D0099808B /* Pisang.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Pisang.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +171,8 @@
 		4B6F0831252B00630054C1FA /* Macro-G39 */ = {
 			isa = PBXGroup;
 			children = (
+				AE8AE5F92567676D0099808B /* Pisang.mlmodel */,
+				AE8AE5F4256757B80099808B /* Buah.mlmodel */,
 				AE8AE5D6256388900099808B /* UmurPisang100.mlmodel */,
 				AE8AE5D1256370D10099808B /* JenisPisang100.mlmodel */,
 				AE6944B1255CD60E0073BF58 /* JenisPisang1.mlmodel */,
@@ -540,6 +546,8 @@
 				AE6944B2255CD60E0073BF58 /* JenisPisang1.mlmodel in Sources */,
 				AE1B8BBD2550E89700D1DC40 /* UmurPisang1.mlmodel in Sources */,
 				94D5065A2558DDD50013BAE5 /* SecondViewController.swift in Sources */,
+				AE8AE5FA2567676D0099808B /* Pisang.mlmodel in Sources */,
+				AE8AE5F5256757B80099808B /* Buah.mlmodel in Sources */,
 				4BE0CF242541CAC600142FFA /* customCellDetailRecipe.swift in Sources */,
 				4B6F086E252B027C0054C1FA /* DetailPageVC.swift in Sources */,
 				4B6F087D252B02B50054C1FA /* RecipeVC.swift in Sources */,

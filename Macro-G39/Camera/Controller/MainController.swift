@@ -74,7 +74,7 @@ extension MainController {
             }
             
             // START: detection camera image
-            guard let model = try? VNCoreMLModel(for: JenisPisang100().model) else {
+            guard let model = try? VNCoreMLModel(for: Pisang().model) else {
                 fatalError("Failed to load model")
             }
             
@@ -85,21 +85,27 @@ extension MainController {
                     else {
                         fatalError("Unexpected results")
                 }
-                    print("\(Int(topResult.confidence * 100))% \(topResult.identifier)")
+//                print("\(Int(topResult.confidence * 100))% \(topResult.identifier)")
                 var messageDetector = ""
                 var confidentLevel = 0
-                    
-                    if (topResult.confidence > 0.9 ) {
-                        confidentLevel = Int ( topResult.confidence * 100 )
-                        let identifierObject = topResult.identifier.split(separator: ",")
-                        messageDetector = "Ini adalah \(confidentLevel)% \(identifierObject[0])"
-                        if (confidentLevel >= 99) {
+                let identifierObject = topResult.identifier.split(separator: ",")
+                confidentLevel = Int(topResult.confidence * 100)
+                messageDetector = "Ini adalah \(confidentLevel)% \(identifierObject[0])"
+                print(messageDetector)
+                confidentLevel = Int ( topResult.confidence * 100 )
+                    if (identifierObject[0] == "Banana") {
+                        
+                        
+                        if (confidentLevel >= 90) {
+                            self?.captureButton.isEnabled = true
                             self!.detectorView.image = #imageLiteral(resourceName: "GroupG")
                         }else{
+                            self?.captureButton.isEnabled = false
                             self!.detectorView.image = #imageLiteral(resourceName: "GroupR")
                         }
                     } else {
                         messageDetector = "Ini bukan pisang"
+                        self?.captureButton.isEnabled = false
                         self!.detectorView.image = nil
                     }
                     
