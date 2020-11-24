@@ -12,7 +12,8 @@ class RecipeVC: UIViewController{
     @IBOutlet weak var recipeCollectionView: UICollectionView!
     
     let searchController = UISearchController(searchResultsController: nil)
-    
+    var filteredData:[Resep]!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         recipeCollectionView.register(UINib.init(nibName: "RecipeCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "recipeCell")
@@ -21,9 +22,13 @@ class RecipeVC: UIViewController{
         navigationItem.hidesSearchBarWhenScrolling = false
         self.navigationController?.navigationBar.isHidden = false
         
+        searchController.searchBar.placeholder = "Search Recipes"
         searchController.searchBar.delegate = self
+        
         recipeCollectionView.delegate = self
         recipeCollectionView.dataSource = self
+        
+        filteredData = listResep
     }
     
 
@@ -34,15 +39,15 @@ class RecipeVC: UIViewController{
 }
 extension RecipeVC: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return listResep.count
+        return filteredData.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "recipeCell", for: indexPath) as! RecipeCollectionViewCell
-        cell.recipeNameLabel.text = listResep[indexPath.row].namaRecipe
-        cell.bananaRipenessLabel.text = listResep[indexPath.row].tingkatKematangan.rawValue
-        cell.bananaTypeLabel.text = listResep[indexPath.row].jenisPisang.rawValue
-        cell.recipeImage.image = UIImage(named: listResep[indexPath.row].gambarRecipe)
+        cell.recipeNameLabel.text = filteredData[indexPath.row].namaRecipe
+        cell.bananaRipenessLabel.text = filteredData[indexPath.row].tingkatKematangan.rawValue
+        cell.bananaTypeLabel.text = filteredData[indexPath.row].jenisPisang.rawValue
+        cell.recipeImage.image = UIImage(named: filteredData[indexPath.row].gambarRecipe)
         return cell
     }
     
@@ -62,7 +67,20 @@ extension RecipeVC: UICollectionViewDelegate, UICollectionViewDataSource {
 }
 
 extension RecipeVC: UISearchBarDelegate {
+    
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        print(searchText)
+        
+        filteredData = []
+        
+        if searchText == "" {
+            filteredData = listResep
+        } else {
+            for recipe in listResep {
+                if recipe.namaRecipe.lowercased().contains(searchText.lowercased()){
+                    filteredData.append(recipe)
+                }
+            }
+        }
+        self.recipeCollectionView.reloadData()
     }
 }
