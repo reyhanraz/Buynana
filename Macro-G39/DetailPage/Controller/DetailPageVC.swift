@@ -328,15 +328,17 @@ extension DetailPageVC: customCellButtonDelegate{
     
     func didTapButton() {
         self.navigationController?.popViewControllerWithHandler {
-            self.delegate?.modalDismissed()
+            let type = self.typeBanana.substring(from: 7)
+            self.delegate?.modalDismissed(bananaType: type)
+            
         }
     }
 }
 extension UINavigationController {
     func popViewControllerWithHandler(handler: @escaping ()->()) {
         CATransaction.begin()
-        CATransaction.setCompletionBlock(handler)
         self.popViewController(animated: true)
+        CATransaction.setCompletionBlock(handler)
         CATransaction.commit()
     }
 }
@@ -344,5 +346,15 @@ extension UIFont{
     struct customFont {
         static let heading = UIFont(name: "SFCompactDisplay-Bold", size: 16)
         static let body = UIFont(name: "SFCompactDisplay-Regular", size: 16)
+    }
+}
+extension String {
+    func index(from: Int) -> Index {
+        return self.index(startIndex, offsetBy: from)
+    }
+
+    func substring(from: Int) -> String {
+        let fromIndex = index(from: from)
+        return String(self[fromIndex...])
     }
 }

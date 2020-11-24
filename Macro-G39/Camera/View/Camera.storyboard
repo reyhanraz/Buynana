@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -99,11 +99,22 @@
                         <outlet property="toggleCameraButton" destination="dNR-Vo-zfA" id="Tc7-9N-4bs"/>
                         <outlet property="toggleFlashButton" destination="TK7-Oc-3y1" id="pfk-k4-hgk"/>
                         <segue destination="qoK-V1-qDW" kind="show" identifier="toDetailPage" id="SC9-1H-o2Z"/>
+                        <segue destination="ugQ-cd-fUs" kind="show" identifier="toRecipe" id="PgY-eO-2HN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+        </scene>
+        <!--RecipeSB-->
+        <scene sceneID="Dhe-kt-QNg">
+            <objects>
+                <viewControllerPlaceholder storyboardName="RecipeSB" id="ugQ-cd-fUs" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="7MU-q1-322"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mtP-aU-f1j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="674" y="90"/>
         </scene>
         <!--DetailPageSB-->
         <scene sceneID="9n0-9J-QdB">
@@ -113,7 +124,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a5Z-Q2-WFf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="670" y="139"/>
+            <point key="canvasLocation" x="691" y="198"/>
         </scene>
     </scenes>
     <resources>

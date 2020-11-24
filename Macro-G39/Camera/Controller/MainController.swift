@@ -13,6 +13,7 @@ import Vision
 class MainController: UIViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
     public var timer = Timer()
     public var sendImage:UIImage = #imageLiteral(resourceName: "bananaKuning")
+    var bananaType = ""
     
     @IBOutlet weak var detectorView: UIImageView!
     
@@ -37,6 +38,9 @@ class MainController: UIViewController, UIImagePickerControllerDelegate & UINavi
         }
         if segue.destination is HomeVC{
             self.navigationController?.popToRootViewController(animated: true)
+        }
+        if let dest = segue.destination as? RecipeVC{
+            dest.bananaType = self.bananaType
         }
     }
 }
@@ -202,14 +206,17 @@ extension MainController {
         }
         
     }
+    
 }
 extension MainController: ModalHandler{
-    func modalDismissed() {
-        let storyB = UIStoryboard(name: "RecipeSB", bundle: nil)
-        let vc = storyB.instantiateViewController(withIdentifier: "RecipeVC") as! RecipeVC
-        self.navigationController?.pushViewController(vc, animated: true)
+    func modalDismissed(bananaType: String) {
+        self.bananaType = bananaType
+        performSegue(withIdentifier: "toRecipe", sender: self)
+//        let storyB = UIStoryboard(name: "RecipeSB", bundle: nil)
+//        let vc = storyB.instantiateViewController(withIdentifier: "RecipeVC") as! RecipeVC
+//        self.navigationController?.pushViewController(vc, animated: true)
     }
 }
 protocol ModalHandler: AnyObject {
-    func modalDismissed()
+    func modalDismissed(bananaType: String)
 }

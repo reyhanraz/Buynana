@@ -13,6 +13,7 @@ class RecipeVC: UIViewController{
     
     let searchController = UISearchController(searchResultsController: nil)
     var filteredData:[Resep]!
+    var bananaType = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +30,10 @@ class RecipeVC: UIViewController{
         recipeCollectionView.dataSource = self
         
         filteredData = listResep
+        if !bananaType.isEmpty{
+            searchController.searchBar.text = bananaType
+            searchBar(searchController.searchBar, textDidChange: bananaType)
+        }
     }
     
 
@@ -68,6 +73,11 @@ extension RecipeVC: UICollectionViewDelegate, UICollectionViewDataSource {
 
 extension RecipeVC: UISearchBarDelegate {
     
+    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+        filteredData = listResep
+        self.recipeCollectionView.reloadData()
+    }
+    
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         
         filteredData = []
@@ -75,11 +85,13 @@ extension RecipeVC: UISearchBarDelegate {
         if searchText == "" {
             filteredData = listResep
         } else {
-            for recipe in listResep {
-                if recipe.namaRecipe.lowercased().contains(searchText.lowercased()){
-                    filteredData.append(recipe)
-                }
-            }
+//            for recipe in listResep {
+//                if recipe.namaRecipe.lowercased().contains(searchText.lowercased()){
+//                    filteredData.append(recipe)
+//                }
+//            }
+            filteredData = listResep.filter ({$0.namaRecipe.lowercased().range(of: searchText.lowercased()) != nil})
+            filteredData += listResep.filter ({$0.jenisPisang.rawValue.lowercased().range(of: searchText.lowercased()) != nil})
         }
         self.recipeCollectionView.reloadData()
     }
