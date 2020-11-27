@@ -1,54 +1,74 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8JW-HT-nII">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8JW-HT-nII">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--RecipeVC-->
+        <!--Resep-->
         <scene sceneID="eqz-LI-gt7">
             <objects>
-                <viewController id="8JW-HT-nII" customClass="RecipeVC" customModule="Macro_G39" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RecipeVC" title="Resep" id="8JW-HT-nII" customClass="RecipeVC" customModule="Macro_G39" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="s8s-qb-6vx" customClass="RecipeView" customModule="Macro_G39" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Hpi-qx-GHa">
-                                <rect key="frame" x="0.0" y="142" width="375" height="636"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="18" minimumInteritemSpacing="10" id="sz7-TS-Kyc">
-                                    <size key="itemSize" width="160" height="180"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Hpi-qx-GHa">
+                                <rect key="frame" x="0.0" y="88" width="375" height="690"/>
+                                <color key="backgroundColor" red="0.98015600439999995" green="0.96965402359999997" blue="0.90979415180000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="16" minimumInteritemSpacing="16" id="sz7-TS-Kyc">
+                                    <size key="itemSize" width="183" height="207"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="18" minY="0.0" maxX="18" maxY="0.0"/>
+                                    <inset key="sectionInset" minX="16" minY="16" maxX="16" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="7a1-yp-WBt" customClass="RecipeCollectionViewCell" customModule="Macro_G39" customModuleProvider="target">
-                                        <rect key="frame" x="18" y="0.0" width="160" height="179"/>
+                                        <rect key="frame" x="96" y="16" width="183" height="204"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Ocp-ua-Mls">
-                                            <rect key="frame" x="0.0" y="0.0" width="160" height="179"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="183" height="204"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" red="0.9876531959" green="0.96585875750000005" blue="0.90195178990000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </collectionViewCellContentView>
-                                        <size key="customSize" width="160" height="179"/>
+                                        <color key="backgroundColor" red="0.9876531959" green="0.96585875750000005" blue="0.90195178990000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <size key="customSize" width="183" height="204"/>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="XOr-dq-sJ0"/>
+                        <color key="backgroundColor" red="0.98015600439999995" green="0.96965402359999997" blue="0.90979415180000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="Hpi-qx-GHa" firstAttribute="bottom" secondItem="XOr-dq-sJ0" secondAttribute="bottom" id="OBD-hF-9g6"/>
+                            <constraint firstItem="Hpi-qx-GHa" firstAttribute="top" secondItem="XOr-dq-sJ0" secondAttribute="top" id="fuu-da-7TK"/>
+                            <constraint firstItem="Hpi-qx-GHa" firstAttribute="leading" secondItem="XOr-dq-sJ0" secondAttribute="leading" id="tTy-WT-Tx2"/>
+                            <constraint firstItem="Hpi-qx-GHa" firstAttribute="trailing" secondItem="XOr-dq-sJ0" secondAttribute="trailing" id="xVd-vp-NMO"/>
+                        </constraints>
                     </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="recipeCollectionView" destination="Hpi-qx-GHa" id="ZPp-Us-5zS"/>
+                        <segue destination="T8p-9h-Xrg" kind="show" identifier="toDetailRecipe" id="4tQ-We-7OX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i7q-Gq-hST" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-292" y="74.630541871921181"/>
+        </scene>
+        <!--DetailRecipeSB-->
+        <scene sceneID="0kN-oN-ObU">
+            <objects>
+                <viewControllerPlaceholder storyboardName="DetailRecipeSB" id="T8p-9h-Xrg" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Jkn-EX-3KX"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ujv-FI-uwh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="447" y="75"/>
         </scene>
     </scenes>
 </document>
