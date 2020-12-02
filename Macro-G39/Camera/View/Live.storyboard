@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IZf-Cp-ogj">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--LiveVC-->
+        <scene sceneID="8aK-5i-IxF">
+            <objects>
+                <viewController id="IZf-Cp-ogj" customClass="LiveVC" customModule="Macro_G39" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wRn-V4-a4c">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QTt-VZ-uO5">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HqF-Le-oMY">
+                                        <rect key="frame" x="8" y="52" width="44" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" image="chevron-icon"/>
+                                        <connections>
+                                            <action selector="backButtonTapped:" destination="IZf-Cp-ogj" eventType="touchUpInside" id="d48-gQ-23k"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mwI-8E-ioJ">
+                                        <rect key="frame" x="365" y="52" width="41" height="48"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" image="blitz-icon"/>
+                                        <connections>
+                                            <action selector="toggleFlash:" destination="IZf-Cp-ogj" eventType="touchUpInside" id="z6N-eT-zK6"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qV0-o4-gwG">
+                                        <rect key="frame" x="174" y="810" width="66" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" image="gallery-icon"/>
+                                        <connections>
+                                            <action selector="takeImage:" destination="IZf-Cp-ogj" eventType="touchUpInside" id="KtJ-D6-0IO"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Ysv-cy-rnn"/>
+                        <color key="backgroundColor" red="1" green="0.64705882349999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </view>
+                    <connections>
+                        <outlet property="liveView" destination="QTt-VZ-uO5" id="sq6-bu-V0H"/>
+                        <outlet property="toggleFlashButton" destination="mwI-8E-ioJ" id="mNw-8f-Wn2"/>
+                        <segue destination="f3X-rs-xUr" kind="show" identifier="toDetailPage" id="Wjs-wb-ZRV"/>
+                        <segue destination="I60-hb-wbM" kind="show" identifier="toRecipe" id="pZE-7Y-w6m"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M8k-oj-mhI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="147.82608695652175" y="-235.04464285714283"/>
+        </scene>
+        <!--DetailPageSB-->
+        <scene sceneID="G9E-v5-oJb">
+            <objects>
+                <viewControllerPlaceholder storyboardName="DetailPageSB" id="f3X-rs-xUr" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="kNJ-SY-Fc4"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ehj-in-eKm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="772" y="-151"/>
+        </scene>
+        <!--RecipeSB-->
+        <scene sceneID="dlu-fk-Lz5">
+            <objects>
+                <viewControllerPlaceholder storyboardName="RecipeSB" id="I60-hb-wbM" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="4R1-0w-bqW"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5nu-5q-zEg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="772" y="-303"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="blitz-icon" width="41" height="48"/>
+        <image name="chevron-icon" width="34" height="44"/>
+        <image name="gallery-icon" width="56" height="49"/>
+    </resources>
+</document>

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="H6Z-vM-PjZ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="H6Z-vM-PjZ">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -97,6 +97,7 @@
                         <segue destination="WyH-aV-RE8" kind="show" identifier="segueToCamera" id="4Vt-AN-QGE"/>
                         <segue destination="0c2-1g-3e1" kind="show" identifier="segueToDetail" id="uiz-BR-ZKX"/>
                         <segue destination="Beg-aa-TF9" kind="show" id="CuA-d0-4hj"/>
+                        <segue destination="XaG-yN-wKp" kind="show" identifier="segueToLive" id="e7W-xH-6vX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cqU-LP-Ndb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -162,6 +163,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f7W-YY-8pw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="200.00000000000003" y="129.91071428571428"/>
+        </scene>
+        <!--Live-->
+        <scene sceneID="9Q8-L4-X35">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Live" id="XaG-yN-wKp" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="hzW-AH-Qz3"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qwq-9l-xHW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1951" y="362"/>
         </scene>
     </scenes>
 </document>

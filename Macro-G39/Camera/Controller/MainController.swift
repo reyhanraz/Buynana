@@ -10,7 +10,7 @@ import UIKit
 import Photos
 import Vision
 
-class MainController: UIViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
+class MainController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, ModalHandler {
     public var timer = Timer()
     public var sendImage:UIImage = #imageLiteral(resourceName: "bananaKuning")
     var bananaType = ""
@@ -208,7 +208,7 @@ extension MainController {
     }
     
 }
-extension MainController: ModalHandler{
+extension MainController: ModalHandling{
     func modalDismissed(bananaType: String) {
         self.bananaType = bananaType
         performSegue(withIdentifier: "toRecipe", sender: self)
@@ -217,6 +217,6 @@ extension MainController: ModalHandler{
 //        self.navigationController?.pushViewController(vc, animated: true)
     }
 }
-protocol ModalHandler: AnyObject {
+protocol ModalHandling: AnyObject {
     func modalDismissed(bananaType: String)
 }

@@ -51,6 +51,8 @@
 		AE8AE5D7256388900099808B /* UmurPisang100.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = AE8AE5D6256388900099808B /* UmurPisang100.mlmodel */; };
 		AE8AE5F5256757B80099808B /* Buah.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = AE8AE5F4256757B80099808B /* Buah.mlmodel */; };
 		AE8AE5FA2567676D0099808B /* Pisang.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = AE8AE5F92567676D0099808B /* Pisang.mlmodel */; };
+		AE9B2DCA2575FA9600D7F346 /* Live.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE9B2DC92575FA9600D7F346 /* Live.storyboard */; };
+		AE9B2DCF2575FAB400D7F346 /* LiveVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9B2DCE2575FAB400D7F346 /* LiveVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -121,6 +123,8 @@
 		AE8AE5D6256388900099808B /* UmurPisang100.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = UmurPisang100.mlmodel; sourceTree = "<group>"; };
 		AE8AE5F4256757B80099808B /* Buah.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Buah.mlmodel; sourceTree = "<group>"; };
 		AE8AE5F92567676D0099808B /* Pisang.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Pisang.mlmodel; sourceTree = "<group>"; };
+		AE9B2DC92575FA9600D7F346 /* Live.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Live.storyboard; sourceTree = "<group>"; };
+		AE9B2DCE2575FAB400D7F346 /* LiveVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -376,6 +380,7 @@
 			children = (
 				AE1B8BA72550BCB000D1DC40 /* CameraController.swift */,
 				AE1B8BA82550BCB000D1DC40 /* MainController.swift */,
+				AE9B2DCE2575FAB400D7F346 /* LiveVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -384,6 +389,7 @@
 			isa = PBXGroup;
 			children = (
 				AE1B8BAA2550BCB000D1DC40 /* Camera.storyboard */,
+				AE9B2DC92575FA9600D7F346 /* Live.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -509,6 +515,7 @@
 				4B78B4F72552A26B00FD40C0 /* SF-Compact-Display-Thin.otf in Resources */,
 				4B78B4F02552A26B00FD40C0 /* SF-Compact-Display-Light.otf in Resources */,
 				AE1B8BAD2550BCB000D1DC40 /* Camera.storyboard in Resources */,
+				AE9B2DCA2575FA9600D7F346 /* Live.storyboard in Resources */,
 				4B78B4F32552A26B00FD40C0 /* SF-Compact-Display-Black.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -534,6 +541,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE9B2DCF2575FAB400D7F346 /* LiveVC.swift in Sources */,
 				AE8AE5D7256388900099808B /* UmurPisang100.mlmodel in Sources */,
 				946036AD2542755500BF9072 /* RecipeCollectionViewCell.swift in Sources */,
 				94D506592558DDD50013BAE5 /* ViewController.swift in Sources */,
@@ -726,7 +734,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 4;
-				DEVELOPMENT_TEAM = 9G44XW2W74;
+				DEVELOPMENT_TEAM = LU7959C5GC;
 				INFOPLIST_FILE = "Macro-G39/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -748,7 +756,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 4;
-				DEVELOPMENT_TEAM = 9G44XW2W74;
+				DEVELOPMENT_TEAM = LU7959C5GC;
 				INFOPLIST_FILE = "Macro-G39/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
