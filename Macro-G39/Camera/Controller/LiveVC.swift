@@ -41,22 +41,14 @@ class LiveVC: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate, UI
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setLiveCamera()
         // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        setLiveCamera()
+        captureSession.startRunning()
         self.navigationController?.navigationBar.isHidden = true
         super.viewDidAppear(animated)
-        self.previewLayer?.frame.size = self.liveView.frame.size
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        captureSession.stopRunning()
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        setLiveCamera()
     }
 
     /*
@@ -120,7 +112,7 @@ class LiveVC: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate, UI
         let myIdentifier = firstObservation.identifier.split(separator: ",")
         
         DispatchQueue.main.async {
-        if (myConfident > 99 && myIdentifier[0] == "Banana") {
+        if (myConfident > 97 && myIdentifier[0] == "Banana") {
                 myMessage = "I am \(myConfident) % confidence this object is : \(myIdentifier[0])."
                 let toCIImage = CIImage(cvPixelBuffer: pixcelBuffer)
                 let toUIImage = UIImage(ciImage: toCIImage)

@@ -96,7 +96,7 @@ class DetailPageVC: UITableViewController {
             switch ripeBanana {
             // case mentah
             case "8-10":
-                cell.label.text = "Eh, pisang kamu belum matang.. Tunggu matang [xx] hari lagi, ya!"
+                cell.label.text = "Eh, pisang kamu belum matang.. Tunggu matang, ya!"
                 cell.buttonNext.alpha = 0
             // case matang
             case "4-7":
