@@ -9,6 +9,7 @@ import UIKit
 import AVKit
 import AVFoundation
 import Vision
+import Photos
 
 class LiveVC: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
@@ -16,9 +17,11 @@ class LiveVC: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate, UI
     @IBOutlet weak var toggleFlashButton: UIButton!
     
     let cameraController = CameraController()
+    let captureSession = AVCaptureSession()
     var previewLayer: AVCaptureVideoPreviewLayer?
     var bananaType = ""
-    public var sendImage:UIImage = #imageLiteral(resourceName: "bananaKuning")
+    var sendImage:UIImage = #imageLiteral(resourceName: "bananaKuning")
+    var sendCIImg:CIImage?
     
     override var prefersStatusBarHidden: Bool { return true }
     
@@ -26,6 +29,7 @@ class LiveVC: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate, UI
         if let destination = segue.destination as? DetailPageVC{
             destination.delegate = self
             destination.image = sendImage
+            destination.ciImg = sendCIImg
         }
         if segue.destination is HomeVC{
             self.navigationController?.popToRootViewController(animated: true)
@@ -37,13 +41,22 @@ class LiveVC: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate, UI
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setLiveCamera()
         // Do any additional setup after loading the view.
     }
     
-    override func viewDidAppear(_ animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
+        setLiveCamera()
+        self.navigationController?.navigationBar.isHidden = true
         super.viewDidAppear(animated)
         self.previewLayer?.frame.size = self.liveView.frame.size
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        captureSession.stopRunning()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        setLiveCamera()
     }
 
     /*
@@ -59,7 +72,6 @@ class LiveVC: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate, UI
     // MARK: Action
     func setLiveCamera(){
         //Start the Camera
-        let captureSession = AVCaptureSession()
         captureSession.sessionPreset = .photo
     
         // get back camera as Video Capture Device
@@ -107,19 +119,22 @@ class LiveVC: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate, UI
             myConfident = Int ( firstObservation.confidence * 100 )
         let myIdentifier = firstObservation.identifier.split(separator: ",")
         
-//        let toCIImage = CoreImage.CIImage(cvImageBuffer: pixcelBuffer)
-//        let toUIImage = UIImage(ciImage: toCIImage)
-            
-        if (myConfident > 90 && myIdentifier[0] == "Banana") {
-            myMessage = "I am \(myConfident) % confidence this object is : \(myIdentifier[0])."
-//            self.sendImage = toUIImage
-//            self.toDetailPage()
+        DispatchQueue.main.async {
+        if (myConfident > 99 && myIdentifier[0] == "Banana") {
+                myMessage = "I am \(myConfident) % confidence this object is : \(myIdentifier[0])."
+                let toCIImage = CIImage(cvPixelBuffer: pixcelBuffer)
+                let toUIImage = UIImage(ciImage: toCIImage)
+                self.sendImage = toUIImage
+                self.sendCIImg = toCIImage
+                self.captureSession.stopRunning()
+                self.toDetailPage()
         } else {
             myMessage = "I am not confidence to detect this object"
         }
             print(myMessage)
         }
-
+        }
+        
         // Anaylize image
         try? VNImageRequestHandler(cvPixelBuffer: pixcelBuffer, options: [:]).perform([request])
     }
@@ -130,7 +145,10 @@ class LiveVC: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate, UI
             sendImage = pickedImage
         }
         picker.dismiss(animated: true, completion: self.toDetailPage)
+    }
     
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        captureSession.startRunning()
     }
     
     func quickErr(myLine: Int , inputStr : String = "" ) {
@@ -150,7 +168,7 @@ class LiveVC: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate, UI
         imagePicker.delegate = self
         imagePicker.sourceType = .photoLibrary
         imagePicker.allowsEditing = true
-        present(imagePicker, animated: true, completion: nil)
+        present(imagePicker, animated: true, completion: nil) //captureSession.stopRunning
     }
     
     @IBAction func toggleFlash(_ sender: UIButton) {

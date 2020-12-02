@@ -16,46 +16,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QTt-VZ-uO5">
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QTt-VZ-uO5">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HqF-Le-oMY">
-                                        <rect key="frame" x="8" y="52" width="44" height="44"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <state key="normal" image="chevron-icon"/>
-                                        <connections>
-                                            <action selector="backButtonTapped:" destination="IZf-Cp-ogj" eventType="touchUpInside" id="d48-gQ-23k"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mwI-8E-ioJ">
-                                        <rect key="frame" x="365" y="52" width="41" height="48"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <state key="normal" image="blitz-icon"/>
-                                        <connections>
-                                            <action selector="toggleFlash:" destination="IZf-Cp-ogj" eventType="touchUpInside" id="z6N-eT-zK6"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qV0-o4-gwG">
-                                        <rect key="frame" x="174" y="810" width="66" height="44"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <state key="normal" image="gallery-icon"/>
-                                        <connections>
-                                            <action selector="takeImage:" destination="IZf-Cp-ogj" eventType="touchUpInside" id="KtJ-D6-0IO"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qV0-o4-gwG" userLabel="Photo Library Button">
+                                <rect key="frame" x="340" y="52" width="66" height="44"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" image="gallery-icon"/>
+                                <connections>
+                                    <action selector="takeImage:" destination="IZf-Cp-ogj" eventType="touchUpInside" id="KtJ-D6-0IO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HqF-Le-oMY" userLabel="Back Button">
+                                <rect key="frame" x="8" y="52" width="44" height="44"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" image="chevron-icon"/>
+                                <connections>
+                                    <action selector="backButtonTapped:" destination="IZf-Cp-ogj" eventType="touchUpInside" id="d48-gQ-23k"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Ysv-cy-rnn"/>
                         <color key="backgroundColor" red="1" green="0.64705882349999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="HqF-Le-oMY" firstAttribute="top" secondItem="Ysv-cy-rnn" secondAttribute="top" constant="8" id="1Et-aD-D9J"/>
+                            <constraint firstItem="Ysv-cy-rnn" firstAttribute="trailing" secondItem="qV0-o4-gwG" secondAttribute="trailing" constant="8" id="4kv-mq-6SR"/>
+                            <constraint firstItem="HqF-Le-oMY" firstAttribute="leading" secondItem="Ysv-cy-rnn" secondAttribute="leading" constant="8" id="D5C-tA-6MM"/>
+                            <constraint firstItem="QTt-VZ-uO5" firstAttribute="width" secondItem="wRn-V4-a4c" secondAttribute="width" id="Qoc-La-1M9"/>
+                            <constraint firstItem="QTt-VZ-uO5" firstAttribute="height" secondItem="wRn-V4-a4c" secondAttribute="height" id="Y6u-lh-66x"/>
+                            <constraint firstItem="qV0-o4-gwG" firstAttribute="top" secondItem="Ysv-cy-rnn" secondAttribute="top" constant="8" id="aMn-bN-4x1"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="liveView" destination="QTt-VZ-uO5" id="sq6-bu-V0H"/>
-                        <outlet property="toggleFlashButton" destination="mwI-8E-ioJ" id="mNw-8f-Wn2"/>
                         <segue destination="f3X-rs-xUr" kind="show" identifier="toDetailPage" id="Wjs-wb-ZRV"/>
                         <segue destination="I60-hb-wbM" kind="show" identifier="toRecipe" id="pZE-7Y-w6m"/>
                     </connections>
@@ -67,7 +60,7 @@
         <!--DetailPageSB-->
         <scene sceneID="G9E-v5-oJb">
             <objects>
-                <viewControllerPlaceholder storyboardName="DetailPageSB" id="f3X-rs-xUr" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardIdentifier="DetailPageSB" storyboardName="DetailPageSB" id="f3X-rs-xUr" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="kNJ-SY-Fc4"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ehj-in-eKm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -86,7 +79,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="blitz-icon" width="41" height="48"/>
         <image name="chevron-icon" width="34" height="44"/>
         <image name="gallery-icon" width="56" height="49"/>
     </resources>

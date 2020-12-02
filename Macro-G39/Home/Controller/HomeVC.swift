@@ -49,14 +49,14 @@ class HomeVC: UIViewController {
         performSegue(withIdentifier: "segueToRecipe", sender: nil)
     }
     @IBAction func goToCameraPage(_ sender: UIButton) {
-        performSegue(withIdentifier: "segueToCamera", sender: nil)
+        performSegue(withIdentifier: "segueToLive", sender: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.destination is RecipeVC {
             self.navigationController?.navigationBar.isHidden = false
         }
-        if segue.destination is MainController {
+        if segue.destination is LiveVC {
             self.navigationController?.navigationBar.isHidden = true
         }
         if let dest = segue.destination as? DetailRecipeVC{

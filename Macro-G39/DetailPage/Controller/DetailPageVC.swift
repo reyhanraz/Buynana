@@ -14,6 +14,7 @@ class DetailPageVC: UITableViewController {
     let mainC = MainController()
     weak var delegate: ModalHandler!
     var image: UIImage?
+    var ciImg: CIImage?
     
     var typeAccuration:String = "--%"
     var typeBanana:String = "--"
@@ -239,11 +240,11 @@ extension DetailPageVC{
             }
         }
         
-        guard let ciImage = CIImage(image: image!)
-            else { fatalError("Cant create CIImage from UIImage") }
+//        guard let ciImage = CIImage(image: image!)
+//            else { fatalError("Cant create CIImage from UIImage") }
         
         // Run klasifikasi jenis pisang
-        let handler = VNImageRequestHandler(ciImage: ciImage)
+        let handler = VNImageRequestHandler(ciImage: ciImg!)
             do {
                 try handler.perform([request])
             } catch {
@@ -276,11 +277,11 @@ extension DetailPageVC{
             }
         }
         
-        guard let ciImage = CIImage(image: image!)
-            else { fatalError("Cant create CIImage from UIImage") }
+//        guard let ciImage = CIImage(image: image!)
+//            else { fatalError("Cant create CIImage from UIImage") }
         
         // Run klasifikasi umur pisang
-        let handler = VNImageRequestHandler(ciImage: ciImage)
+        let handler = VNImageRequestHandler(ciImage: ciImg!)
             do {
                 try handler.perform([request])
             } catch {
