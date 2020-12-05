@@ -141,6 +141,7 @@ class LiveVC: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate, UI
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         captureSession.startRunning()
+        dismiss(animated: true, completion: nil)
     }
     
     func quickErr(myLine: Int , inputStr : String = "" ) {
@@ -148,7 +149,7 @@ class LiveVC: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate, UI
     }
     
     func toDetailPage(){
-            self.performSegue(withIdentifier: "toDetailPage", sender: nil)
+        self.performSegue(withIdentifier: "toDetailPage", sender: nil)
     }
     
     @IBAction func backButtonTapped(_ sender: UIButton){    navigationController?.popViewController(animated: true)
@@ -160,7 +161,8 @@ class LiveVC: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate, UI
         imagePicker.delegate = self
         imagePicker.sourceType = .photoLibrary
         imagePicker.allowsEditing = true
-        present(imagePicker, animated: true, completion: nil) //captureSession.stopRunning
+        present(imagePicker, animated: true, completion: nil)
+        captureSession.stopRunning()
     }
     
     @IBAction func toggleFlash(_ sender: UIButton) {
