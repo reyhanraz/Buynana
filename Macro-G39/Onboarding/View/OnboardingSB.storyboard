@@ -26,15 +26,15 @@
                                 <rect key="frame" x="20" y="98" width="333" height="334"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Kenali Jenis dan Kematangan Pisang" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="tTu-TG-0cX">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Kenali Jenis dan Kematangan Pisang" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tTu-TG-0cX">
                                 <rect key="frame" x="20" y="472" width="333" height="82"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Deteksi kematangan, jenis, dan umur pisang sebelum busuk" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="9Lj-vH-sHO">
-                                <rect key="frame" x="64" y="562" width="245" height="54"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Deteksi kematangan, jenis, dan umur pisang sebelum busuk" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Lj-vH-sHO">
+                                <rect key="frame" x="63" y="562" width="245" height="54"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -102,15 +102,15 @@
                                 <rect key="frame" x="20" y="96" width="333" height="334"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Temukan Resep Berbahan Dasar Pisang" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="dff-bY-OK3">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Temukan Resep Berbahan Dasar Pisang" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dff-bY-OK3">
                                 <rect key="frame" x="20" y="470" width="333" height="82"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Temukan resep olahan makanan yang cocok berdasarkan tingkat kematangan pisang" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="CXf-Cy-foc">
-                                <rect key="frame" x="64" y="560" width="245" height="70"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Temukan resep olahan makanan yang cocok berdasarkan tingkat kematangan pisang" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CXf-Cy-foc">
+                                <rect key="frame" x="63" y="560" width="245" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -151,7 +151,6 @@
         <!--Navigation Controller-->
         <scene sceneID="Dsb-K9-7cC">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="LkX-5v-lB8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="v4k-V1-O4P" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8s6-0H-Zex">
@@ -163,6 +162,7 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="R3B-BV-18U"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LkX-5v-lB8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="133.74384236453201"/>
         </scene>
